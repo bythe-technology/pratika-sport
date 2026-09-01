@@ -1,0 +1,18 @@
+{
+  "name": "Pratika Sport",
+  "short_name": "Pratika Sport",
+  "description": "Construção, reforma e manutenção de quadras esportivas.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0878bf",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "300x300",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
