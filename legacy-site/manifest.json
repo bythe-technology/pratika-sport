@@ -1,0 +1,1207 @@
+{
+  "capturedAt": "2026-08-31T15:48:28.878Z",
+  "rootUrl": "https://pratikasport.com.br/index.html",
+  "records": [
+    {
+      "url": "https://pratikasport.com.br/index.html",
+      "finalUrl": "https://pratikasport.com.br/index.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 60371,
+      "sha256": "39037d79e2d65a6234fa6dd9938413a8fd52afe47c7438781a62527e3c747b5b",
+      "file": "snapshot\\index.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/robots.txt",
+      "finalUrl": "https://pratikasport.com.br/robots.txt",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/plain",
+      "bytes": 282,
+      "sha256": "aa3e0bd6599f7b645522c14bba37ab588e32ca509550bd2c3282c6a7f97c01a3",
+      "file": "snapshot\\robots.txt"
+    },
+    {
+      "url": "https://pratikasport.com.br/sitemap.xml",
+      "finalUrl": "https://pratikasport.com.br/sitemap.xml",
+      "kind": "page",
+      "status": 200,
+      "contentType": "application/xml",
+      "bytes": 9098,
+      "sha256": "d926c112d553e499f6dba1660212e7551bcb7f66544b351e9b4aa38a895adc59",
+      "file": "snapshot\\sitemap.xml"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/",
+      "finalUrl": "https://www.pratikasport.com.br/",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 60371,
+      "sha256": "39037d79e2d65a6234fa6dd9938413a8fd52afe47c7438781a62527e3c747b5b",
+      "file": "snapshot\\index.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/servicos/quadras-poliesportivas.html",
+      "finalUrl": "https://pratikasport.com.br/pages/servicos/quadras-poliesportivas.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 14643,
+      "sha256": "657f94b683a70794471a29dbd32afc54c68466fe48c7bd98f66748fb8d00c264",
+      "file": "snapshot\\pages\\servicos\\quadras-poliesportivas.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/servicos/quadra-de-tenis.html",
+      "finalUrl": "https://pratikasport.com.br/pages/servicos/quadra-de-tenis.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 26166,
+      "sha256": "f4e921c34340d65f8ddcce438dbd566a2e9f7385e43b48f24c86ff79a2b9a257",
+      "file": "snapshot\\pages\\servicos\\quadra-de-tenis.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/servicos/quadra-de-beach-tennis.html",
+      "finalUrl": "https://pratikasport.com.br/pages/servicos/quadra-de-beach-tennis.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 25746,
+      "sha256": "db3589f1149bda224b4e9b972ccc96711f4074984dc5f613118b2cc1fcf7367e",
+      "file": "snapshot\\pages\\servicos\\quadra-de-beach-tennis.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/servicos/campo-de-futebol.html",
+      "finalUrl": "https://pratikasport.com.br/pages/servicos/campo-de-futebol.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 27511,
+      "sha256": "fc0f1066b6f8d31bf677b6ed4cdbb4f37c71a06098d83159c19abb83e0ef03e3",
+      "file": "snapshot\\pages\\servicos\\campo-de-futebol.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/projetos.html",
+      "finalUrl": "https://pratikasport.com.br/pages/projetos.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15043,
+      "sha256": "58f31e21b44d7ef933de638574d7aae86bb9b3ea9ee3cc169ce1d007121831bd",
+      "file": "snapshot\\pages\\projetos.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/blog.html",
+      "finalUrl": "https://pratikasport.com.br/pages/blog.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 13358,
+      "sha256": "8edf0b7a4ca454d6d540e8f09a3ee9df51d14e2aefb5b45dbbc635e8b42f4dd5",
+      "file": "snapshot\\pages\\blog.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/contato.html",
+      "finalUrl": "https://pratikasport.com.br/pages/contato.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 14509,
+      "sha256": "fd2b8b81937508812885776de9fd84c724272b3fd2cd2494492f64482eb29320",
+      "file": "snapshot\\pages\\contato.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/servicos/reforma-de-quadras.html",
+      "finalUrl": "https://pratikasport.com.br/pages/servicos/reforma-de-quadras.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 17975,
+      "sha256": "71eb1f085cb52842c267bb534c3c2d4e4e2277cc6d5756b9ad5bd7fb608d3c3e",
+      "file": "snapshot\\pages\\servicos\\reforma-de-quadras.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/servicos/manutencao-de-quadras.html",
+      "finalUrl": "https://pratikasport.com.br/pages/servicos/manutencao-de-quadras.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 18945,
+      "sha256": "8d5db0530c8f4c1646e2d7dc1950b1efff45772b8e0d74e08f9213783986e8aa",
+      "file": "snapshot\\pages\\servicos\\manutencao-de-quadras.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/sobre.html",
+      "finalUrl": "https://pratikasport.com.br/pages/sobre.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 17946,
+      "sha256": "595f6f03ca9c153d5b1da6a4b995aebd762e205884f17b2f3f2f6d982ef3a9c6",
+      "file": "snapshot\\pages\\sobre.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/depoimentos.html",
+      "finalUrl": "https://pratikasport.com.br/pages/depoimentos.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 20769,
+      "sha256": "e70d56d842eef25ed0d501f08f08e2de49f195367aeec5d29d85e15c6f53677d",
+      "file": "snapshot\\pages\\depoimentos.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/blog/quanto-custa-construir-quadra-poliesportiva.html",
+      "finalUrl": "https://pratikasport.com.br/pages/blog/quanto-custa-construir-quadra-poliesportiva.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 26767,
+      "sha256": "4f208b487303ee4136df561ad4e016ce096aafb0b65485b37c07d37269007f04",
+      "file": "snapshot\\pages\\blog\\quanto-custa-construir-quadra-poliesportiva.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/blog/melhor-piso-para-quadra-esportiva.html",
+      "finalUrl": "https://pratikasport.com.br/pages/blog/melhor-piso-para-quadra-esportiva.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 22003,
+      "sha256": "ff26229f01992856d8ac71af456135beb58d92dfe9316d2de403d2f62ab0b669",
+      "file": "snapshot\\pages\\blog\\melhor-piso-para-quadra-esportiva.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/blog/medidas-oficiais-quadra-poliesportiva.html",
+      "finalUrl": "https://pratikasport.com.br/pages/blog/medidas-oficiais-quadra-poliesportiva.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 20865,
+      "sha256": "f90f81cdbcd11c45d2ea88233f0811047e2637af561b2a0b390df7e867a3629d",
+      "file": "snapshot\\pages\\blog\\medidas-oficiais-quadra-poliesportiva.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/politica-privacidade.html",
+      "finalUrl": "https://pratikasport.com.br/politica-privacidade.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 6898,
+      "sha256": "07b42518a14107bc39b6e27543c062dc5ead27f1c9e6bedb5ae7a6aa99ec1059",
+      "file": "snapshot\\politica-privacidade.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/termos-servico.html",
+      "finalUrl": "https://pratikasport.com.br/termos-servico.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 8616,
+      "sha256": "4aedcb7ded27079c28f9165d9da1f80ce304e2230ff2252c419633bdbee96817",
+      "file": "snapshot\\termos-servico.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/sobre.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/sobre.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 17946,
+      "sha256": "595f6f03ca9c153d5b1da6a4b995aebd762e205884f17b2f3f2f6d982ef3a9c6",
+      "file": "snapshot\\pages\\sobre.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/contato.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/contato.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 14509,
+      "sha256": "fd2b8b81937508812885776de9fd84c724272b3fd2cd2494492f64482eb29320",
+      "file": "snapshot\\pages\\contato.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/blog.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/blog.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 13358,
+      "sha256": "8edf0b7a4ca454d6d540e8f09a3ee9df51d14e2aefb5b45dbbc635e8b42f4dd5",
+      "file": "snapshot\\pages\\blog.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/projetos.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/projetos.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15043,
+      "sha256": "58f31e21b44d7ef933de638574d7aae86bb9b3ea9ee3cc169ce1d007121831bd",
+      "file": "snapshot\\pages\\projetos.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/depoimentos.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/depoimentos.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 20769,
+      "sha256": "e70d56d842eef25ed0d501f08f08e2de49f195367aeec5d29d85e15c6f53677d",
+      "file": "snapshot\\pages\\depoimentos.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/servicos/quadras-poliesportivas.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/servicos/quadras-poliesportivas.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 14643,
+      "sha256": "657f94b683a70794471a29dbd32afc54c68466fe48c7bd98f66748fb8d00c264",
+      "file": "snapshot\\pages\\servicos\\quadras-poliesportivas.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/servicos/quadra-de-tenis.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/servicos/quadra-de-tenis.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 26166,
+      "sha256": "f4e921c34340d65f8ddcce438dbd566a2e9f7385e43b48f24c86ff79a2b9a257",
+      "file": "snapshot\\pages\\servicos\\quadra-de-tenis.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/servicos/quadra-de-beach-tennis.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/servicos/quadra-de-beach-tennis.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 25746,
+      "sha256": "db3589f1149bda224b4e9b972ccc96711f4074984dc5f613118b2cc1fcf7367e",
+      "file": "snapshot\\pages\\servicos\\quadra-de-beach-tennis.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/servicos/campo-de-futebol.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/servicos/campo-de-futebol.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 27511,
+      "sha256": "fc0f1066b6f8d31bf677b6ed4cdbb4f37c71a06098d83159c19abb83e0ef03e3",
+      "file": "snapshot\\pages\\servicos\\campo-de-futebol.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/servicos/reforma-de-quadras.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/servicos/reforma-de-quadras.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 17975,
+      "sha256": "71eb1f085cb52842c267bb534c3c2d4e4e2277cc6d5756b9ad5bd7fb608d3c3e",
+      "file": "snapshot\\pages\\servicos\\reforma-de-quadras.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/servicos/manutencao-de-quadras.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/servicos/manutencao-de-quadras.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 18945,
+      "sha256": "8d5db0530c8f4c1646e2d7dc1950b1efff45772b8e0d74e08f9213783986e8aa",
+      "file": "snapshot\\pages\\servicos\\manutencao-de-quadras.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/blog/quanto-custa-construir-quadra-poliesportiva.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/blog/quanto-custa-construir-quadra-poliesportiva.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 26767,
+      "sha256": "4f208b487303ee4136df561ad4e016ce096aafb0b65485b37c07d37269007f04",
+      "file": "snapshot\\pages\\blog\\quanto-custa-construir-quadra-poliesportiva.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/blog/melhor-piso-para-quadra-esportiva.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/blog/melhor-piso-para-quadra-esportiva.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 22003,
+      "sha256": "ff26229f01992856d8ac71af456135beb58d92dfe9316d2de403d2f62ab0b669",
+      "file": "snapshot\\pages\\blog\\melhor-piso-para-quadra-esportiva.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/blog/medidas-oficiais-quadra-poliesportiva.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/blog/medidas-oficiais-quadra-poliesportiva.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 20865,
+      "sha256": "f90f81cdbcd11c45d2ea88233f0811047e2637af561b2a0b390df7e867a3629d",
+      "file": "snapshot\\pages\\blog\\medidas-oficiais-quadra-poliesportiva.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/blog/tipos-de-piso-quadra-de-tenis.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/blog/tipos-de-piso-quadra-de-tenis.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 20801,
+      "sha256": "5e86dcffccc8a1d9e99d061948c1046ef51494dc2f64039c88032e322f93cca4",
+      "file": "snapshot\\pages\\blog\\tipos-de-piso-quadra-de-tenis.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/blog/grama-sintetica-campo-futebol.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/blog/grama-sintetica-campo-futebol.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 19604,
+      "sha256": "d907afdf8ee63d51824e390d3cb26328ff6c549719cb147c81d479636eb71467",
+      "file": "snapshot\\pages\\blog\\grama-sintetica-campo-futebol.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/blog/manutencao-quadra-beach-tennis.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/blog/manutencao-quadra-beach-tennis.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 20378,
+      "sha256": "ffa64f55248fd328b28ca1e2ac6dcceb9bba1017013a69c77cf39bfd1b910a3f",
+      "file": "snapshot\\pages\\blog\\manutencao-quadra-beach-tennis.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/acre.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/acre.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15109,
+      "sha256": "b2a7865f2b4cdc33ad465b31c739c986aa9d642c5f1556f99e19d19cb522b408",
+      "file": "snapshot\\pages\\estados\\acre.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/alagoas.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/alagoas.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15214,
+      "sha256": "cd0da7bb6d3068134a2be272876d6d77558fe7ede67bbe08d6bb9f7d1d8d9d4b",
+      "file": "snapshot\\pages\\estados\\alagoas.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/amapa.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/amapa.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15174,
+      "sha256": "0f34e9564d940e1227e651f0bfd0e04fa923ad08edc95f27bd37a5fd840023de",
+      "file": "snapshot\\pages\\estados\\amapa.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/amazonas.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/amazonas.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15245,
+      "sha256": "fd0296bb5420bb7de1cd5e374523065a748f442d7333bfdfa6a0d9659166156e",
+      "file": "snapshot\\pages\\estados\\amazonas.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/bahia.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/bahia.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15146,
+      "sha256": "c76de009447e745a9841db2c3f6efddd90418a39cef9b3ccee2e6ad4b002dd1d",
+      "file": "snapshot\\pages\\estados\\bahia.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/ceara.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/ceara.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15177,
+      "sha256": "38d021a24ac82e1baf0d10acc5beb8a99671d448ab26b97bbc4f61049942e333",
+      "file": "snapshot\\pages\\estados\\ceara.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/distrito-federal.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/distrito-federal.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15524,
+      "sha256": "030c7e9fe4696de1a8ecaaed83b4e1ca4445f1c09c27a8b503cdd06b2a800512",
+      "file": "snapshot\\pages\\estados\\distrito-federal.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/espirito-santo.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/espirito-santo.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15482,
+      "sha256": "b8294bbb44acfb08f9c82ea2250a7c4c57e02441e58ea43552ad35d932bc5fbb",
+      "file": "snapshot\\pages\\estados\\espirito-santo.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/goias.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/goias.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15181,
+      "sha256": "665a4d56a083334a5a4e9e1e60374b2ad2295759b0fde993e4817f39a65b3b6e",
+      "file": "snapshot\\pages\\estados\\goias.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/maranhao.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/maranhao.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15279,
+      "sha256": "f3ef38b6ccba75eea39fd6877dd5621fc88d2959f94ac0e02e50af45a556ac7b",
+      "file": "snapshot\\pages\\estados\\maranhao.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/mato-grosso.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/mato-grosso.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15347,
+      "sha256": "6f21035dee17c0d953582de46fbdbc917b05915f81a33cedeb2b3819898db2a1",
+      "file": "snapshot\\pages\\estados\\mato-grosso.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/mato-grosso-do-sul.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/mato-grosso-do-sul.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15592,
+      "sha256": "2b27ca23974b4b309f7216cd7719fa3272a585a2748065fa53036424b26a5557",
+      "file": "snapshot\\pages\\estados\\mato-grosso-do-sul.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/minas-gerais.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/minas-gerais.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15376,
+      "sha256": "551e633e5cc3b44e549a7182dd0940553bc286ca1bf14b4f804d90b03e6cbc96",
+      "file": "snapshot\\pages\\estados\\minas-gerais.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/para.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/para.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15133,
+      "sha256": "ccfa5378e63164b11cd84a69ca1904ba04fa3d6116489dfe80b0b3926f89470b",
+      "file": "snapshot\\pages\\estados\\para.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/paraiba.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/paraiba.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15238,
+      "sha256": "a3e907139559e1946e32d63e0bad172a6afe0fbe7f28084bccf5a19c23387e2e",
+      "file": "snapshot\\pages\\estados\\paraiba.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/parana.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/parana.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15199,
+      "sha256": "7f3ac25e52af9a54a6da26a2bfa7edcc2e93e3d81fb197a92a5a45b4452ca080",
+      "file": "snapshot\\pages\\estados\\parana.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/pernambuco.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/pernambuco.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15316,
+      "sha256": "93bd47c32fc2b5e1c20b159766ee0be2cfb44071714b2468081b95f93c99f263",
+      "file": "snapshot\\pages\\estados\\pernambuco.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/piaui.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/piaui.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15177,
+      "sha256": "7117b6d294a7a219a7ab00835e61d9f8128949a693f540fc5a4e04220f567d95",
+      "file": "snapshot\\pages\\estados\\piaui.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/rio-de-janeiro.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/rio-de-janeiro.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15451,
+      "sha256": "dd5dd943de5ccd9786006beaaf2fa8961ed188e75b8917765f3fce15a1ff79d9",
+      "file": "snapshot\\pages\\estados\\rio-de-janeiro.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/rio-grande-do-norte.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/rio-grande-do-norte.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15622,
+      "sha256": "a7edc5f170d9cdcb76ea7969f560434cc48a6a5bd2825211cfdcc94b8393c307",
+      "file": "snapshot\\pages\\estados\\rio-grande-do-norte.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/rio-grande-do-sul.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/rio-grande-do-sul.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15549,
+      "sha256": "c093203407944d2db2d0eea665623ac1baadd8e8f6a8ee9e0fa829b521d6a3f5",
+      "file": "snapshot\\pages\\estados\\rio-grande-do-sul.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/rondonia.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/rondonia.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15276,
+      "sha256": "803fddd95d593dd16793e545db627e522418a93f5e26a46629aa99f72e2ea516",
+      "file": "snapshot\\pages\\estados\\rondonia.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/roraima.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/roraima.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15211,
+      "sha256": "edb596e9c46962bdca802677ebeb1f4cc9ca26a6d97e0aae927afcccf94fa5e1",
+      "file": "snapshot\\pages\\estados\\roraima.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/santa-catarina.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/santa-catarina.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15447,
+      "sha256": "b6df7260f1c6718e2d06e1eb373845396ddba900bdc1d870f6a7026111735c61",
+      "file": "snapshot\\pages\\estados\\santa-catarina.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/sao-paulo.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/sao-paulo.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15312,
+      "sha256": "05c77b9e55a551d1d026b4c3aaf36adc4bf3c2b2ad29adb37afac241903f9b8d",
+      "file": "snapshot\\pages\\estados\\sao-paulo.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/sergipe.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/sergipe.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15214,
+      "sha256": "9e5ce2ba29b21a8db415f5da02168e60ce7de7a2e0c3e436f554dd3489eb766a",
+      "file": "snapshot\\pages\\estados\\sergipe.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/pages/estados/tocantins.html",
+      "finalUrl": "https://www.pratikasport.com.br/pages/estados/tocantins.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 15279,
+      "sha256": "7f17320afe892522cf1686eaca80209aad343e4977db49eb4049fa498f9a7b02",
+      "file": "snapshot\\pages\\estados\\tocantins.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/index.html",
+      "finalUrl": "https://www.pratikasport.com.br/index.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 60371,
+      "sha256": "39037d79e2d65a6234fa6dd9938413a8fd52afe47c7438781a62527e3c747b5b",
+      "file": "snapshot\\index.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/politica-privacidade.html",
+      "finalUrl": "https://www.pratikasport.com.br/politica-privacidade.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 6898,
+      "sha256": "07b42518a14107bc39b6e27543c062dc5ead27f1c9e6bedb5ae7a6aa99ec1059",
+      "file": "snapshot\\politica-privacidade.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/termos-servico.html",
+      "finalUrl": "https://www.pratikasport.com.br/termos-servico.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 8616,
+      "sha256": "4aedcb7ded27079c28f9165d9da1f80ce304e2230ff2252c419633bdbee96817",
+      "file": "snapshot\\termos-servico.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/blog/tipos-de-piso-quadra-de-tenis.html",
+      "finalUrl": "https://pratikasport.com.br/pages/blog/tipos-de-piso-quadra-de-tenis.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 20801,
+      "sha256": "5e86dcffccc8a1d9e99d061948c1046ef51494dc2f64039c88032e322f93cca4",
+      "file": "snapshot\\pages\\blog\\tipos-de-piso-quadra-de-tenis.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/blog/grama-sintetica-campo-futebol.html",
+      "finalUrl": "https://pratikasport.com.br/pages/blog/grama-sintetica-campo-futebol.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 19604,
+      "sha256": "d907afdf8ee63d51824e390d3cb26328ff6c549719cb147c81d479636eb71467",
+      "file": "snapshot\\pages\\blog\\grama-sintetica-campo-futebol.html"
+    },
+    {
+      "url": "https://pratikasport.com.br/pages/blog/manutencao-quadra-beach-tennis.html",
+      "finalUrl": "https://pratikasport.com.br/pages/blog/manutencao-quadra-beach-tennis.html",
+      "kind": "page",
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 20378,
+      "sha256": "ffa64f55248fd328b28ca1e2ac6dcceb9bba1017013a69c77cf39bfd1b910a3f",
+      "file": "snapshot\\pages\\blog\\manutencao-quadra-beach-tennis.html"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/construcao-de-quadras-1.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/construcao-de-quadras-1.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 89460,
+      "sha256": "0099c7074fceb6c079bb563e4d2907642b01ba788a5ed19ae434cda0d34b0f6d",
+      "file": "snapshot\\images\\construcao-de-quadras-1.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/logo.png",
+      "finalUrl": "https://pratikasport.com.br/images/logo.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 68527,
+      "sha256": "b6bccfa7949850d0511f2255a68a26dd6295098bfe6053eed8ea0b982885c3aa",
+      "file": "snapshot\\images\\logo.png"
+    },
+    {
+      "url": "https://pratikasport.com.br/css/style.css",
+      "finalUrl": "https://pratikasport.com.br/css/style.css",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 33414,
+      "sha256": "c2e55598682639d86564a06340e2fc0f159b151662772d0e9cc1aeac9a978b10",
+      "file": "snapshot\\css\\style.css"
+    },
+    {
+      "url": "https://pratikasport.com.br/js/main.js",
+      "finalUrl": "https://pratikasport.com.br/js/main.js",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 6948,
+      "sha256": "9acb5523feaaeb3b9849102c2c6168bbad29335db2c99f55b91df1aa89989359",
+      "file": "snapshot\\js\\main.js"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/construcao-de-quadras-1.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/construcao-de-quadras-1.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 89460,
+      "sha256": "0099c7074fceb6c079bb563e4d2907642b01ba788a5ed19ae434cda0d34b0f6d",
+      "file": "snapshot\\images\\construcao-de-quadras-1.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/logo-header.png",
+      "finalUrl": "https://pratikasport.com.br/images/logo-header.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 10218,
+      "sha256": "ece8d35eacc143a657448e8e35ab50068ce5be72a1068b682adbd3f723626c3b",
+      "file": "snapshot\\images\\logo-header.png"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/piso-modular-esportivo-area-interna-1.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/piso-modular-esportivo-area-interna-1.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 377793,
+      "sha256": "165863c145a26aa6689d213db5c94f6615ae624cd94a956d7ffd6e0232610980",
+      "file": "snapshot\\images\\piso-modular-esportivo-area-interna-1.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/construcao-de-quadras-1-1024x576.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/construcao-de-quadras-1-1024x576.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 60412,
+      "sha256": "1ab030bcb9948dfc222dfe07e4da6c42663cecfc1261ef6f0e32a58dbc54b07c",
+      "file": "snapshot\\images\\construcao-de-quadras-1-1024x576.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/construcao-de-quadra-de-tennis-2.jpeg",
+      "finalUrl": "https://pratikasport.com.br/images/construcao-de-quadra-de-tennis-2.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 141066,
+      "sha256": "e7004708e4d69d5afb7d11da527e210c94429f899a88d84fd40b14fa6baa47c0",
+      "file": "snapshot\\images\\construcao-de-quadra-de-tennis-2.jpeg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/quadra-beach-tennis-4.jpeg",
+      "finalUrl": "https://pratikasport.com.br/images/quadra-beach-tennis-4.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 171062,
+      "sha256": "3b1fdaabd5620c43886245efb3c5db169477224caa8a8eba0019248c4afe8741",
+      "file": "snapshot\\images\\quadra-beach-tennis-4.jpeg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/construcao-manutecao-de-campo-de-futebol-society-2.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/construcao-manutecao-de-campo-de-futebol-society-2.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 192706,
+      "sha256": "49f9a7d8fd961f43c7bdfdc734ab9dbca88d91585304c291ca1b544c25e79c2d",
+      "file": "snapshot\\images\\construcao-manutecao-de-campo-de-futebol-society-2.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/piso-modular-esportivo-area-externa-2.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/piso-modular-esportivo-area-externa-2.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 378949,
+      "sha256": "4e4a51cb2c02f39b3a98778496d324b34011c109b140b8247d961b3ba9a774d3",
+      "file": "snapshot\\images\\piso-modular-esportivo-area-externa-2.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/grama-sintetica-esportiva.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/grama-sintetica-esportiva.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 83151,
+      "sha256": "b7f4afb647dd7fc458dce6bcc6725f8c7600d47bcbf9122ad5bb41a143afc08e",
+      "file": "snapshot\\images\\grama-sintetica-esportiva.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/9-300x300.png",
+      "finalUrl": "https://pratikasport.com.br/images/9-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 5482,
+      "sha256": "bdc8c2e4105011fc87b712722be86c73f41bfbbdc994e719da63cffb1e698c7b",
+      "file": "snapshot\\images\\9-300x300.png"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/11-300x300.png",
+      "finalUrl": "https://pratikasport.com.br/images/11-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 15774,
+      "sha256": "5f25e2a36d03518496779d6db618cb9e748370c9e51a908b80cb34a2588e37d1",
+      "file": "snapshot\\images\\11-300x300.png"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/7-300x300.png",
+      "finalUrl": "https://pratikasport.com.br/images/7-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 5384,
+      "sha256": "848e37ec0fe0c8873a8c16f00f96c4147a90d80e938113fd6c3883ed215dcc5e",
+      "file": "snapshot\\images\\7-300x300.png"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/construcao-de-quadras-4.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/construcao-de-quadras-4.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 160447,
+      "sha256": "3de0e8e73f10b215597440017bcf3bf196d8a377f14e8dc5a249b1cf778feb20",
+      "file": "snapshot\\images\\construcao-de-quadras-4.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/piso-modular-esportivo-area-externa-6.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/piso-modular-esportivo-area-externa-6.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 433521,
+      "sha256": "5a285171a48e62b09f0fe0d58a20766673585af3823bc689c341f6aa472e91e5",
+      "file": "snapshot\\images\\piso-modular-esportivo-area-externa-6.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/construcao-manutecao-de-quadras-poli-esportivas-34.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/construcao-manutecao-de-quadras-poli-esportivas-34.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 133091,
+      "sha256": "26b1c949561503b8f2192882437bfecf7746c4473b6f9e05babbcc31c8211451",
+      "file": "snapshot\\images\\construcao-manutecao-de-quadras-poli-esportivas-34.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/logo.png",
+      "finalUrl": "https://www.pratikasport.com.br/images/logo.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 68527,
+      "sha256": "b6bccfa7949850d0511f2255a68a26dd6295098bfe6053eed8ea0b982885c3aa",
+      "file": "snapshot\\images\\logo.png"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/css/style.css",
+      "finalUrl": "https://www.pratikasport.com.br/css/style.css",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "text/css",
+      "bytes": 33414,
+      "sha256": "c2e55598682639d86564a06340e2fc0f159b151662772d0e9cc1aeac9a978b10",
+      "file": "snapshot\\css\\style.css"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/js/main.js",
+      "finalUrl": "https://www.pratikasport.com.br/js/main.js",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "text/javascript",
+      "bytes": 6948,
+      "sha256": "9acb5523feaaeb3b9849102c2c6168bbad29335db2c99f55b91df1aa89989359",
+      "file": "snapshot\\js\\main.js"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/logo-header.png",
+      "finalUrl": "https://www.pratikasport.com.br/images/logo-header.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 10218,
+      "sha256": "ece8d35eacc143a657448e8e35ab50068ce5be72a1068b682adbd3f723626c3b",
+      "file": "snapshot\\images\\logo-header.png"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/piso-modular-esportivo-area-interna-1.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/piso-modular-esportivo-area-interna-1.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 377793,
+      "sha256": "165863c145a26aa6689d213db5c94f6615ae624cd94a956d7ffd6e0232610980",
+      "file": "snapshot\\images\\piso-modular-esportivo-area-interna-1.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/construcao-de-quadras-1-1024x576.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/construcao-de-quadras-1-1024x576.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 60412,
+      "sha256": "1ab030bcb9948dfc222dfe07e4da6c42663cecfc1261ef6f0e32a58dbc54b07c",
+      "file": "snapshot\\images\\construcao-de-quadras-1-1024x576.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/construcao-de-quadra-de-tennis-2.jpeg",
+      "finalUrl": "https://www.pratikasport.com.br/images/construcao-de-quadra-de-tennis-2.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 141066,
+      "sha256": "e7004708e4d69d5afb7d11da527e210c94429f899a88d84fd40b14fa6baa47c0",
+      "file": "snapshot\\images\\construcao-de-quadra-de-tennis-2.jpeg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/quadra-beach-tennis-4.jpeg",
+      "finalUrl": "https://www.pratikasport.com.br/images/quadra-beach-tennis-4.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 171062,
+      "sha256": "3b1fdaabd5620c43886245efb3c5db169477224caa8a8eba0019248c4afe8741",
+      "file": "snapshot\\images\\quadra-beach-tennis-4.jpeg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/construcao-manutecao-de-campo-de-futebol-society-2.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/construcao-manutecao-de-campo-de-futebol-society-2.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 192706,
+      "sha256": "49f9a7d8fd961f43c7bdfdc734ab9dbca88d91585304c291ca1b544c25e79c2d",
+      "file": "snapshot\\images\\construcao-manutecao-de-campo-de-futebol-society-2.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/piso-modular-esportivo-area-externa-2.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/piso-modular-esportivo-area-externa-2.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 378949,
+      "sha256": "4e4a51cb2c02f39b3a98778496d324b34011c109b140b8247d961b3ba9a774d3",
+      "file": "snapshot\\images\\piso-modular-esportivo-area-externa-2.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/grama-sintetica-esportiva.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/grama-sintetica-esportiva.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 83151,
+      "sha256": "b7f4afb647dd7fc458dce6bcc6725f8c7600d47bcbf9122ad5bb41a143afc08e",
+      "file": "snapshot\\images\\grama-sintetica-esportiva.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/9-300x300.png",
+      "finalUrl": "https://www.pratikasport.com.br/images/9-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 5482,
+      "sha256": "bdc8c2e4105011fc87b712722be86c73f41bfbbdc994e719da63cffb1e698c7b",
+      "file": "snapshot\\images\\9-300x300.png"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/11-300x300.png",
+      "finalUrl": "https://www.pratikasport.com.br/images/11-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 15774,
+      "sha256": "5f25e2a36d03518496779d6db618cb9e748370c9e51a908b80cb34a2588e37d1",
+      "file": "snapshot\\images\\11-300x300.png"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/7-300x300.png",
+      "finalUrl": "https://www.pratikasport.com.br/images/7-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 5384,
+      "sha256": "848e37ec0fe0c8873a8c16f00f96c4147a90d80e938113fd6c3883ed215dcc5e",
+      "file": "snapshot\\images\\7-300x300.png"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/construcao-de-quadras-4.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/construcao-de-quadras-4.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 160447,
+      "sha256": "3de0e8e73f10b215597440017bcf3bf196d8a377f14e8dc5a249b1cf778feb20",
+      "file": "snapshot\\images\\construcao-de-quadras-4.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/piso-modular-esportivo-area-externa-6.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/piso-modular-esportivo-area-externa-6.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 433521,
+      "sha256": "5a285171a48e62b09f0fe0d58a20766673585af3823bc689c341f6aa472e91e5",
+      "file": "snapshot\\images\\piso-modular-esportivo-area-externa-6.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/construcao-manutecao-de-quadras-poli-esportivas-34.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/construcao-manutecao-de-quadras-poli-esportivas-34.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 133091,
+      "sha256": "26b1c949561503b8f2192882437bfecf7746c4473b6f9e05babbcc31c8211451",
+      "file": "snapshot\\images\\construcao-manutecao-de-quadras-poli-esportivas-34.jpg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/construcao-de-quadra-de-tennis-5.jpeg",
+      "finalUrl": "https://www.pratikasport.com.br/images/construcao-de-quadra-de-tennis-5.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 195224,
+      "sha256": "f386c3586c94374dcfef2031dda33c4c2de2c65b1ac6a9ac028318a5615c4e34",
+      "file": "snapshot\\images\\construcao-de-quadra-de-tennis-5.jpeg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/construcao-de-quadra-de-tennis-5.jpeg",
+      "finalUrl": "https://pratikasport.com.br/images/construcao-de-quadra-de-tennis-5.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 195224,
+      "sha256": "f386c3586c94374dcfef2031dda33c4c2de2c65b1ac6a9ac028318a5615c4e34",
+      "file": "snapshot\\images\\construcao-de-quadra-de-tennis-5.jpeg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/construcao-manutecao-de-campo-de-futebol-society-4.jpg",
+      "finalUrl": "https://www.pratikasport.com.br/images/construcao-manutecao-de-campo-de-futebol-society-4.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 105959,
+      "sha256": "1f434c7da406c796deac464e0c4d12dfb10338165036b79798d972051c2253b4",
+      "file": "snapshot\\images\\construcao-manutecao-de-campo-de-futebol-society-4.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/construcao-manutecao-de-campo-de-futebol-society-4.jpg",
+      "finalUrl": "https://pratikasport.com.br/images/construcao-manutecao-de-campo-de-futebol-society-4.jpg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 105959,
+      "sha256": "1f434c7da406c796deac464e0c4d12dfb10338165036b79798d972051c2253b4",
+      "file": "snapshot\\images\\construcao-manutecao-de-campo-de-futebol-society-4.jpg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/quadra-beach-tennis-14-1.jpeg",
+      "finalUrl": "https://pratikasport.com.br/images/quadra-beach-tennis-14-1.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 89804,
+      "sha256": "0cc2d69e64ebda8847e88ac1e49261c777caad719798ae4a40cd074be5e6d08b",
+      "file": "snapshot\\images\\quadra-beach-tennis-14-1.jpeg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/quadra-beach-tennis-7-1.jpeg",
+      "finalUrl": "https://pratikasport.com.br/images/quadra-beach-tennis-7-1.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 230636,
+      "sha256": "54b869343319baec608b792becbd9109c3ea3b2bd1f93ca7e6fef2ef9cb4c6c4",
+      "file": "snapshot\\images\\quadra-beach-tennis-7-1.jpeg"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/12-300x300.png",
+      "finalUrl": "https://pratikasport.com.br/images/12-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 9532,
+      "sha256": "f706453204acb7d6ee92fe6e84879a5f36ccc07a3556353bc925248e18e2bec5",
+      "file": "snapshot\\images\\12-300x300.png"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/13-300x300.png",
+      "finalUrl": "https://pratikasport.com.br/images/13-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 17060,
+      "sha256": "dab786806491faaf19ba9f536b0238e7821bd18d4373da0add3f5aeeed23119f",
+      "file": "snapshot\\images\\13-300x300.png"
+    },
+    {
+      "url": "https://pratikasport.com.br/images/14-300x300.png",
+      "finalUrl": "https://pratikasport.com.br/images/14-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 8735,
+      "sha256": "79c96a6281caa3b53926ce5d4e30e2ce0be1065ba764cde193b1d45ff18a4766",
+      "file": "snapshot\\images\\14-300x300.png"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/quadra-beach-tennis-7-1.jpeg",
+      "finalUrl": "https://www.pratikasport.com.br/images/quadra-beach-tennis-7-1.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 230636,
+      "sha256": "54b869343319baec608b792becbd9109c3ea3b2bd1f93ca7e6fef2ef9cb4c6c4",
+      "file": "snapshot\\images\\quadra-beach-tennis-7-1.jpeg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/quadra-beach-tennis-14-1.jpeg",
+      "finalUrl": "https://www.pratikasport.com.br/images/quadra-beach-tennis-14-1.jpeg",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 89804,
+      "sha256": "0cc2d69e64ebda8847e88ac1e49261c777caad719798ae4a40cd074be5e6d08b",
+      "file": "snapshot\\images\\quadra-beach-tennis-14-1.jpeg"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/12-300x300.png",
+      "finalUrl": "https://www.pratikasport.com.br/images/12-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 9532,
+      "sha256": "f706453204acb7d6ee92fe6e84879a5f36ccc07a3556353bc925248e18e2bec5",
+      "file": "snapshot\\images\\12-300x300.png"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/13-300x300.png",
+      "finalUrl": "https://www.pratikasport.com.br/images/13-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 17060,
+      "sha256": "dab786806491faaf19ba9f536b0238e7821bd18d4373da0add3f5aeeed23119f",
+      "file": "snapshot\\images\\13-300x300.png"
+    },
+    {
+      "url": "https://www.pratikasport.com.br/images/14-300x300.png",
+      "finalUrl": "https://www.pratikasport.com.br/images/14-300x300.png",
+      "kind": "asset",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 8735,
+      "sha256": "79c96a6281caa3b53926ce5d4e30e2ce0be1065ba764cde193b1d45ff18a4766",
+      "file": "snapshot\\images\\14-300x300.png"
+    }
+  ],
+  "errors": []
+}
