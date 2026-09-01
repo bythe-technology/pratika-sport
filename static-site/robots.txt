@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Ambiente temporario de homologacao. O sitemap oficial sera ativado no dominio final.
