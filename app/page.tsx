@@ -215,7 +215,7 @@ export default function Home() {
             <div className="hero-actions">
               <a
                 className="btn btn-primary"
-                href="https://wa.me/551391919194?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20e%20or%C3%A7amento%20para%20meu%20projeto."
+                href="https://wa.me/5515997157642?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20e%20or%C3%A7amento%20para%20meu%20projeto."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -241,7 +241,7 @@ export default function Home() {
               </a>
 
               <a
-                href="https://wa.me/551391919194?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20da%20Pratika%20Sport."
+                href="https://wa.me/5515997157642?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20da%20Pratika%20Sport."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-social-link"
@@ -343,7 +343,7 @@ export default function Home() {
                     </Link>
 
                     <a
-                      href={`https://wa.me/551391919194?text=${encodeURIComponent(service.waText)}`}
+                      href={`https://wa.me/5515997157642?text=${encodeURIComponent(service.waText)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="service-card-action"
@@ -506,8 +506,8 @@ export default function Home() {
               Especialistas em construção, reforma e revitalização de quadras esportivas, campos society e pisos modulares em todo o Brasil.
             </p>
             <div className="footer-contact-items">
-              <a href="tel:+551391919194" className="footer-contact-link">
-                <Phone size={15} /> (13) 9191-9194
+              <a href="tel:+5515997157642" className="footer-contact-link">
+                <Phone size={15} /> (15) 99715-7642
               </a>
               <span className="footer-contact-link">
                 <MapPin size={15} /> São Paulo · Atendimento Nacional
@@ -525,7 +525,7 @@ export default function Home() {
                 <Camera size={17} />
               </a>
               <a
-                href="https://wa.me/551391919194?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20da%20Pratika%20Sport."
+                href="https://wa.me/5515997157642?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20da%20Pratika%20Sport."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"

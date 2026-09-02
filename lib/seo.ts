@@ -1,8 +1,8 @@
 export const siteUrl = 'https://www.pratikasport.com.br';
 
 export const contact = {
-  phone: '+551391919194',
-  displayPhone: '(13) 9191-9194',
+  phone: '+5515997157642',
+  displayPhone: '(15) 99715-7642',
   email: 'contatosuperquadras@gmail.com',
   instagram: 'https://www.instagram.com/pratikasport.com.br/',
 };

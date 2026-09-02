@@ -34,7 +34,7 @@ export default function QuoteForm() {
       `📝 *Detalhes:* ${details || 'Gostaria de saber mais sobre prazos, custos e opções.'}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/551391919194?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/5515997157642?text=${encodedMessage}`;
 
     setTimeout(() => {
       window.open(whatsappUrl, '_blank');
@@ -55,11 +55,11 @@ export default function QuoteForm() {
         </p>
 
         <div className="quote-direct-cards">
-          <a href="tel:+551391919194" className="direct-card">
+          <a href="tel:+5515997157642" className="direct-card">
             <div className="direct-icon"><Phone size={20} /></div>
             <div>
               <span className="direct-label">Ligue agora</span>
-              <strong className="direct-val">(13) 9191-9194</strong>
+              <strong className="direct-val">(15) 99715-7642</strong>
             </div>
           </a>
 

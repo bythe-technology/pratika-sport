@@ -71,7 +71,7 @@ export default function SiteHeader() {
         {/* CTA Button & Mobile Toggle */}
         <div className="floating-actions">
           <a
-            href="https://wa.me/551391919194?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20quadra%20esportiva."
+            href="https://wa.me/5515997157642?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20quadra%20esportiva."
             target="_blank"
             rel="noopener noreferrer"
             className="floating-cta-btn"
@@ -138,12 +138,12 @@ export default function SiteHeader() {
 
           <div className="floating-mobile-footer">
             <div className="mobile-contact-chips">
-              <a href="tel:+551391919194" className="mobile-chip phone-chip">
+              <a href="tel:+5515997157642" className="mobile-chip phone-chip">
                 <Phone size={15} />
-                <span>(13) 9191-9194</span>
+                <span>(15) 99715-7642</span>
               </a>
               <a
-                href="https://wa.me/551391919194?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20da%20Pratika%20Sport."
+                href="https://wa.me/5515997157642?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20da%20Pratika%20Sport."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mobile-chip wa-chip"

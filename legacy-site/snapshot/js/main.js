@@ -195,7 +195,7 @@ Nome: ${nome}
 Telefone: ${telefone}
 Mensagem: ${mensagem}`;
 
-      const numero = '551391919194';
+      const numero = '5515997157642';
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
       window.open(url, '_blank');
