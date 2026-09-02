@@ -9,6 +9,3 @@ await mkdir(output, { recursive: true });
 await cp(resolve(root, 'legacy-site', 'snapshot'), output, { recursive: true });
 await cp(resolve(root, 'static-site'), output, { recursive: true });
 await cp(resolve(root, 'public', 'images'), resolve(output, 'images'), { recursive: true });
-await cp(resolve(root, 'public', 'favicon.png'), resolve(output, 'favicon.png'));
-await cp(resolve(root, 'public', 'apple-touch-icon.png'), resolve(output, 'apple-touch-icon.png'));
-await cp(resolve(root, 'public', 'icon.png'), resolve(output, 'icon.png'));
