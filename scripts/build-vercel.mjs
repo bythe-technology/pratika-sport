@@ -35,10 +35,12 @@ const urls = htmlFiles
   .map((file) => file.slice(output.length).replaceAll('\\', '/'))
   .map((path) => path === '/index.html' ? '/' : path)
   .filter((path) => !path.includes('/404'))
+  .filter((path) => !path.startsWith('/pages/estados/') || path === '/pages/estados/sao-paulo.html')
   .sort((a, b) => a.localeCompare(b));
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls.map((path) => `  <url>
     <loc>${xmlEscape(`${canonicalBase}${path}`)}</loc>
     <lastmod>${updatedAt}</lastmod>
