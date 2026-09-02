@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import StructuredData from '@/components/StructuredData';
+import { organizationSchema, siteUrl, websiteSchema } from '@/lib/seo';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -12,10 +14,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.pratikasport.com.br'),
+  metadataBase: new URL(siteUrl),
   applicationName: 'Pratika Sport',
-  title: 'Pratika Sport | Construção e Reforma de Quadras Esportivas',
-  description: 'Construção, reforma e manutenção de quadras poliesportivas, tênis, beach tennis e campos de futebol society. Atendimento em todo o Brasil.',
+  title: {
+    default: 'Construção e Reforma de Quadras em SP | Pratika Sport',
+    template: '%s | Pratika Sport',
+  },
+  description: 'Construção, reforma e manutenção de quadras esportivas em São Paulo e todo o Brasil. Poliesportivas, tênis, beach tennis, society e pisos. Peça uma avaliação.',
   keywords: [
     'Pratika Sport',
     'construção de quadra esportiva',
@@ -25,15 +30,24 @@ export const metadata: Metadata = {
     'beach tennis',
     'campo de futebol society',
     'piso esportivo',
+    'construção de quadras em São Paulo',
+    'reforma de quadras em São Paulo',
+    'manutenção de quadras em São Paulo',
     'atendimento nacional',
   ],
+  authors: [{ name: 'Pratika Sport', url: siteUrl }],
+  creator: 'Pratika Sport',
+  publisher: 'Pratika Sport',
+  category: 'Construção e manutenção de instalações esportivas',
+  formatDetection: { email: false, address: false, telephone: false },
   alternates: {
     canonical: '/',
+    languages: { 'pt-BR': '/' },
   },
   openGraph: {
-    title: 'Pratika Sport | Construção e Reforma de Quadras Esportivas',
-    description: 'Especialistas em construção, reforma e manutenção de quadras esportivas em todo o Brasil.',
-    url: 'https://www.pratikasport.com.br',
+    title: 'Construção e Reforma de Quadras em SP | Pratika Sport',
+    description: 'Projetos completos de construção, reforma e manutenção de quadras esportivas em São Paulo e todo o Brasil.',
+    url: siteUrl,
     siteName: 'Pratika Sport',
     locale: 'pt_BR',
     type: 'website',
@@ -48,8 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pratika Sport | Construção e Reforma de Quadras Esportivas',
-    description: 'Especialistas em construção, reforma e manutenção de quadras esportivas em todo o Brasil.',
+    title: 'Construção e Reforma de Quadras em SP | Pratika Sport',
+    description: 'Projetos completos de quadras esportivas em São Paulo e todo o Brasil.',
     images: ['/images/construcao-de-quadras-1.jpg'],
   },
   robots: {
@@ -74,6 +88,11 @@ export const metadata: Metadata = {
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
+  manifest: '/site.webmanifest',
+  other: {
+    'geo.region': 'BR-SP',
+    'geo.placename': 'São Paulo',
+  },
 };
 
 export default function RootLayout({
@@ -87,6 +106,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <StructuredData data={[organizationSchema, websiteSchema]} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}

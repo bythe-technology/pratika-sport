@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   ArrowRight,
   CheckCircle2,
@@ -21,6 +22,8 @@ import SiteHeader from '@/components/SiteHeader';
 import QuoteForm from '@/components/QuoteForm';
 import FaqSection from '@/components/FaqSection';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import StructuredData from '@/components/StructuredData';
+import { faqSchema, serviceSchema } from '@/lib/seo';
 
 const services = [
   {
@@ -28,6 +31,7 @@ const services = [
     category: 'Multiuso & Condomínios',
     description: 'Projetadas para futsal, basquete, vôlei e handebol com piso de alta absorção de impacto, iluminação LED e alambrados reforçados.',
     image: '/images/hero-quadra.jpg',
+    href: '/pages/servicos/quadras-poliesportivas.html',
     waText: 'Olá! Gostaria de um orçamento para construção ou reforma de Quadra Poliesportiva.',
   },
   {
@@ -35,6 +39,7 @@ const services = [
     category: 'Oficial & Recreativo',
     description: 'Superfícies em saibro tradicional, piso rápido acrílico ou grama sintética, respeitando normas técnicas da CBT e ITF.',
     image: '/images/quadra-tenis.jpg',
+    href: '/pages/servicos/quadra-de-tenis.html',
     waText: 'Olá! Gostaria de um orçamento para Quadra de Tênis.',
   },
   {
@@ -42,6 +47,7 @@ const services = [
     category: 'Modalidades de Areia',
     description: 'Sistema completo com drenagem profunda, areia tratada de granulometria ideal, cercamentos e postes oficiais.',
     image: '/images/beach-tennis.jpeg',
+    href: '/pages/servicos/quadra-de-beach-tennis.html',
     waText: 'Olá! Gostaria de um orçamento para Quadra de Beach Tennis.',
   },
   {
@@ -49,6 +55,7 @@ const services = [
     category: 'Grama Sintética',
     description: 'Grama sintética monofilamento de alta densidade com base amortecedora, drenagem ágil e fechamento perimetral com redes.',
     image: '/images/campo-futebol.jpg',
+    href: '/pages/servicos/campo-de-futebol.html',
     waText: 'Olá! Gostaria de um orçamento para Campo de Futebol Society.',
   },
   {
@@ -56,6 +63,7 @@ const services = [
     category: 'Interno e Externo',
     description: 'Placas modulares em polipropileno de alta resistência, antiderrapantes, com drenagem instantânea e proteção UV.',
     image: '/images/piso-modular-esportivo-area-externa-2.jpg',
+    href: '/pages/blog/melhor-piso-para-quadra-esportiva.html',
     waText: 'Olá! Gostaria de informações sobre Piso Modular Esportivo.',
   },
   {
@@ -63,6 +71,7 @@ const services = [
     category: 'Manutenção & Pintura',
     description: 'Correção de fissuras, regularização de base, pintura epóxi/acrílica, demarcação técnica e troca de acessórios esportivos.',
     image: '/images/construcao-de-quadras-4.jpg',
+    href: '/pages/servicos/reforma-de-quadras.html',
     waText: 'Olá! Gostaria de um diagnóstico e orçamento para Reforma de Quadra.',
   },
 ];
@@ -171,6 +180,7 @@ const testimonials = [
 export default function Home() {
   return (
     <div className="site-wrapper">
+      <StructuredData data={[serviceSchema, faqSchema]} />
       <a className="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
       {/* Responsive Sticky Header */}
       <SiteHeader />
@@ -199,7 +209,7 @@ export default function Home() {
             </h1>
 
             <p className="hero-description">
-              Soluções completas de engenharia esportiva para condomínios, clubes, escolas, centros de treinamento, empresas e residências em todo o Brasil.
+              Construção, reforma e manutenção de quadras esportivas em São Paulo e todo o Brasil para condomínios, clubes, escolas, centros de treinamento, empresas e residências.
             </p>
 
             <div className="hero-actions">
@@ -253,7 +263,7 @@ export default function Home() {
               </div>
               <div className="hero-highlight-item">
                 <MapPin size={18} className="text-accent" />
-                <span>Atendimento Nacional</span>
+                <span>Prioridade em São Paulo · Atendimento Nacional</span>
               </div>
             </div>
           </div>
@@ -282,7 +292,7 @@ export default function Home() {
               <div className="trust-icon-box"><MapPin size={24} /></div>
               <div>
                 <strong className="trust-number">26 Estados</strong>
-                <p className="trust-label">Atendimento em todo o Brasil</p>
+                <p className="trust-label">Prioridade em São Paulo e atendimento nacional</p>
               </div>
             </div>
 
@@ -327,6 +337,10 @@ export default function Home() {
                   <div className="service-card-body">
                     <h3 className="service-card-title">{service.title}</h3>
                     <p className="service-card-desc">{service.description}</p>
+
+                    <Link className="service-details-link" href={service.href}>
+                      Ver detalhes técnicos sobre {service.title.toLowerCase()}
+                    </Link>
 
                     <a
                       href={`https://wa.me/551391919194?text=${encodeURIComponent(service.waText)}`}
@@ -538,12 +552,13 @@ export default function Home() {
           <div className="footer-links-col">
             <h4 className="footer-col-title">Modalidades</h4>
             <ul className="footer-links-list">
-              <li><a href="#servicos">Quadras Poliesportivas</a></li>
-              <li><a href="#servicos">Quadras de Tênis</a></li>
-              <li><a href="#servicos">Beach Tennis</a></li>
-              <li><a href="#servicos">Campos de Futebol Society</a></li>
-              <li><a href="#servicos">Pisos Modulares</a></li>
-              <li><a href="#servicos">Reforma & Pintura</a></li>
+              <li><Link href="/pages/servicos/quadras-poliesportivas.html">Quadras Poliesportivas</Link></li>
+              <li><Link href="/pages/servicos/quadra-de-tenis.html">Quadras de Tênis</Link></li>
+              <li><Link href="/pages/servicos/quadra-de-beach-tennis.html">Beach Tennis</Link></li>
+              <li><Link href="/pages/servicos/campo-de-futebol.html">Campos de Futebol Society</Link></li>
+              <li><Link href="/pages/blog/melhor-piso-para-quadra-esportiva.html">Pisos Esportivos</Link></li>
+              <li><Link href="/pages/servicos/reforma-de-quadras.html">Reforma & Pintura</Link></li>
+              <li><Link href="/pages/estados/sao-paulo.html">Atendimento em São Paulo</Link></li>
             </ul>
           </div>
         </div>
