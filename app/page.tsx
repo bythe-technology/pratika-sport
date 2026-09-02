@@ -2,7 +2,6 @@ import Image from 'next/image';
 import {
   ArrowRight,
   CheckCircle2,
-  Clock3,
   MapPin,
   Phone,
   ShieldCheck,
@@ -155,15 +154,28 @@ const testimonials = [
     image: '/images/12-300x300.png',
     text: 'O campo society construído pela Pratika é referência na nossa cidade. A grama sintética de alta densidade e o amortecimento recebem elogios diários dos clientes.',
   },
+  {
+    name: 'Mariana Santos',
+    role: 'Administradora — Hotel Fazenda',
+    image: '/images/13-300x300.png',
+    text: 'Profissionalismo exemplar! Desde o primeiro contato até a entrega, tudo foi feito com muita competência. Nossa quadra de tênis ficou incrível!',
+  },
+  {
+    name: 'Paulo Ricardo',
+    role: 'Presidente — Country Club',
+    image: '/images/14-300x300.png',
+    text: 'Construímos três quadras de beach tennis e o retorno foi imediato. Os associados adoraram! A Pratika Sport entregou tudo conforme prometido.',
+  },
 ];
 
 export default function Home() {
   return (
     <div className="site-wrapper">
+      <a className="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
       {/* Responsive Sticky Header */}
       <SiteHeader />
 
-      <main>
+      <main id="conteudo-principal">
         {/* HERO SECTION */}
         <section className="hero" id="inicio">
           <Image

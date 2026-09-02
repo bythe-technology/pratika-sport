@@ -69,17 +69,19 @@ export default function FaqSection() {
                   onClick={() => toggle(idx)}
                   className="faq-question-btn"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${idx}`}
+                  id={`faq-question-${idx}`}
                 >
                   <span className="faq-q-text">{faq.question}</span>
-                  <div className={`faq-icon-wrapper ${isOpen ? 'rotate' : ''}`}>
+                  <span className={`faq-icon-wrapper ${isOpen ? 'rotate' : ''}`} aria-hidden="true">
                     <ChevronDown size={20} />
-                  </div>
+                  </span>
                 </button>
-                <div className={`faq-answer-collapse ${isOpen ? 'show' : ''}`}>
+                <section id={`faq-answer-${idx}`} aria-labelledby={`faq-question-${idx}`} className={`faq-answer-collapse ${isOpen ? 'show' : ''}`}>
                   <div className="faq-answer-content">
                     <p>{faq.answer}</p>
                   </div>
-                </div>
+                </section>
               </div>
             );
           })}

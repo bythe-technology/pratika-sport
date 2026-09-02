@@ -88,9 +88,11 @@ export default function QuoteForm() {
               <label htmlFor="quote-name">Nome / Empresa / Condomínio *</label>
               <input
                 id="quote-name"
+                name="name"
                 type="text"
                 required
-                placeholder="Ex: Carlos Silva / Condomínio Palmeiras"
+                autoComplete="name"
+                placeholder="Ex.: Carlos Silva / Condomínio Palmeiras"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="form-input"
@@ -101,8 +103,11 @@ export default function QuoteForm() {
               <label htmlFor="quote-phone">WhatsApp ou Telefone *</label>
               <input
                 id="quote-phone"
+                name="phone"
                 type="tel"
                 required
+                autoComplete="tel"
+                inputMode="tel"
                 placeholder="(13) 99999-9999"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -116,9 +121,11 @@ export default function QuoteForm() {
               <label htmlFor="quote-city">Cidade e Estado (UF) *</label>
               <input
                 id="quote-city"
+                name="city"
                 type="text"
                 required
-                placeholder="Ex: Santos / SP"
+                autoComplete="address-level2"
+                placeholder="Ex.: Santos / SP"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 className="form-input"
@@ -129,6 +136,7 @@ export default function QuoteForm() {
               <label htmlFor="quote-sport">Modalidade do Projeto *</label>
               <select
                 id="quote-sport"
+                name="sport"
                 value={sport}
                 onChange={(e) => setSport(e.target.value)}
                 className="form-select"
@@ -146,8 +154,9 @@ export default function QuoteForm() {
             </label>
             <textarea
               id="quote-details"
+              name="details"
               rows={3}
-              placeholder="Ex: Terreno plano de 18x36m para condomínio residencial, previsão de início em 30 dias..."
+              placeholder="Ex.: terreno plano de 18 × 36 m para condomínio residencial, com início previsto em 30 dias…"
               value={details}
               onChange={(e) => setDetails(e.target.value)}
               className="form-textarea"

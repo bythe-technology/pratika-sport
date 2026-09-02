@@ -16,6 +16,18 @@ export default function SiteHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMobileMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleEscape);
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const toggleMenu = () => setMobileMenuOpen(prev => !prev);
   const closeMenu = () => setMobileMenuOpen(false);
 
@@ -74,6 +86,7 @@ export default function SiteHeader() {
             onClick={toggleMenu}
             aria-label={mobileMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
             aria-expanded={mobileMenuOpen}
+            aria-controls="menu-navegacao-mobile"
           >
             {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -81,7 +94,7 @@ export default function SiteHeader() {
       </header>
 
       {/* Floating Mobile Menu Dropdown */}
-      <div className={`floating-mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+      <div id="menu-navegacao-mobile" className={`floating-mobile-menu ${mobileMenuOpen ? 'open' : ''}`} aria-hidden={!mobileMenuOpen}>
         <div className="floating-mobile-card">
           <div className="mobile-card-gradient-bar" />
           
