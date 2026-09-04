@@ -2,6 +2,13 @@
   "buildCommand": "npm run build && node scripts/build-vercel.mjs",
   "outputDirectory": "dist/client",
   "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/pages/estados/sao-paulo.html",
+      "destination": "/pages/estados/sao-paulo",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -558,7 +558,7 @@ export default function Home() {
               <li><Link href="/pages/servicos/campo-de-futebol.html">Campos de Futebol Society</Link></li>
               <li><Link href="/pages/blog/melhor-piso-para-quadra-esportiva.html">Pisos Esportivos</Link></li>
               <li><Link href="/pages/servicos/reforma-de-quadras.html">Reforma & Pintura</Link></li>
-              <li><Link href="/pages/estados/sao-paulo.html">Atendimento em São Paulo</Link></li>
+              <li><Link href="/pages/estados/sao-paulo">Atendimento em São Paulo</Link></li>
             </ul>
           </div>
         </div>

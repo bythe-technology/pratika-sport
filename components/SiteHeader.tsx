@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Menu, X, MessageCircle, Phone, ArrowUpRight, Sparkles } from 'lucide-react';
 
 export default function SiteHeader() {
@@ -66,6 +67,9 @@ export default function SiteHeader() {
           <a href="#faq" className="floating-nav-link">
             <span>Dúvidas</span>
           </a>
+          <Link href="/pages/estados/sao-paulo" className="floating-nav-link">
+            <span>São Paulo</span>
+          </Link>
         </nav>
 
         {/* CTA Button & Mobile Toggle */}
@@ -127,6 +131,10 @@ export default function SiteHeader() {
               <span>Perguntas Frequentes</span>
               <ArrowUpRight size={17} className="mobile-link-arrow" />
             </a>
+            <Link href="/pages/estados/sao-paulo" onClick={closeMenu} className="floating-mobile-link">
+              <span>São Paulo</span>
+              <ArrowUpRight size={17} className="mobile-link-arrow" />
+            </Link>
             <a href="#orcamento" onClick={closeMenu} className="floating-mobile-link highlight-gradient">
               <span className="flex items-center gap-2">
                 <Sparkles size={16} />
