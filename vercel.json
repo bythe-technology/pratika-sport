@@ -9,6 +9,12 @@
       "permanent": true
     }
   ],
+  "rewrites": [
+    {
+      "source": "/pages/estados/sao-paulo",
+      "destination": "/pages/estados/sao-paulo.html.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
