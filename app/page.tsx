@@ -29,15 +29,18 @@ const services = [
   {
     title: 'Quadras Poliesportivas',
     category: 'Multiuso & Condomínios',
-    description: 'Projetadas para futsal, basquete, vôlei e handebol com piso de alta absorção de impacto, iluminação LED e alambrados reforçados.',
+    description:
+      'Projetadas para futsal, basquete, vôlei e handebol com piso de alta absorção de impacto, iluminação LED e alambrados reforçados.',
     image: '/images/hero-quadra.jpg',
     href: '/pages/servicos/quadras-poliesportivas.html',
-    waText: 'Olá! Gostaria de um orçamento para construção ou reforma de Quadra Poliesportiva.',
+    waText:
+      'Olá! Gostaria de um orçamento para construção ou reforma de Quadra Poliesportiva.',
   },
   {
     title: 'Quadras de Tênis',
     category: 'Oficial & Recreativo',
-    description: 'Superfícies em saibro tradicional, piso rápido acrílico ou grama sintética, respeitando normas técnicas da CBT e ITF.',
+    description:
+      'Superfícies em saibro tradicional, piso rápido acrílico ou grama sintética, respeitando normas técnicas da CBT e ITF.',
     image: '/images/quadra-tenis.jpg',
     href: '/pages/servicos/quadra-de-tenis.html',
     waText: 'Olá! Gostaria de um orçamento para Quadra de Tênis.',
@@ -45,7 +48,8 @@ const services = [
   {
     title: 'Beach Tennis & Areia',
     category: 'Modalidades de Areia',
-    description: 'Sistema completo com drenagem profunda, areia tratada de granulometria ideal, cercamentos e postes oficiais.',
+    description:
+      'Sistema completo com drenagem profunda, areia tratada de granulometria ideal, cercamentos e postes oficiais.',
     image: '/images/beach-tennis.jpeg',
     href: '/pages/servicos/quadra-de-beach-tennis.html',
     waText: 'Olá! Gostaria de um orçamento para Quadra de Beach Tennis.',
@@ -53,7 +57,8 @@ const services = [
   {
     title: 'Campos de Futebol Society',
     category: 'Grama Sintética',
-    description: 'Grama sintética monofilamento de alta densidade com base amortecedora, drenagem ágil e fechamento perimetral com redes.',
+    description:
+      'Grama sintética monofilamento de alta densidade com base amortecedora, drenagem ágil e fechamento perimetral com redes.',
     image: '/images/campo-futebol.jpg',
     href: '/pages/servicos/campo-de-futebol.html',
     waText: 'Olá! Gostaria de um orçamento para Campo de Futebol Society.',
@@ -61,7 +66,8 @@ const services = [
   {
     title: 'Pisos Modulares Esportivos',
     category: 'Interno e Externo',
-    description: 'Placas modulares em polipropileno de alta resistência, antiderrapantes, com drenagem instantânea e proteção UV.',
+    description:
+      'Placas modulares em polipropileno de alta resistência, antiderrapantes, com drenagem instantânea e proteção UV.',
     image: '/images/piso-modular-esportivo-area-externa-2.jpg',
     href: '/pages/blog/melhor-piso-para-quadra-esportiva.html',
     waText: 'Olá! Gostaria de informações sobre Piso Modular Esportivo.',
@@ -69,10 +75,12 @@ const services = [
   {
     title: 'Reforma e Revitalização',
     category: 'Manutenção & Pintura',
-    description: 'Correção de fissuras, regularização de base, pintura epóxi/acrílica, demarcação técnica e troca de acessórios esportivos.',
+    description:
+      'Correção de fissuras, regularização de base, pintura epóxi/acrílica, demarcação técnica e troca de acessórios esportivos.',
     image: '/images/construcao-de-quadras-4.jpg',
     href: '/pages/servicos/reforma-de-quadras.html',
-    waText: 'Olá! Gostaria de um diagnóstico e orçamento para Reforma de Quadra.',
+    waText:
+      'Olá! Gostaria de um diagnóstico e orçamento para Reforma de Quadra.',
   },
 ];
 
@@ -181,7 +189,9 @@ export default function Home() {
   return (
     <div className="site-wrapper">
       <StructuredData data={[serviceSchema, faqSchema]} />
-      <a className="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+      <a className="skip-link" href="#conteudo-principal">
+        Pular para o conteúdo principal
+      </a>
       {/* Responsive Sticky Header */}
       <SiteHeader />
 
@@ -209,7 +219,10 @@ export default function Home() {
             </h1>
 
             <p className="hero-description">
-              Construção, reforma e manutenção de quadras esportivas em São Paulo e todo o Brasil para condomínios, clubes, escolas, centros de treinamento, empresas e residências.
+              Construção, reforma e manutenção de quadras esportivas em todo o
+              Brasil para condomínios, clubes, escolas, centros de treinamento,
+              empresas e residências, com prioridade operacional no estado de
+              São Paulo.
             </p>
 
             <div className="hero-actions">
@@ -228,7 +241,10 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="hero-socials" aria-label="Redes sociais da Pratika Sport">
+            <div
+              className="hero-socials"
+              aria-label="Redes sociais da Pratika Sport"
+            >
               <a
                 href="https://www.instagram.com/pratikasport.com.br/"
                 target="_blank"
@@ -263,17 +279,25 @@ export default function Home() {
               </div>
               <div className="hero-highlight-item">
                 <MapPin size={18} className="text-accent" />
-                <span>Prioridade em São Paulo · Atendimento Nacional</span>
+                <span>
+                  Atendimento Nacional · Prioridade no Estado de São Paulo
+                </span>
               </div>
             </div>
           </div>
         </section>
 
         {/* TRUST STRIP METRICS */}
-        <section className="trust-strip" id="diferenciais" aria-label="Métricas e Diferenciais">
+        <section
+          className="trust-strip"
+          id="diferenciais"
+          aria-label="Métricas e Diferenciais"
+        >
           <div className="trust-grid">
             <div className="trust-card">
-              <div className="trust-icon-box"><Award size={24} /></div>
+              <div className="trust-icon-box">
+                <Award size={24} />
+              </div>
               <div>
                 <strong className="trust-number">+20 Anos</strong>
                 <p className="trust-label">De experiência e solidez técnica</p>
@@ -281,7 +305,9 @@ export default function Home() {
             </div>
 
             <div className="trust-card">
-              <div className="trust-icon-box"><FileCheck2 size={24} /></div>
+              <div className="trust-icon-box">
+                <FileCheck2 size={24} />
+              </div>
               <div>
                 <strong className="trust-number">+850 Obras</strong>
                 <p className="trust-label">Quadras e campos entregues</p>
@@ -289,18 +315,26 @@ export default function Home() {
             </div>
 
             <div className="trust-card">
-              <div className="trust-icon-box"><MapPin size={24} /></div>
+              <div className="trust-icon-box">
+                <MapPin size={24} />
+              </div>
               <div>
-                <strong className="trust-number">26 Estados</strong>
-                <p className="trust-label">Prioridade em São Paulo e atendimento nacional</p>
+                <strong className="trust-number">Todo o Brasil</strong>
+                <p className="trust-label">
+                  Prioridade operacional no estado de São Paulo
+                </p>
               </div>
             </div>
 
             <div className="trust-card">
-              <div className="trust-icon-box"><ShieldCheck size={24} /></div>
+              <div className="trust-icon-box">
+                <ShieldCheck size={24} />
+              </div>
               <div>
                 <strong className="trust-number">100% Garantia</strong>
-                <p className="trust-label">Materiais homologados de alta durabilidade</p>
+                <p className="trust-label">
+                  Materiais homologados de alta durabilidade
+                </p>
               </div>
             </div>
           </div>
@@ -312,10 +346,14 @@ export default function Home() {
             <div className="section-header-block">
               <div>
                 <span className="section-eyebrow">Nossas Especialidades</span>
-                <h2 className="section-title">Estruturas feitas para durar, jogar e encantar.</h2>
+                <h2 className="section-title">
+                  Estruturas feitas para durar, jogar e encantar.
+                </h2>
               </div>
               <p className="section-subtitle">
-                Do planejamento inicial à demarcação final: oferecemos soluções completas com materiais certificados e mão de obra especializada para cada modalidade.
+                Do planejamento inicial à demarcação final: oferecemos soluções
+                completas com materiais certificados e mão de obra especializada
+                para cada modalidade.
               </p>
             </div>
 
@@ -363,11 +401,16 @@ export default function Home() {
           <div className="section-container">
             <div className="section-header-block text-light">
               <div>
-                <span className="section-eyebrow text-accent">Pisos & Revestimentos</span>
-                <h2 className="section-title text-white">A superfície certa para cada intensidade de jogo.</h2>
+                <span className="section-eyebrow text-accent">
+                  Pisos & Revestimentos
+                </span>
+                <h2 className="section-title text-white">
+                  A superfície certa para cada intensidade de jogo.
+                </h2>
               </div>
               <p className="section-subtitle text-slate-300">
-                A escolha do piso define a drenagem, amortecimento, manutenção e a velocidade da partida. Conheça as opções que instalamos:
+                A escolha do piso define a drenagem, amortecimento, manutenção e
+                a velocidade da partida. Conheça as opções que instalamos:
               </p>
             </div>
 
@@ -393,10 +436,14 @@ export default function Home() {
             <div className="section-header-block">
               <div>
                 <span className="section-eyebrow">Metodologia Construtiva</span>
-                <h2 className="section-title">Da primeira conversa à quadra pronta para o jogo.</h2>
+                <h2 className="section-title">
+                  Da primeira conversa à quadra pronta para o jogo.
+                </h2>
               </div>
               <p className="section-subtitle">
-                Nosso processo evita retrabalho, surpresas orçamentárias e garante conformidade com as dimensões e normas das federações esportivas.
+                Nosso processo evita retrabalho, surpresas orçamentárias e
+                garante conformidade com as dimensões e normas das federações
+                esportivas.
               </p>
             </div>
 
@@ -418,16 +465,30 @@ export default function Home() {
             <div className="audience-card-wrapper">
               <div className="audience-header">
                 <span className="section-eyebrow">Segmentos Atendidos</span>
-                <h2 className="audience-title">Projetos sob medida para cada tipo de cliente</h2>
+                <h2 className="audience-title">
+                  Projetos sob medida para cada tipo de cliente
+                </h2>
               </div>
 
               <div className="audience-tags">
-                <div className="audience-pill"><Building2 size={16} /> Condomínios Residenciais</div>
-                <div className="audience-pill"><Users size={16} /> Clubes Esportivos & Associações</div>
-                <div className="audience-pill"><Award size={16} /> Arenas & Centros de Treinamento</div>
-                <div className="audience-pill"><HardHat size={16} /> Construtoras & Incorporadoras</div>
-                <div className="audience-pill"><Compass size={16} /> Escolas, Faculdades & Universidades</div>
-                <div className="audience-pill"><MapPin size={16} /> Hotéis, Resorts & Espaços Públicos</div>
+                <div className="audience-pill">
+                  <Building2 size={16} /> Condomínios Residenciais
+                </div>
+                <div className="audience-pill">
+                  <Users size={16} /> Clubes Esportivos & Associações
+                </div>
+                <div className="audience-pill">
+                  <Award size={16} /> Arenas & Centros de Treinamento
+                </div>
+                <div className="audience-pill">
+                  <HardHat size={16} /> Construtoras & Incorporadoras
+                </div>
+                <div className="audience-pill">
+                  <Compass size={16} /> Escolas, Faculdades & Universidades
+                </div>
+                <div className="audience-pill">
+                  <MapPin size={16} /> Hotéis, Resorts & Espaços Públicos
+                </div>
               </div>
             </div>
           </div>
@@ -439,20 +500,37 @@ export default function Home() {
             <div className="section-header-block">
               <div>
                 <span className="section-eyebrow">Depoimentos & Confiança</span>
-                <h2 className="section-title">O que dizem os clientes da Pratika Sport.</h2>
+                <h2 className="section-title">
+                  O que dizem os clientes da Pratika Sport.
+                </h2>
               </div>
               <p className="section-subtitle">
-                Mais de duas décadas construindo parcerias duradouras com síndicos, diretores de clubes e investidores esportivos.
+                Mais de duas décadas construindo parcerias duradouras com
+                síndicos, diretores de clubes e investidores esportivos.
               </p>
             </div>
 
-            <div className="testimonials-marquee" aria-label="Carrossel de depoimentos">
+            <div
+              className="testimonials-marquee"
+              aria-label="Carrossel de depoimentos"
+            >
               <div className="testimonials-track">
                 {[...testimonials, ...testimonials].map((test, index) => (
-                  <div className="testimonial-card" key={`${test.name}-${index}`}>
-                    <div className="stars-row" aria-label="Avaliação 5 estrelas">
+                  <div
+                    className="testimonial-card"
+                    key={`${test.name}-${index}`}
+                  >
+                    <div
+                      className="stars-row"
+                      aria-label="Avaliação 5 estrelas"
+                    >
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={17} className="star-icon" fill="currentColor" />
+                        <Star
+                          key={i}
+                          size={17}
+                          className="star-icon"
+                          fill="currentColor"
+                        />
                       ))}
                     </div>
 
@@ -503,7 +581,8 @@ export default function Home() {
               className="footer-logo"
             />
             <p className="footer-brand-desc">
-              Especialistas em construção, reforma e revitalização de quadras esportivas, campos society e pisos modulares em todo o Brasil.
+              Especialistas em construção, reforma e revitalização de quadras
+              esportivas, campos society e pisos modulares em todo o Brasil.
             </p>
             <div className="footer-contact-items">
               <a href="tel:+5515997157642" className="footer-contact-link">
@@ -514,7 +593,10 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="footer-social-links" aria-label="Redes sociais da Pratika Sport">
+            <div
+              className="footer-social-links"
+              aria-label="Redes sociais da Pratika Sport"
+            >
               <a
                 href="https://www.instagram.com/pratikasport.com.br/"
                 target="_blank"
@@ -539,26 +621,68 @@ export default function Home() {
           <div className="footer-links-col">
             <h4 className="footer-col-title">Navegação</h4>
             <ul className="footer-links-list">
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#servicos">Especialidades</a></li>
-              <li><a href="#superficies">Guia de Pisos</a></li>
-              <li><a href="#processo">Como Funciona</a></li>
-              <li><a href="#depoimentos">Depoimentos</a></li>
-              <li><a href="#faq">Perguntas Frequentes</a></li>
-              <li><a href="#orcamento">Solicitar Orçamento</a></li>
+              <li>
+                <a href="#inicio">Início</a>
+              </li>
+              <li>
+                <a href="#servicos">Especialidades</a>
+              </li>
+              <li>
+                <a href="#superficies">Guia de Pisos</a>
+              </li>
+              <li>
+                <a href="#processo">Como Funciona</a>
+              </li>
+              <li>
+                <a href="#depoimentos">Depoimentos</a>
+              </li>
+              <li>
+                <a href="#faq">Perguntas Frequentes</a>
+              </li>
+              <li>
+                <a href="#orcamento">Solicitar Orçamento</a>
+              </li>
             </ul>
           </div>
 
           <div className="footer-links-col">
             <h4 className="footer-col-title">Modalidades</h4>
             <ul className="footer-links-list">
-              <li><Link href="/pages/servicos/quadras-poliesportivas.html">Quadras Poliesportivas</Link></li>
-              <li><Link href="/pages/servicos/quadra-de-tenis.html">Quadras de Tênis</Link></li>
-              <li><Link href="/pages/servicos/quadra-de-beach-tennis.html">Beach Tennis</Link></li>
-              <li><Link href="/pages/servicos/campo-de-futebol.html">Campos de Futebol Society</Link></li>
-              <li><Link href="/pages/blog/melhor-piso-para-quadra-esportiva.html">Pisos Esportivos</Link></li>
-              <li><Link href="/pages/servicos/reforma-de-quadras.html">Reforma & Pintura</Link></li>
-              <li><Link href="/pages/estados/sao-paulo">Atendimento em São Paulo</Link></li>
+              <li>
+                <Link href="/pages/servicos/quadras-poliesportivas.html">
+                  Quadras Poliesportivas
+                </Link>
+              </li>
+              <li>
+                <Link href="/pages/servicos/quadra-de-tenis.html">
+                  Quadras de Tênis
+                </Link>
+              </li>
+              <li>
+                <Link href="/pages/servicos/quadra-de-beach-tennis.html">
+                  Beach Tennis
+                </Link>
+              </li>
+              <li>
+                <Link href="/pages/servicos/campo-de-futebol.html">
+                  Campos de Futebol Society
+                </Link>
+              </li>
+              <li>
+                <Link href="/pages/blog/melhor-piso-para-quadra-esportiva.html">
+                  Pisos Esportivos
+                </Link>
+              </li>
+              <li>
+                <Link href="/pages/servicos/reforma-de-quadras.html">
+                  Reforma & Pintura
+                </Link>
+              </li>
+              <li>
+                <Link href="/pages/estados/sao-paulo">
+                  Atendimento em São Paulo
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -585,7 +709,10 @@ export default function Home() {
           </div>
 
           <div className="footer-bottom">
-            <p className="footer-copyright">© {new Date().getFullYear()} Pratika Sport. Todos os direitos reservados.</p>
+            <p className="footer-copyright">
+              © {new Date().getFullYear()} Pratika Sport. Todos os direitos
+              reservados.
+            </p>
           </div>
         </div>
       </footer>

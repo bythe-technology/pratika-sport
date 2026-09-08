@@ -5,7 +5,10 @@ import StructuredData from '@/components/StructuredData';
 import { organizationSchema, siteUrl, websiteSchema } from '@/lib/seo';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
-const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
 
 export const viewport: Viewport = {
   themeColor: '#0078d4',
@@ -17,10 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: 'Pratika Sport',
   title: {
-    default: 'Construção e Reforma de Quadras em SP | Pratika Sport',
+    default: 'Construção e Reforma de Quadras no Brasil | Pratika Sport',
     template: '%s | Pratika Sport',
   },
-  description: 'Construção, reforma e manutenção de quadras esportivas em São Paulo e todo o Brasil. Poliesportivas, tênis, beach tennis, society e pisos. Peça uma avaliação.',
+  description:
+    'Construção, reforma e manutenção de quadras esportivas em todo o Brasil, com prioridade operacional no estado de São Paulo. Solicite uma avaliação.',
   keywords: [
     'Pratika Sport',
     'construção de quadra esportiva',
@@ -30,6 +34,9 @@ export const metadata: Metadata = {
     'beach tennis',
     'campo de futebol society',
     'piso esportivo',
+    'construção de quadras no Brasil',
+    'reforma de quadras no Brasil',
+    'manutenção de quadras no Brasil',
     'construção de quadras em São Paulo',
     'reforma de quadras em São Paulo',
     'manutenção de quadras em São Paulo',
@@ -45,8 +52,9 @@ export const metadata: Metadata = {
     languages: { 'pt-BR': '/' },
   },
   openGraph: {
-    title: 'Construção e Reforma de Quadras em SP | Pratika Sport',
-    description: 'Projetos completos de construção, reforma e manutenção de quadras esportivas em São Paulo e todo o Brasil.',
+    title: 'Construção e Reforma de Quadras no Brasil | Pratika Sport',
+    description:
+      'Projetos completos de construção, reforma e manutenção de quadras esportivas em todo o Brasil, com prioridade operacional no estado de São Paulo.',
     url: siteUrl,
     siteName: 'Pratika Sport',
     locale: 'pt_BR',
@@ -62,8 +70,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Construção e Reforma de Quadras em SP | Pratika Sport',
-    description: 'Projetos completos de quadras esportivas em São Paulo e todo o Brasil.',
+    title: 'Construção e Reforma de Quadras no Brasil | Pratika Sport',
+    description:
+      'Projetos completos de quadras esportivas em todo o Brasil, com prioridade operacional no estado de São Paulo.',
     images: ['/images/construcao-de-quadras-1.jpg'],
   },
   robots: {
@@ -79,7 +88,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/pratika-sport-favicon-192.png', sizes: '192x192', type: 'image/png' },
+      {
+        url: '/pratika-sport-favicon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
@@ -87,8 +100,8 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   other: {
-    'geo.region': 'BR-SP',
-    'geo.placename': 'São Paulo',
+    'geo.region': 'BR',
+    'geo.placename': 'Brasil',
   },
 };
 
