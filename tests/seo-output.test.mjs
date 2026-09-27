@@ -7,6 +7,11 @@ const manifestPath = new URL(
   '../dist/client/site.webmanifest',
   import.meta.url,
 );
+const sitemapPath = new URL('../dist/client/sitemap.xml', import.meta.url);
+const multisportPath = new URL(
+  '../dist/client/pages/servicos/quadras-poliesportivas.html',
+  import.meta.url,
+);
 
 test('a página inicial comunica atendimento nacional sem limitar a empresa a SP', async () => {
   const html = await readFile(homePath, 'utf8');
@@ -42,4 +47,23 @@ test('a página inicial usa o domínio www como canonical', async () => {
     html,
     /<link rel="canonical" href="https:\/\/www\.pratikasport\.com\.br"/,
   );
+});
+
+test('o sitemap lista somente URLs indexáveis e inclui imagens relevantes', async () => {
+  const sitemap = await readFile(sitemapPath, 'utf8');
+
+  assert.match(
+    sitemap,
+    /https:\/\/www\.pratikasport\.com\.br\/pages\/servicos\/quadras-poliesportivas\.html/,
+  );
+  assert.match(sitemap, /<image:image>/);
+  assert.doesNotMatch(sitemap, /\/pages\/estados\/distrito-federal\.html/);
+});
+
+test('a página de quadra poliesportiva não exibe ano desatualizado e possui breadcrumb', async () => {
+  const html = await readFile(multisportPath, 'utf8');
+
+  assert.match(html, /<title>Construção de Quadra Poliesportiva \| Projeto e Reforma \| Pratika Sport<\/title>/);
+  assert.doesNotMatch(html, /2025/);
+  assert.match(html, /BreadcrumbList/);
 });

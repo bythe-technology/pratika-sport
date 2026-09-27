@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = resolve(root, 'dist', 'client');
+const canonicalBase = 'https://www.pratikasport.com.br';
 await mkdir(output, { recursive: true });
 const saoPauloOutput = resolve(output, 'pages', 'estados', 'sao-paulo.html');
 const saoPauloModernPage = await readFile(saoPauloOutput, 'utf8');
@@ -39,18 +40,28 @@ const legacyPages = (await listHtmlFiles(legacyPagesDirectory))
   .filter((file) => !file.endsWith('.html.html'));
 await Promise.all(legacyPages.map(async (file) => {
   const html = await readFile(file, 'utf8');
-  if (html.includes('/css/legacy-modern.css')) {
-    return;
-  }
+  const path = file.slice(output.length).replaceAll('\\', '/');
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
+  const isIndexable = !/<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+  const breadcrumb = isIndexable && title
+    ? `  <script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: `${canonicalBase}/` },
+        { '@type': 'ListItem', position: 2, name: title, item: `${canonicalBase}${path}` },
+      ],
+    }).replaceAll('</', '<\\/')}</script>\n`
+    : '';
 
-  const enhancedHtml = html.replace(
-    '</head>',
-    '  <link rel="stylesheet" href="/css/legacy-modern.css">\n</head>',
-  );
+  const enhancements = [
+    html.includes('/css/legacy-modern.css') ? '' : '  <link rel="stylesheet" href="/css/legacy-modern.css">\n',
+    html.includes('"@type":"BreadcrumbList"') ? '' : breadcrumb,
+  ].join('');
+  const enhancedHtml = enhancements ? html.replace('</head>', `${enhancements}</head>`) : html;
   await writeFile(file, enhancedHtml, 'utf8');
 }));
 
-const canonicalBase = 'https://www.pratikasport.com.br';
 const updatedAt = new Date().toISOString().slice(0, 10);
 const normalizeRoute = (path) => {
   if (path === '/index.html') {
@@ -68,20 +79,34 @@ const normalizeRoute = (path) => {
   return path;
 };
 
-const urls = htmlFiles
-  .map((file) => file.slice(output.length).replaceAll('\\', '/'))
-  .map(normalizeRoute)
-  .filter((path) => !path.includes('/404'))
-  .filter((path) => !path.endsWith('.html.html'))
-  .filter((path) => !path.startsWith('/pages/estados/') || path === '/pages/estados/sao-paulo')
-  .sort((a, b) => a.localeCompare(b));
+const urlEntries = (await Promise.all(htmlFiles.map(async (file) => {
+  const originalPath = file.slice(output.length).replaceAll('\\', '/');
+  const path = normalizeRoute(originalPath);
+  const html = await readFile(file, 'utf8');
+  const isIndexable = !/<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+  const imageSource = html.match(/<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i)?.[1]
+    ?? html.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
+  const imageUrl = imageSource && !imageSource.startsWith('data:')
+    ? new URL(imageSource, `${canonicalBase}${originalPath}`).href
+    : null;
+
+  return { path, isIndexable, imageUrl };
+})))
+  .filter(({ path, isIndexable }) => isIndexable)
+  .filter(({ path }) => !path.includes('/404'))
+  .filter(({ path }) => !path.endsWith('.html.html'))
+  .filter(({ path }) => !path.startsWith('/pages/estados/') || path === '/pages/estados/sao-paulo')
+  .sort((a, b) => a.path.localeCompare(b.path));
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${urls.map((path) => `  <url>
+${urlEntries.map(({ path, imageUrl }) => `  <url>
     <loc>${xmlEscape(`${canonicalBase}${path}`)}</loc>
-    <lastmod>${updatedAt}</lastmod>
+    <lastmod>${updatedAt}</lastmod>${imageUrl ? `
+    <image:image>
+      <image:loc>${xmlEscape(imageUrl)}</image:loc>
+    </image:image>` : ''}
   </url>`).join('\n')}
 </urlset>
 `;
