@@ -34,6 +34,33 @@ const xmlEscape = (value) => value
 
 const htmlFiles = await listHtmlFiles(output);
 
+const removePublishedPrices = (html) => html
+  .replace(
+    /<li\b([^>]*)>[\s\S]*?R\$\s*[\s\S]*?<\/li>/gi,
+    '<li$1>Escopo e investimento definidos após avaliação técnica e orçamento personalizado.</li>',
+  )
+  .replace(
+    /<td\b([^>]*)>\s*(?:A partir de\s*)?R\$[^<]*<\/td>/gi,
+    '<td$1>Sob orçamento personalizado</td>',
+  )
+  .replace(
+    /"text"\s*:\s*"[^"\n]*R\$[^"\n]*"/gi,
+    '"text": "O escopo é definido conforme a avaliação técnica, as condições do local e o orçamento personalizado."',
+  );
+
+await Promise.all(htmlFiles.map(async (file) => {
+  const html = await readFile(file, 'utf8');
+  const sanitizedHtml = removePublishedPrices(html);
+
+  if (/R\$/i.test(sanitizedHtml)) {
+    throw new Error(`Referência monetária não removida do conteúdo publicado: ${file}`);
+  }
+
+  if (sanitizedHtml !== html) {
+    await writeFile(file, sanitizedHtml, 'utf8');
+  }
+}));
+
 const legacyPagesDirectory = resolve(output, 'pages');
 const legacyPages = (await listHtmlFiles(legacyPagesDirectory))
   .filter((file) => file !== saoPauloOutput)

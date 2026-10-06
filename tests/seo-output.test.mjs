@@ -67,3 +67,20 @@ test('a página de quadra poliesportiva não exibe ano desatualizado e possui br
   assert.doesNotMatch(html, /2025/);
   assert.match(html, /BreadcrumbList/);
 });
+
+test('nenhuma página pública exibe valores monetários', async () => {
+  const publicHtmlFiles = [
+    new URL('../dist/client/pages/servicos/campo-de-futebol.html', import.meta.url),
+    new URL('../dist/client/pages/servicos/quadras-poliesportivas.html', import.meta.url),
+    new URL('../dist/client/pages/servicos/quadra-de-tenis.html', import.meta.url),
+    new URL('../dist/client/pages/servicos/quadra-de-beach-tennis.html', import.meta.url),
+    new URL('../dist/client/pages/servicos/reforma-de-quadras.html', import.meta.url),
+    new URL('../dist/client/pages/servicos/manutencao-de-quadras.html', import.meta.url),
+    new URL('../dist/client/pages/blog/quanto-custa-construir-quadra-poliesportiva.html', import.meta.url),
+  ];
+  const pages = await Promise.all(publicHtmlFiles.map((path) => readFile(path, 'utf8')));
+
+  for (const page of pages) {
+    assert.doesNotMatch(page, /R\$/i);
+  }
+});
