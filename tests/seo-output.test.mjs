@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import { test } from 'node:test';
 
 const homePath = new URL('../dist/client/index.html', import.meta.url);
@@ -69,6 +69,12 @@ test('a página de quadra poliesportiva não exibe ano desatualizado e possui br
 });
 
 test('nenhuma página pública exibe valores monetários', async () => {
+  const outputDirectory = new URL('../dist/client/', import.meta.url);
+  const allFiles = await readdir(outputDirectory, { recursive: true });
+  for (const file of allFiles.filter((path) => path.endsWith('.html'))) {
+    const html = await readFile(new URL(file.replaceAll('\\', '/'), outputDirectory), 'utf8');
+    assert.doesNotMatch(html, /R\$|R&#(?:36|x24);/i, file);
+  }
   const publicHtmlFiles = [
     new URL('../dist/client/pages/servicos/campo-de-futebol.html', import.meta.url),
     new URL('../dist/client/pages/servicos/quadras-poliesportivas.html', import.meta.url),
@@ -83,4 +89,14 @@ test('nenhuma página pública exibe valores monetários', async () => {
   for (const page of pages) {
     assert.doesNotMatch(page, /R\$/i);
   }
+});
+
+test('remoção de preços preserva navegação, modalidades e conteúdo técnico do campo', async () => {
+  const html = await readFile(new URL('../dist/client/pages/servicos/campo-de-futebol.html', import.meta.url), 'utf8');
+  assert.match(html, /nav-desktop/);
+  assert.match(html, /Society 20x40m/);
+  assert.match(html, /Campo oficial \(grama natural\)/);
+  assert.match(html, /id="planejar-orcamento"/);
+  assert.match(html, /\/pages\/estados\/sao-paulo"/);
+  assert.equal((html.match(/rel="icon"/g) ?? []).length, 1);
 });

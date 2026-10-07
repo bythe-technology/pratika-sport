@@ -36,8 +36,8 @@ const htmlFiles = await listHtmlFiles(output);
 
 const removePublishedPrices = (html) => html
   .replace(
-    /<li\b([^>]*)>[\s\S]*?R\$\s*[\s\S]*?<\/li>/gi,
-    '<li$1>Escopo e investimento definidos após avaliação técnica e orçamento personalizado.</li>',
+    /<li\b([^>]*)>((?:(?!<li\b|<\/li>)[\s\S])*R\$(?:(?!<li\b|<\/li>)[\s\S])*)<\/li>/gi,
+    (_match, attributes, content) => `<li${attributes}>${content.includes('</strong>') ? content.slice(0, content.indexOf('</strong>') + 9) : ''} Sob orçamento personalizado.</li>`,
   )
   .replace(
     /<td\b([^>]*)>\s*(?:A partir de\s*)?R\$[^<]*<\/td>/gi,
@@ -85,11 +85,37 @@ await Promise.all(legacyPages.map(async (file) => {
     html.includes('/css/legacy-modern.css') ? '' : '  <link rel="stylesheet" href="/css/legacy-modern.css">\n',
     html.includes('"@type":"BreadcrumbList"') ? '' : breadcrumb,
   ].join('');
-  const enhancedHtml = enhancements ? html.replace('</head>', `${enhancements}</head>`) : html;
+  let enhancedHtml = enhancements ? html.replace('</head>', `${enhancements}</head>`) : html;
+  enhancedHtml = enhancedHtml
+    .replace(/<link[^>]+rel="(?:icon|apple-touch-icon)"[^>]*>/gi, '')
+    .replace('</head>', '<link rel="icon" href="/pratika-sport-favicon-192.png" type="image/png" sizes="192x192">\n</head>')
+    .replace(/href="(?:\.\.\/)+index\.html"/g, 'href="/"');
+
+  if (path.startsWith('/pages/servicos/') && !enhancedHtml.includes('id="planejar-orcamento"')) {
+    const relatedServices = [
+      ['quadras-poliesportivas', 'Construção de quadras poliesportivas'],
+      ['quadra-de-tenis', 'Quadras de tênis'],
+      ['quadra-de-beach-tennis', 'Quadras de beach tennis'],
+      ['campo-de-futebol', 'Campos de futebol'],
+      ['reforma-de-quadras', 'Reforma e recuperação de quadras'],
+      ['manutencao-de-quadras', 'Manutenção de quadras'],
+    ].filter(([slug]) => !path.endsWith(`${slug}.html`));
+    const planningSection = `<section class="section" id="planejar-orcamento"><div class="container">
+      <h2>Como solicitar um orçamento para seu projeto esportivo</h2>
+      <p>Informe a cidade e o estado, a modalidade, as medidas aproximadas e se o espaço precisa de construção, reforma ou manutenção. Fotos atuais ajudam a identificar as condições da base, da drenagem e dos acessórios.</p>
+      <p>Para condomínios, clubes, escolas e arenas, descreva também a intensidade de uso e as condições de acesso à obra. A proposta deve definir os serviços previstos, materiais, conservação e cronograma conforme a avaliação do local. A Pratika Sport trabalha com orçamento personalizado, sem tabela de preços.</p>
+      <h2>Atendimento no Brasil, com prioridade no estado de São Paulo</h2>
+      <p>A Pratika Sport atende projetos em todo o Brasil. No estado de São Paulo, capital, Grande São Paulo, interior e litoral entram no planejamento conforme o endereço, o escopo e a viabilidade logística. Informe sua localização para confirmar o atendimento.</p>
+      <p><a href="/pages/estados/sao-paulo">Conheça o atendimento de quadras esportivas em São Paulo</a></p>
+      <h2>Soluções relacionadas para seu espaço</h2>
+      <ul>${relatedServices.map(([slug, label]) => `<li><a href="/pages/servicos/${slug}.html">${label}</a></li>`).join('')}</ul>
+      <p><a class="btn btn-primary" href="https://wa.me/5515997157642?text=${encodeURIComponent('Olá! Gostaria de um orçamento personalizado. Minha cidade e estado são: ')}" target="_blank" rel="noopener noreferrer">Solicitar orçamento personalizado no WhatsApp</a></p>
+      </div></section>`;
+    enhancedHtml = enhancedHtml.replace('</main>', `${planningSection}</main>`);
+  }
   await writeFile(file, enhancedHtml, 'utf8');
 }));
 
-const updatedAt = new Date().toISOString().slice(0, 10);
 const normalizeRoute = (path) => {
   if (path === '/index.html') {
     return '/';
@@ -130,7 +156,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urlEntries.map(({ path, imageUrl }) => `  <url>
     <loc>${xmlEscape(`${canonicalBase}${path}`)}</loc>
-    <lastmod>${updatedAt}</lastmod>${imageUrl ? `
+    ${imageUrl ? `
     <image:image>
       <image:loc>${xmlEscape(imageUrl)}</image:loc>
     </image:image>` : ''}
