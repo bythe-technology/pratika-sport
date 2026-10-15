@@ -74,6 +74,7 @@ test('nenhuma página pública exibe valores monetários', async () => {
   for (const file of allFiles.filter((path) => path.endsWith('.html'))) {
     const html = await readFile(new URL(file.replaceAll('\\', '/'), outputDirectory), 'utf8');
     assert.doesNotMatch(html, /R\$|R&#(?:36|x24);/i, file);
+    assert.equal((html.match(/src="\/analytics\.js"/g) ?? []).length, 1, file);
   }
   const publicHtmlFiles = [
     new URL('../dist/client/pages/servicos/campo-de-futebol.html', import.meta.url),
@@ -97,6 +98,7 @@ test('remoção de preços preserva navegação, modalidades e conteúdo técnic
   assert.match(html, /Society 20x40m/);
   assert.match(html, /Campo oficial \(grama natural\)/);
   assert.match(html, /id="planejar-orcamento"/);
+  assert.match(html, /id="avaliacao-do-espaco"/);
   assert.match(html, /\/pages\/estados\/sao-paulo"/);
   assert.equal((html.match(/rel="icon"/g) ?? []).length, 1);
 });
