@@ -73,7 +73,7 @@ test('o sitemap lista somente URLs indexáveis e inclui imagens relevantes', asy
 test('a página de quadra poliesportiva não exibe ano desatualizado e possui breadcrumb', async () => {
   const html = await readFile(multisportPath, 'utf8');
 
-  assert.match(html, /<title>Construção de Quadra Poliesportiva \| Projeto e Reforma \| Pratika Sport<\/title>/);
+  assert.match(html, /<title>Construção e Reforma de Quadra Poliesportiva \| Pratika Sport<\/title>/);
   assert.doesNotMatch(html, /2025/);
   assert.match(html, /BreadcrumbList/);
 });
@@ -100,6 +100,22 @@ test('nenhuma página pública exibe valores monetários', async () => {
   for (const page of pages) {
     assert.doesNotMatch(page, /R\$/i);
   }
+  for (const path of [
+    'campo-de-futebol.html',
+    'manutencao-de-quadras.html',
+    'quadra-de-beach-tennis.html',
+    'quadra-de-tenis.html',
+    'quadras-poliesportivas.html',
+    'reforma-de-quadras.html',
+  ]) {
+    const html = await readFile(new URL(`../dist/client/pages/servicos/${path}`, import.meta.url), 'utf8');
+    assert.doesNotMatch(html, /Quanto Custa|Valores aproximados|Investimento em Manutenção|<strong>Investimento:<\/strong>/i, path);
+    assert.doesNotMatch(html, /<title>[^<]*(?:Pre[cç]o|2025)[^<]*<\/title>/i, path);
+    assert.doesNotMatch(html, /centenas de quadras/i, path);
+  }
+  const planningArticle = await readFile(new URL('../dist/client/pages/blog/quanto-custa-construir-quadra-poliesportiva.html', import.meta.url), 'utf8');
+  assert.match(planningArticle, /<title>Construção de Quadra Poliesportiva: Planejamento \| Pratika Sport<\/title>/);
+  assert.doesNotMatch(planningArticle, /Quanto custa construir uma quadra poliesportiva|Preços de R\$|Custo médio (?:mensal|anual)/i);
 });
 
 test('remoção de preços preserva navegação, modalidades e conteúdo técnico do campo', async () => {
