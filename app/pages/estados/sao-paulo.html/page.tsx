@@ -183,7 +183,7 @@ const pageSchema = {
 };
 
 export const metadata: Metadata = {
-  title: pageTitle,
+  title: { absolute: pageTitle },
   description: pageDescription,
   alternates: {
     canonical: '/pages/estados/sao-paulo',

@@ -13,6 +13,16 @@ const multisportPath = new URL(
   import.meta.url,
 );
 
+test('páginas modernas de São Paulo não duplicam a marca no título', async () => {
+  for (const path of ['pages/estados/sao-paulo.html', 'pages/estados/sao-paulo.html.html']) {
+    const html = await readFile(new URL(`../dist/client/${path}`, import.meta.url), 'utf8');
+    const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
+    assert.equal(title, 'Construção, Reforma e Manutenção de Quadras em SP | Pratika Sport', path);
+    assert.equal((title.match(/Pratika Sport/g) ?? []).length, 1, path);
+    assert.match(html, /rel="canonical" href="https:\/\/www\.pratikasport\.com\.br\/pages\/estados\/sao-paulo"/);
+  }
+});
+
 test('a página inicial comunica atendimento nacional sem limitar a empresa a SP', async () => {
   const html = await readFile(homePath, 'utf8');
 
