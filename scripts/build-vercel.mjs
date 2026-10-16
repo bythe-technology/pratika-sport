@@ -1,7 +1,7 @@
 import { cp, mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { serviceIntent, serviceMetadata } from './service-intent.mjs';
+import { getServiceSlug, serviceIntent, serviceMetadata } from './service-intent.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = resolve(root, 'dist', 'client');
@@ -80,7 +80,7 @@ const updateServicePage = (html, metadata) => {
 
 await Promise.all(htmlFiles.map(async (file) => {
   const html = await readFile(file, 'utf8');
-  const serviceSlug = file.match(/\\servicos\\([^\\]+)\.html$/)?.[1];
+  const serviceSlug = getServiceSlug(file);
   const metadata = serviceMetadata[serviceSlug];
   let sanitizedHtml = removePublishedPrices(html);
   if (metadata) sanitizedHtml = updateServicePage(sanitizedHtml, metadata);

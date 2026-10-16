@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { test } from 'node:test';
+import { getServiceSlug, serviceMetadata } from '../scripts/service-intent.mjs';
 
 const homePath = new URL('../dist/client/index.html', import.meta.url);
 const manifestPath = new URL(
@@ -112,10 +113,17 @@ test('nenhuma página pública exibe valores monetários', async () => {
     assert.doesNotMatch(html, /Quanto Custa|Valores aproximados|Investimento em Manutenção|<strong>Investimento:<\/strong>/i, path);
     assert.doesNotMatch(html, /<title>[^<]*(?:Pre[cç]o|2025)[^<]*<\/title>/i, path);
     assert.doesNotMatch(html, /centenas de quadras/i, path);
+    const serviceSlug = getServiceSlug(`/pages/servicos/${path}`);
+    assert.equal(html.match(/<title>([^<]+)<\/title>/)?.[1], serviceMetadata[serviceSlug].title, path);
   }
   const planningArticle = await readFile(new URL('../dist/client/pages/blog/quanto-custa-construir-quadra-poliesportiva.html', import.meta.url), 'utf8');
   assert.match(planningArticle, /<title>Construção de Quadra Poliesportiva: Planejamento \| Pratika Sport<\/title>/);
   assert.doesNotMatch(planningArticle, /Quanto custa construir uma quadra poliesportiva|Preços de R\$|Custo médio (?:mensal|anual)/i);
+});
+
+test('a identificação de páginas de serviço funciona em caminhos Windows e Linux', () => {
+  assert.equal(getServiceSlug('C:\\repo\\pages\\servicos\\quadra-de-tenis.html'), 'quadra-de-tenis');
+  assert.equal(getServiceSlug('/vercel/path0/pages/servicos/quadra-de-tenis.html'), 'quadra-de-tenis');
 });
 
 test('remoção de preços preserva navegação, modalidades e conteúdo técnico do campo', async () => {

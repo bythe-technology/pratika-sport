@@ -8,6 +8,11 @@ export const serviceIntent = {
   'manutencao-de-quadras': ['Quando solicitar manutenção da quadra esportiva?', 'Observe desgaste da demarcação, superfície escorregadia, fissuras, poças e danos em redes e alambrados. O plano de conservação deve considerar o revestimento, a frequência de uso e a exposição ao tempo. Se houver risco aos usuários, restrinja o uso da área afetada até a avaliação responsável.'],
 };
 
+export const getServiceSlug = (filePath) => {
+  const normalizedPath = filePath.replaceAll('\\', '/');
+  return normalizedPath.match(/\/servicos\/([^/]+)\.html$/)?.[1] ?? null;
+};
+
 export const serviceMetadata = {
   'quadras-poliesportivas': {
     title: 'Construção e Reforma de Quadra Poliesportiva | Pratika Sport',

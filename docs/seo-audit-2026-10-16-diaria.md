@@ -18,6 +18,8 @@ Consultas e fontes consultadas:
 - Mantidos Analytics e consentimento, domínio/canonical e atendimento nacional com prioridade em São Paulo.
 
 ## Verificações e limites
-Doze testes automatizados passaram. O teste percorre todos os HTML gerados para conferir ausência de valores monetários e presença única do Analytics; testes adicionais cobrem metadados, páginas sem preços, conteúdo técnico e eventos de contato sem mensagem pessoal. A publicação ainda precisa ser conferida no domínio ao vivo após o deploy.
+Treze testes automatizados passaram. O teste percorre todos os HTML gerados para conferir ausência de valores monetários e presença única do Analytics; testes adicionais cobrem metadados exatos, páginas sem preços, conteúdo técnico, eventos de contato sem mensagem pessoal e detecção de rotas nos caminhos de Windows e Linux.
 
-O painel do Google Analytics abriu na sessão do Chrome, mas foi apresentada uma janela de preferências da conta que bloqueava a confirmação de qual propriedade e período estavam selecionados. Não alterei as preferências nem atribuí números à Pratika Sport. Assim, esta rodada não declara tráfego, cliques, conversões ou vendas. É necessário liberar/confirmar o acesso correto aos relatórios da propriedade `G-J5RD6CP1YY` para a próxima análise de desempenho.
+Na primeira conferência do domínio, parte do conteúdo ainda estava antigo. Foi identificada e corrigida uma dependência de caminhos Windows no gerador; o build da Vercel roda em Linux. Corrigida a detecção, as verificações agora comparam os títulos finais aos metadados esperados das seis páginas.
+
+O painel do Google Analytics abriu na sessão do Chrome, mas foi apresentada uma janela de preferências da conta que bloqueava a confirmação de qual propriedade e período estavam selecionados. Não alterei as preferências nem atribuí números à Pratika Sport. Assim, esta rodada não declara tráfego, cliques, conversões ou vendas. É necessário confirmar o acesso correto aos relatórios da propriedade `G-J5RD6CP1YY` para a próxima análise de desempenho.
