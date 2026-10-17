@@ -53,7 +53,7 @@
     }
   };
   const style = document.createElement('style');
-  style.textContent = '#pratika-consent{position:fixed;bottom:76px;left:12px;z-index:10000;max-width:460px;width:calc(100% - 24px);box-sizing:border-box;background:#fff;color:#142033;border:1px solid #ccd5df;border-radius:12px;padding:16px;box-shadow:0 4px 24px #0003;font:14px/1.5 system-ui}#pratika-consent p{margin:0 0 12px}#pratika-consent button{font:inherit;padding:8px 12px;margin:4px;border:1px solid #617083;border-radius:6px;background:#fff;color:#142033;cursor:pointer}#pratika-consent button:focus-visible,#pratika-cookie-settings:focus-visible{outline:3px solid #0078d4;outline-offset:3px}#pratika-cookie-settings{position:fixed;bottom:8px;left:8px;z-index:9999;font:12px system-ui;background:#fff;color:#142033;border:1px solid #617083;border-radius:5px;padding:6px;cursor:pointer}';
+  style.textContent = '#pratika-consent{position:relative;z-index:2;max-width:460px;width:calc(100% - 24px);box-sizing:border-box;margin:12px auto 0;background:#fff;color:#142033;border:1px solid #ccd5df;border-radius:12px;padding:16px;box-shadow:0 4px 24px #0003;font:14px/1.5 system-ui}#pratika-consent p{margin:0 0 12px}#pratika-consent button{font:inherit;padding:8px 12px;margin:4px;border:1px solid #617083;border-radius:6px;background:#fff;color:#142033;cursor:pointer}#pratika-consent button:focus-visible,#pratika-cookie-settings:focus-visible{outline:3px solid #0078d4;outline-offset:3px}#pratika-cookie-settings{position:fixed;bottom:8px;left:8px;z-index:9999;font:12px system-ui;background:#fff;color:#142033;border:1px solid #617083;border-radius:5px;padding:6px;cursor:pointer}';
   document.head.append(style);
   const banner = document.createElement('section');
   banner.id = 'pratika-consent';
@@ -67,7 +67,7 @@
   settings.type = 'button';
   settings.textContent = 'Cookies';
   settings.addEventListener('click', () => { banner.hidden = false; banner.querySelector('button').focus(); });
-  document.body.append(banner, settings);
+  document.body.prepend(banner, settings);
   const preference = readPreference();
   banner.hidden = preference === 'granted' || preference === 'denied';
   if (preference === 'granted') choose('granted');

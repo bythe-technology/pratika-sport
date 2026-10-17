@@ -11,6 +11,7 @@ function browser(preference) {
     dataset = {};
     addEventListener(type, callback) { this.listeners[type] = callback; }
     append(...items) { this.children.push(...items); }
+    prepend(...items) { this.children.unshift(...items); }
     setAttribute() {}
     focus() {}
     querySelectorAll() {
@@ -18,8 +19,11 @@ function browser(preference) {
     }
     querySelector() { return this.querySelectorAll()[0]; }
   }
+  const body = new Element();
+  const pageContent = Object.assign(new Element(), { tag: 'main' });
+  body.append(pageContent);
   const document = Object.assign(new Element(), {
-    head: new Element(), body: new Element(), cookie: '', referrer: 'https://www.google.com/search?q=private',
+    head: new Element(), body, cookie: '', referrer: 'https://www.google.com/search?q=private',
     createElement: (tag) => Object.assign(new Element(), { tag }),
   });
   const storage = new Map(preference ? [['pratika-analytics-consent-v1', preference]] : []);
@@ -32,6 +36,9 @@ function browser(preference) {
 test('no Google requests or tracking before consent, including refusal', () => {
   const page = browser();
   assert.equal(page.scripts().length, 0);
+  assert.equal(page.document.body.children[0], page.banner);
+  assert.equal(page.document.body.children[2].tag, 'main');
+  assert.match(page.document.head.children[0].textContent, /#pratika-consent\{position:relative;/);
   page.choose('denied');
   assert.equal(page.scripts().length, 0);
   assert.equal(page.events().length, 0);
