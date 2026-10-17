@@ -61,9 +61,6 @@ export default function SiteHeader() {
           <a href="#processo" className="floating-nav-link">
             <span>Como Funciona</span>
           </a>
-          <a href="#depoimentos" className="floating-nav-link">
-            <span>Depoimentos</span>
-          </a>
           <a href="#faq" className="floating-nav-link">
             <span>Dúvidas</span>
           </a>
@@ -121,10 +118,6 @@ export default function SiteHeader() {
             </a>
             <a href="#processo" onClick={closeMenu} className="floating-mobile-link">
               <span>Como Funciona (Etapas)</span>
-              <ArrowUpRight size={17} className="mobile-link-arrow" />
-            </a>
-            <a href="#depoimentos" onClick={closeMenu} className="floating-mobile-link">
-              <span>Depoimentos de Clientes</span>
               <ArrowUpRight size={17} className="mobile-link-arrow" />
             </a>
             <a href="#faq" onClick={closeMenu} className="floating-mobile-link">

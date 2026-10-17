@@ -92,7 +92,7 @@ export default function QuoteForm() {
                 type="text"
                 required
                 autoComplete="name"
-                placeholder="Ex.: Carlos Silva / Condomínio Palmeiras"
+                placeholder="Ex.: nome do condomínio ou empresa"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="form-input"

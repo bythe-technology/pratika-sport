@@ -155,7 +155,6 @@ img {
 .surface-card,
 .step-card,
 .audience-pill,
-.testimonial-card,
 .footer-bythe-link {
   animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -185,10 +184,6 @@ img {
 .step-card:nth-child(3) { animation-delay: 0.2s; }
 .step-card:nth-child(4) { animation-delay: 0.26s; }
 
-.testimonial-card:nth-child(1) { animation-delay: 0.08s; }
-.testimonial-card:nth-child(2) { animation-delay: 0.14s; }
-.testimonial-card:nth-child(3) { animation-delay: 0.2s; }
-.testimonial-card:nth-child(4) { animation-delay: 0.26s; }
 
 .hero-image {
   transform: scale(1.02);
@@ -247,8 +242,7 @@ img {
 
 .service-card:hover,
 .surface-card:hover,
-.step-card:hover,
-.testimonial-card:hover {
+.step-card:hover {
   transform: translateY(-8px) scale(1.01);
   box-shadow: 0 22px 44px rgba(7, 52, 90, 0.12);
 }
@@ -1145,115 +1139,6 @@ img {
 /* ==========================================================================
    TESTIMONIALS SECTION
    ========================================================================== */
-.testimonials-section {
-  background: #ffffff;
-}
-
-.testimonials-marquee {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 8px 0 12px;
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    #000 8%,
-    #000 92%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    #000 8%,
-    #000 92%,
-    transparent 100%
-  );
-}
-
-.testimonials-track {
-  display: flex;
-  align-items: stretch;
-  gap: 22px;
-  width: max-content;
-  will-change: transform;
-  animation: testimonials-scroll 52s linear infinite;
-}
-
-.testimonial-card {
-  background: var(--bg-page);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: min(100%, 360px);
-  min-width: 300px;
-  flex: 0 0 auto;
-}
-
-.testimonials-marquee:hover .testimonials-track {
-  animation-play-state: paused;
-}
-
-@keyframes testimonials-scroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.stars-row {
-  display: flex;
-  gap: 3px;
-  color: #eab308;
-  margin-bottom: 14px;
-}
-
-.testimonial-text {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: var(--ink-800);
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: auto;
-}
-
-.author-avatar-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 2px solid var(--logo-blue);
-  flex-shrink: 0;
-}
-
-.author-avatar {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.author-name {
-  display: block;
-  font-size: 14px;
-  font-weight: 750;
-  color: var(--ink-900);
-}
-
-.author-role {
-  display: block;
-  font-size: 12px;
-  color: var(--ink-600);
-}
 
 /* ==========================================================================
    FAQ ACCORDION COMPONENT
@@ -1851,9 +1736,6 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .quote-container {
     grid-template-columns: 1fr;
@@ -1939,9 +1821,6 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
 
   .form-group-grid {
     grid-template-columns: 1fr;

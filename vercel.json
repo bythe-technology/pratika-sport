@@ -4,6 +4,11 @@
   "cleanUrls": false,
   "redirects": [
     {
+      "source": "/pages/depoimentos.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/pages/estados/sao-paulo.html",
       "destination": "/pages/estados/sao-paulo",
       "permanent": true

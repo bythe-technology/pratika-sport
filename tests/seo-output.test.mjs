@@ -38,6 +38,30 @@ test('a página inicial comunica atendimento nacional sem limitar a empresa a SP
   assert.doesNotMatch(html, /<title>[^<]*em SP[^<]*<\/title>/);
 });
 
+test('páginas públicas não exibem depoimentos, nomes ou métricas sem comprovação', async () => {
+  for (const path of [
+    'index.html',
+    'pages/estados/sao-paulo.html',
+    'pages/estados/sao-paulo.html.html',
+  ]) {
+    const html = await readFile(new URL(`../dist/client/${path}`, import.meta.url), 'utf8');
+    assert.doesNotMatch(html, /Carlos Silva|Ana Paula Mendes|Roberto Costa|Fernando Oliveira|Mariana Santos|Paulo Ricardo/i, path);
+    assert.doesNotMatch(html, /850\s*Obras|100%\s*Garantia|Avaliação 5 estrelas/i, path);
+    assert.doesNotMatch(html, /href="#depoimentos"|id="depoimentos"/i, path);
+  }
+
+  const [sitemap, legacyReviews, vercelConfig] = await Promise.all([
+    readFile(sitemapPath, 'utf8'),
+    readFile(new URL('../dist/client/pages/depoimentos.html', import.meta.url), 'utf8'),
+    readFile(new URL('../vercel.json', import.meta.url), 'utf8').then(JSON.parse),
+  ]);
+  assert.doesNotMatch(sitemap, /\/pages\/depoimentos\.html/);
+  assert.match(legacyReviews, /<meta name="robots" content="noindex, follow">/);
+  assert.ok(vercelConfig.redirects.some(
+    (redirect) => redirect.source === '/pages/depoimentos.html' && redirect.destination === '/',
+  ));
+});
+
 test('o favicon oficial tem uma única referência indexável e está no manifesto', async () => {
   const [html, manifestText] = await Promise.all([
     readFile(homePath, 'utf8'),

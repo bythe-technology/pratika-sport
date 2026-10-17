@@ -9,7 +9,6 @@ import {
   Award,
   Layers,
   Sparkles,
-  Star,
   Users,
   Building2,
   HardHat,
@@ -146,45 +145,6 @@ const steps = [
   },
 ];
 
-const testimonials = [
-  {
-    name: 'Carlos Silva',
-    role: 'Síndico — Condomínio Residencial',
-    image: '/images/9-300x300.png',
-    text: 'A Pratika Sport superou todas as nossas expectativas. A quadra poliesportiva do nosso condomínio ficou perfeita, com acabamento impecável e entrega antes do prazo acordado.',
-  },
-  {
-    name: 'Ana Paula Mendes',
-    role: 'Diretora Esportiva — Clube Campestre',
-    image: '/images/11-300x300.png',
-    text: 'Contratamos para construir duas quadras de beach tennis e o resultado foi excepcional. Profissionalismo absoluto desde o projeto de drenagem até a iluminação em LED.',
-  },
-  {
-    name: 'Roberto Costa',
-    role: 'Proprietário — Centro de Treinamento de Tênis',
-    image: '/images/7-300x300.png',
-    text: 'Reformamos nossa quadra de tênis que estava deteriorada há anos. A equipe da Pratika fez uma recuperação de base impecável e a pintura ficou padrão de torneio internacional.',
-  },
-  {
-    name: 'Fernando Oliveira',
-    role: 'Gestor — Arena de Futebol Society',
-    image: '/images/12-300x300.png',
-    text: 'O campo society construído pela Pratika é referência na nossa cidade. A grama sintética de alta densidade e o amortecimento recebem elogios diários dos clientes.',
-  },
-  {
-    name: 'Mariana Santos',
-    role: 'Administradora — Hotel Fazenda',
-    image: '/images/13-300x300.png',
-    text: 'Profissionalismo exemplar! Desde o primeiro contato até a entrega, tudo foi feito com muita competência. Nossa quadra de tênis ficou incrível!',
-  },
-  {
-    name: 'Paulo Ricardo',
-    role: 'Presidente — Country Club',
-    image: '/images/14-300x300.png',
-    text: 'Construímos três quadras de beach tennis e o retorno foi imediato. Os associados adoraram! A Pratika Sport entregou tudo conforme prometido.',
-  },
-];
-
 export default function Home() {
   return (
     <div className="site-wrapper">
@@ -287,11 +247,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TRUST STRIP METRICS */}
+        {/* VERIFIED SERVICE DIFFERENTIATORS */}
         <section
           className="trust-strip"
           id="diferenciais"
-          aria-label="Métricas e Diferenciais"
+          aria-label="Diferenciais de atendimento"
         >
           <div className="trust-grid">
             <div className="trust-card">
@@ -299,8 +259,8 @@ export default function Home() {
                 <Award size={24} />
               </div>
               <div>
-                <strong className="trust-number">+20 Anos</strong>
-                <p className="trust-label">De experiência e solidez técnica</p>
+                <strong className="trust-number">Atendimento nacional</strong>
+                <p className="trust-label">Com prioridade operacional em São Paulo</p>
               </div>
             </div>
 
@@ -309,8 +269,8 @@ export default function Home() {
                 <FileCheck2 size={24} />
               </div>
               <div>
-                <strong className="trust-number">+850 Obras</strong>
-                <p className="trust-label">Quadras e campos entregues</p>
+                <strong className="trust-number">Projeto personalizado</strong>
+                <p className="trust-label">Escopo conforme o espaço e a modalidade</p>
               </div>
             </div>
 
@@ -319,10 +279,8 @@ export default function Home() {
                 <MapPin size={24} />
               </div>
               <div>
-                <strong className="trust-number">Todo o Brasil</strong>
-                <p className="trust-label">
-                  Prioridade operacional no estado de São Paulo
-                </p>
+                <strong className="trust-number">Diagnóstico técnico</strong>
+                <p className="trust-label">Análise da base, drenagem e uso previsto</p>
               </div>
             </div>
 
@@ -331,10 +289,8 @@ export default function Home() {
                 <ShieldCheck size={24} />
               </div>
               <div>
-                <strong className="trust-number">100% Garantia</strong>
-                <p className="trust-label">
-                  Materiais homologados de alta durabilidade
-                </p>
+                <strong className="trust-number">Da obra à manutenção</strong>
+                <p className="trust-label">Construção, reforma e conservação de quadras</p>
               </div>
             </div>
           </div>
@@ -494,70 +450,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TESTIMONIALS */}
-        <section className="section testimonials-section" id="depoimentos">
-          <div className="section-container">
-            <div className="section-header-block">
-              <div>
-                <span className="section-eyebrow">Depoimentos & Confiança</span>
-                <h2 className="section-title">
-                  O que dizem os clientes da Pratika Sport.
-                </h2>
-              </div>
-              <p className="section-subtitle">
-                Mais de duas décadas construindo parcerias duradouras com
-                síndicos, diretores de clubes e investidores esportivos.
-              </p>
-            </div>
-
-            <div
-              className="testimonials-marquee"
-              aria-label="Carrossel de depoimentos"
-            >
-              <div className="testimonials-track">
-                {[...testimonials, ...testimonials].map((test, index) => (
-                  <div
-                    className="testimonial-card"
-                    key={`${test.name}-${index}`}
-                  >
-                    <div
-                      className="stars-row"
-                      aria-label="Avaliação 5 estrelas"
-                    >
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={17}
-                          className="star-icon"
-                          fill="currentColor"
-                        />
-                      ))}
-                    </div>
-
-                    <p className="testimonial-text">“{test.text}”</p>
-
-                    <div className="testimonial-author">
-                      <div className="author-avatar-box">
-                        <Image
-                          src={test.image}
-                          alt={test.name}
-                          width={46}
-                          height={46}
-                          className="author-avatar"
-                        />
-                      </div>
-                      <div>
-                        <strong className="author-name">{test.name}</strong>
-                        <span className="author-role">{test.role}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* INTERACTIVE FAQ */}
         <FaqSection />
 
@@ -632,9 +524,6 @@ export default function Home() {
               </li>
               <li>
                 <a href="#processo">Como Funciona</a>
-              </li>
-              <li>
-                <a href="#depoimentos">Depoimentos</a>
               </li>
               <li>
                 <a href="#faq">Perguntas Frequentes</a>

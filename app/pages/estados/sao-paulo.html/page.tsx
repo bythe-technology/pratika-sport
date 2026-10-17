@@ -139,24 +139,6 @@ const processSteps = [
   },
 ];
 
-const testimonials = [
-  {
-    name: 'Carlos Silva',
-    role: 'Síndico — Condomínio Residencial',
-    text: 'A quadra do condomínio ficou com acabamento muito superior ao esperado. A equipe foi organizada e entregou dentro do combinado.',
-  },
-  {
-    name: 'Ana Paula Mendes',
-    role: 'Diretora Esportiva — Clube Campestre',
-    text: 'Contratamos para duas quadras de beach tennis e o resultado ficou consistente em drenagem, nivelamento e iluminação.',
-  },
-  {
-    name: 'Roberto Costa',
-    role: 'Centro de Treinamento de Tênis',
-    text: 'A reforma devolveu padrão técnico ao espaço e melhorou muito a experiência de jogo para os atletas.',
-  },
-];
-
 const localFaqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -420,39 +402,6 @@ export default function SaoPauloPage() {
                 </li>
               ))}
             </ol>
-          </div>
-        </section>
-
-        <section className="section" id="depoimentos">
-          <div className="container">
-            <div className="section-heading">
-              <div>
-                <small className="section-eyebrow">PROVA SOCIAL</small>
-                <h2>Experiências de quem já transformou seu espaço esportivo.</h2>
-              </div>
-              <p>
-                Conheça a experiência de clientes atendidos em diferentes tipos de quadras e empreendimentos.
-              </p>
-            </div>
-
-            <div className="testimonials-grid">
-              {testimonials.map((testimonial) => (
-                <article key={testimonial.name} className="testimonial-card">
-                  <div className="testimonial-rating" aria-label="5 estrelas">
-                    <Star size={16} fill="currentColor" />
-                    <Star size={16} fill="currentColor" />
-                    <Star size={16} fill="currentColor" />
-                    <Star size={16} fill="currentColor" />
-                    <Star size={16} fill="currentColor" />
-                  </div>
-                  <blockquote>{testimonial.text}</blockquote>
-                  <div className="testimonial-meta">
-                    <strong>{testimonial.name}</strong>
-                    <span>{testimonial.role}</span>
-                  </div>
-                </article>
-              ))}
-            </div>
           </div>
         </section>
 

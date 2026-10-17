@@ -21,11 +21,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pratikasport.com.br/#depoimentos</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.pratikasport.com.br/#faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
