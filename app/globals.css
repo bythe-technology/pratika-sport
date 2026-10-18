@@ -791,6 +791,12 @@ img {
   line-height: 1.1;
 }
 
+.trust-metric {
+  color: #a3e635;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+
 .trust-label {
   font-size: 13px;
   color: #94a3b8;

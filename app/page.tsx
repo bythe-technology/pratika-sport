@@ -259,8 +259,8 @@ export default function Home() {
                 <Award size={24} />
               </div>
               <div>
-                <strong className="trust-number">Atendimento nacional</strong>
-                <p className="trust-label">Com prioridade operacional em São Paulo</p>
+                <strong className="trust-number trust-metric">+850</strong>
+                <p className="trust-label">projetos realizados</p>
               </div>
             </div>
 
@@ -269,8 +269,8 @@ export default function Home() {
                 <FileCheck2 size={24} />
               </div>
               <div>
-                <strong className="trust-number">Projeto personalizado</strong>
-                <p className="trust-label">Escopo conforme o espaço e a modalidade</p>
+                <strong className="trust-number trust-metric">10+ anos</strong>
+                <p className="trust-label">de operação</p>
               </div>
             </div>
 
@@ -279,8 +279,8 @@ export default function Home() {
                 <MapPin size={24} />
               </div>
               <div>
-                <strong className="trust-number">Diagnóstico técnico</strong>
-                <p className="trust-label">Análise da base, drenagem e uso previsto</p>
+                <strong className="trust-number">Atendimento nacional</strong>
+                <p className="trust-label">Com prioridade em São Paulo</p>
               </div>
             </div>
 
@@ -289,8 +289,8 @@ export default function Home() {
                 <ShieldCheck size={24} />
               </div>
               <div>
-                <strong className="trust-number">Da obra à manutenção</strong>
-                <p className="trust-label">Construção, reforma e conservação de quadras</p>
+                <strong className="trust-number">Soluções completas</strong>
+                <p className="trust-label">Construção, reforma e manutenção</p>
               </div>
             </div>
           </div>

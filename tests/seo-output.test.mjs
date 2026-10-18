@@ -38,6 +38,13 @@ test('a página inicial comunica atendimento nacional sem limitar a empresa a SP
   assert.doesNotMatch(html, /<title>[^<]*em SP[^<]*<\/title>/);
 });
 
+test('a página inicial destaca os números confirmados pela empresa', async () => {
+  const html = await readFile(homePath, 'utf8');
+
+  assert.match(html, />\+850<\/strong>\s*<p class="trust-label">projetos realizados<\/p>/);
+  assert.match(html, />10\+ anos<\/strong>\s*<p class="trust-label">de operação<\/p>/);
+});
+
 test('páginas públicas não exibem depoimentos, nomes ou métricas sem comprovação', async () => {
   for (const path of [
     'index.html',
