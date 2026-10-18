@@ -137,9 +137,12 @@ test('nenhuma página pública exibe valores monetários', async () => {
     assert.doesNotMatch(html, /Quanto Custa|Valores aproximados|Investimento em Manutenção|<strong>Investimento:<\/strong>/i, path);
     assert.doesNotMatch(html, /<title>[^<]*(?:Pre[cç]o|2025)[^<]*<\/title>/i, path);
     assert.doesNotMatch(html, /centenas de quadras/i, path);
+    assert.doesNotMatch(html, /20\+ anos|15\+ anos|garantia de 5 anos/i, path);
     const serviceSlug = getServiceSlug(`/pages/servicos/${path}`);
     assert.equal(html.match(/<title>([^<]+)<\/title>/)?.[1], serviceMetadata[serviceSlug].title, path);
   }
+  const polysportPage = await readFile(new URL('../dist/client/pages/servicos/quadras-poliesportivas.html', import.meta.url), 'utf8');
+  assert.match(polysportPage, /A Pratika Sport desenvolve projetos de quadras poliesportivas para condomínios, clubes, escolas e academias em todo o Brasil\./);
   const planningArticle = await readFile(new URL('../dist/client/pages/blog/quanto-custa-construir-quadra-poliesportiva.html', import.meta.url), 'utf8');
   assert.match(planningArticle, /<title>Construção de Quadra Poliesportiva: Planejamento \| Pratika Sport<\/title>/);
   assert.doesNotMatch(planningArticle, /Quanto custa construir uma quadra poliesportiva|Preços de R\$|Custo médio (?:mensal|anual)/i);
