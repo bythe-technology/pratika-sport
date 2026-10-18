@@ -29,16 +29,17 @@ function browser(preference) {
   const storage = new Map(preference ? [['pratika-analytics-consent-v1', preference]] : []);
   const window = {};
   runInNewContext(source, { document, window, Element, URL, Date, location: { origin: 'https://www.pratikasport.com.br', pathname: '/', hostname: 'www.pratikasport.com.br' }, localStorage: { getItem: (key) => storage.get(key), setItem: (key, value) => storage.set(key, value) } });
-  const banner = document.body.children[0];
+  const banner = document.body.children[1];
   return { document, window, Element, banner, choose: (choice) => banner.querySelectorAll().find((button) => button.dataset.choice === choice).listeners.click(), scripts: () => document.head.children.filter((element) => element.tag === 'script'), events: () => (window.dataLayer ?? []).map((args) => Array.from(args)) };
 }
 
 test('no Google requests or tracking before consent, including refusal', () => {
   const page = browser();
   assert.equal(page.scripts().length, 0);
-  assert.equal(page.document.body.children[0], page.banner);
-  assert.equal(page.document.body.children[2].tag, 'main');
-  assert.match(page.document.head.children[0].textContent, /#pratika-consent\{position:relative;/);
+  assert.equal(page.document.body.children[0].tag, 'main');
+  assert.equal(page.document.body.children[1], page.banner);
+  assert.match(page.document.head.children[0].textContent, /#pratika-consent\{position:fixed;right:16px;bottom:82px;/);
+  assert.match(page.document.head.children[0].textContent, /@media\(max-width:600px\)\{#pratika-consent\{left:12px;right:12px;/);
   page.choose('denied');
   assert.equal(page.scripts().length, 0);
   assert.equal(page.events().length, 0);
