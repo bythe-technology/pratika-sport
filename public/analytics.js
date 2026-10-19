@@ -58,7 +58,7 @@
   const banner = document.createElement('section');
   banner.id = 'pratika-consent';
   banner.setAttribute('aria-label', 'Preferências de medição');
-  banner.innerHTML = '<p>Podemos usar o Google Analytics para entender visitas e cliques de contato e melhorar o site? A medição é opcional. <a href="/politica-privacidade.html#analytics">Saiba mais</a>.</p><button type="button" data-choice="granted">Aceitar medição</button><button type="button" data-choice="denied">Recusar medição</button>';
+  banner.innerHTML = '<p>Podemos medir visitas e cliques de contato com o Google Analytics? Isso é opcional. <a href="/politica-privacidade.html#analytics">Saiba mais</a>.</p><button type="button" data-choice="granted">Aceitar medição</button><button type="button" data-choice="denied">Recusar medição</button>';
   for (const button of banner.querySelectorAll('button')) {
     button.addEventListener('click', () => { choose(button.dataset.choice); banner.hidden = true; settings.focus(); });
   }
