@@ -41,6 +41,7 @@ test('no Google requests or tracking before consent, including refusal', () => {
   assert.match(page.banner.innerHTML, /visitas e cliques de contato.*Isso é opcional/);
   assert.match(page.document.head.children[0].textContent, /#pratika-consent\{position:fixed;right:16px;bottom:82px;/);
   assert.match(page.document.head.children[0].textContent, /@media\(max-width:600px\)\{#pratika-consent\{left:12px;right:12px;/);
+  assert.match(page.document.head.children[0].textContent, /padding:10px\}#pratika-consent p\{margin-bottom:6px\}/);
   page.choose('denied');
   assert.equal(page.scripts().length, 0);
   assert.equal(page.events().length, 0);
