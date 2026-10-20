@@ -53,7 +53,14 @@ test('páginas legadas alinham a apresentação institucional aos dados confirma
   assert.match(about, /<div class="stat-label">Projetos Realizados<\/div>/);
   assert.match(about, /<div class="stat-number">Brasil<\/div>[\s\S]*?<div class="stat-label">Atendimento Nacional<\/div>/);
   assert.match(about, /<div class="stat-number">São Paulo<\/div>[\s\S]*?<div class="stat-label">Prioridade Operacional<\/div>/);
-  assert.doesNotMatch(about, /20\+ anos|mais de 20 anos|Fundada em 2004|26 estados|98%|garantia estendida/i);
+  assert.match(about, /Materiais conforme o projeto/);
+  assert.doesNotMatch(about, /20\+ anos|mais de 20 anos|Fundada em 2004|26 estados|98%|garantia estendida|materiais certificados e de alta durabilidade/i);
+  const organizationSchemaText = about.match(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/)?.[1];
+  assert.ok(organizationSchemaText, 'schema institucional deve existir');
+  const organizationSchema = JSON.parse(organizationSchemaText);
+  assert.equal(organizationSchema.mainEntity.numberOfEmployees, undefined);
+  assert.equal(organizationSchema.mainEntity.foundingDate, undefined);
+  assert.equal(organizationSchema.mainEntity.founders, undefined);
 
   const outputDirectory = new URL('../dist/client/', import.meta.url);
   const htmlFiles = (await readdir(outputDirectory, { recursive: true })).filter((path) => path.endsWith('.html'));
