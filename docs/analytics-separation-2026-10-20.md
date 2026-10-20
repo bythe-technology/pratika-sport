@@ -11,7 +11,7 @@
 - Moeda: Real brasileiro (BRL).
 - Objetivos selecionados no assistente: geração de leads e tráfego web.
 - Categoria selecionada no assistente: Comércio e indústria (categoria mais próxima disponível).
-- Porte selecionado no assistente: Pequena, 1–10 funcionários; precisa ser confirmado pelo responsável da Pratika, pois não havia dado verificado disponível durante a configuração.
+- Porte selecionado e confirmado pelo usuário: Pequena, 1–10 funcionários.
 
 ## Preservação da propriedade antiga
 
