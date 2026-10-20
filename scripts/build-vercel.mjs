@@ -78,9 +78,41 @@ const updateServicePage = (html, metadata) => {
     .replace(/<h2>Quanto Custa Construir uma Quadra Poliesportiva\?<\/h2>/i, '<h2>Planejamento de uma quadra poliesportiva</h2>')
     .replace(/<h1([^>]*)>Quanto Custa Construir uma Quadra Poliesportiva\?<\/h1>/i, '<h1$1>Planejamento de uma Quadra Poliesportiva: Etapas e Fatores</h1>')
     .replace(/Quanto Custa Construir uma Quadra Poliesportiva\?/gi, 'Planejamento de uma Quadra Poliesportiva');
-  updated = updated.replace(/"name"\s*:\s*"Quanto custa construir[^\"]*"/gi, '"name": "Como solicitar um orçamento personalizado?"');
+  updated = updated.replace(/"name"\s*:\s*"Quanto custa construir[^"]*"/gi, '"name": "Como solicitar um orçamento personalizado?"');
   return updated;
 };
+
+const sanitizeCompanyClaims = (html) => html
+  .replace(/H[aá] mais de 20 anos transformando sonhos em realidade,\s*construindo quadras esportivas\s*de excel[eê]ncia em todo o Brasil\./gi, 'A Pratika Sport atua há mais de 10 anos em projetos de quadras esportivas no Brasil, com prioridade operacional em São Paulo.')
+  .replace(/20\+\s*anos\s+de\s+(?:experi[eê]ncia|excel[eê]ncia|opera[cç][ãa]o)/gi, '10+ anos de operação')
+  .replace(/mais de 20 anos(?: de experiência)?/gi, 'mais de 10 anos de operação')
+  .replace(/20\+ anos construindo quadras esportivas de excelência/gi, 'Mais de 10 anos de operação em projetos de quadras esportivas')
+  .replace(/20\+ Anos de Excelência/gi, '10+ anos de operação')
+  .replace(/20\+ anos no mercado/gi, '10+ anos de operação')
+  .replace(/(?:mais de\s+)?850\+?\s+quadras?\s+constru[ií]das/gi, 'mais de 850 projetos realizados')
+  .replace(/(?:mais de\s+)?850\+?\s+campos\s+constru[ií]dos/gi, 'mais de 850 projetos realizados')
+  .replace(/(?:em\s+)?26 estados(?: do Brasil| brasileiros)?/gi, 'em todo o Brasil')
+  .replace(/26 estados atendidos/gi, 'atendimento nacional')
+  .replace(/98% de satisfa[cç][ãa]o[^.]*\.?/gi, 'mais de 850 projetos realizados, conforme informação confirmada pela empresa.')
+  .replace(/Todos os nossos projetos possuem garantia estendida\./gi, 'Consulte as condições de garantia na proposta de cada projeto.')
+  .replace(/(<strong>Durabilidade:<\/strong>\s*)20\+ anos/gi, '$1A durabilidade varia conforme os materiais, o uso e a manutenção')
+  .replace(/há mais de 10 anos de operação\./gi, 'há mais de 10 anos.')
+  .replace(/<div class="stat">\s*<div class="stat-number" data-counter="20" data-suffix="\+">20\+<\/div>\s*<div class="stat-label">Anos de Experi[eê]ncia<\/div>\s*<\/div>/gi, '<div class="stat">\n            <div class="stat-number" data-counter="10" data-suffix="+">10+</div>\n            <div class="stat-label">Anos de Operação</div>\n          </div>')
+  .replace(/<div class="stat">\s*<div class="stat-number" data-counter="26" data-suffix="">26<\/div>\s*<div class="stat-label">Estados Atendidos<\/div>\s*<\/div>/gi, '')
+  .replace(/<div class="stat">\s*<div class="stat-number" data-counter="98" data-suffix="%">98%<\/div>\s*<div class="stat-label">Clientes Satisfeitos<\/div>\s*<\/div>/gi, '');
+
+const updateAboutPage = (html) => html
+  .replace(/<meta name="description" content="[^"]*"\s*\/?>/i, '<meta name="description" content="Conheça a Pratika Sport: mais de 850 projetos realizados e mais de 10 anos de operação, com atendimento nacional e prioridade em São Paulo.">')
+  .replace(/<meta property="og:description" content="[^"]*"\s*\/?>/i, '<meta property="og:description" content="Mais de 850 projetos realizados e mais de 10 anos de operação. Conheça a Pratika Sport e suas soluções para quadras esportivas.">')
+  .replace(/<meta name="twitter:description" content="[^"]*"\s*\/?>/i, '<meta name="twitter:description" content="Mais de 850 projetos realizados e mais de 10 anos de operação. Conheça a Pratika Sport.">')
+  .replace(/<p>\s*Fundada em 2004,[\s\S]*?<\/p>/i, '<p>A <strong>Pratika Sport</strong> desenvolve soluções para construção, reforma e manutenção de quadras esportivas, com mais de 10 anos de operação.</p>')
+  .replace(/<p>\s*Começamos como uma pequena empresa[\s\S]*?<\/p>/i, '<p>Com mais de <strong>850 projetos realizados</strong>, a empresa atende todo o Brasil, com prioridade operacional no estado de São Paulo.</p>')
+  .replace(/<div class="about-image-badge-number">20\+<\/div>/i, '<div class="about-image-badge-number">10+</div>')
+  .replace(/<div class="about-image-badge-text">Anos de<br>Experi[eê]ncia<\/div>/i, '<div class="about-image-badge-text">Anos de<br>Operação</div>')
+  .replace(/<div class="stat-number" data-counter="850" data-suffix="\+">850\+<\/div>\s*<div class="stat-label">Quadras Constru[ií]das<\/div>/i, '<div class="stat-number" data-counter="850" data-suffix="+">850+</div>\n            <div class="stat-label">Projetos Realizados</div>')
+  .replace(/<div class="stat">\s*<div class="stat-number" data-counter="20" data-suffix="\+">20\+<\/div>\s*<div class="stat-label">Anos de Experi[eê]ncia<\/div>\s*<\/div>/i, '<div class="stat">\n            <div class="stat-number" data-counter="10" data-suffix="+">10+</div>\n            <div class="stat-label">Anos de Operação</div>\n          </div>')
+  .replace(/\s*<div class="stat">\s*<div class="stat-number" data-counter="26" data-suffix="">26<\/div>\s*<div class="stat-label">Estados Atendidos<\/div>\s*<\/div>/i, '<div class="stat">\n            <div class="stat-number">Brasil</div>\n            <div class="stat-label">Atendimento Nacional</div>\n          </div>')
+  .replace(/\s*<div class="stat">\s*<div class="stat-number" data-counter="98" data-suffix="%">98%<\/div>\s*<div class="stat-label">Clientes Satisfeitos<\/div>\s*<\/div>/i, '<div class="stat">\n            <div class="stat-number">São Paulo</div>\n            <div class="stat-label">Prioridade Operacional</div>\n          </div>');
 
 await Promise.all(htmlFiles.map(async (file) => {
   const html = await readFile(file, 'utf8');
@@ -88,6 +120,8 @@ await Promise.all(htmlFiles.map(async (file) => {
   const metadata = serviceMetadata[serviceSlug];
   let sanitizedHtml = removePublishedPrices(html);
   if (metadata) sanitizedHtml = updateServicePage(sanitizedHtml, metadata);
+  if (file === resolve(output, 'pages', 'sobre.html')) sanitizedHtml = updateAboutPage(sanitizedHtml);
+  sanitizedHtml = sanitizeCompanyClaims(sanitizedHtml);
   if (file.endsWith('quanto-custa-construir-quadra-poliesportiva.html')) {
     sanitizedHtml = sanitizedHtml
       .replace(/<title>[^<]*<\/title>/i, '<title>Construção de Quadra Poliesportiva: Planejamento | Pratika Sport</title>')
@@ -100,7 +134,7 @@ await Promise.all(htmlFiles.map(async (file) => {
       .replace(/<meta\s+property="article:modified_time"\s+content="[^"]*"\s*\/?>/i, '<meta property="article:modified_time" content="2026-10-16">')
       .replace(/"dateModified"\s*:\s*"[^"]*"/i, '"dateModified": "2026-10-16"')
       .replace(/"headline"\s*:\s*"Quanto Custa Construir uma Quadra Poliesportiva\?"/gi, '"headline": "Construção de Quadra Poliesportiva: Planejamento"')
-      .replace(/"description"\s*:\s*"Guia completo com preços[^\"]*"/gi, '"description": "Orientações sobre medidas, piso, base, drenagem e infraestrutura para planejar uma quadra poliesportiva."')
+      .replace(/"description"\s*:\s*"Guia completo com preços[^"]*"/gi, '"description": "Orientações sobre medidas, piso, base, drenagem e infraestrutura para planejar uma quadra poliesportiva."')
       .replace(/<h1([^>]*)>Quanto Custa Construir uma Quadra Poliesportiva\?<\/h1>/i, '<h1$1>Planejamento de uma Quadra Poliesportiva: Etapas e Fatores</h1>')
       .replace(/<h2>Quanto Custa Construir uma Quadra Poliesportiva: Visão Geral<\/h2>/i, '<h2>O que considerar no planejamento da quadra</h2>')
       .replace(/O <strong>custo para construir uma quadra poliesportiva<\/strong> depende do terreno, das dimensões, da base, da drenagem, do tipo de piso, da iluminação, dos fechamentos e dos acessórios\. Uma faixa genérica pode induzir a uma decisão errada; a estimativa confiável é feita depois de conhecer o local e o escopo\./i, 'O planejamento técnico considera o terreno, as dimensões, a base, a drenagem, o tipo de piso, a iluminação, os fechamentos e os acessórios. A solução adequada depende da avaliação do local e do uso previsto.')
@@ -233,7 +267,7 @@ const urlEntries = (await Promise.all(htmlFiles.map(async (file) => {
 
   return { path, isIndexable, imageUrl };
 })))
-  .filter(({ path, isIndexable }) => isIndexable)
+  .filter(({ isIndexable }) => isIndexable)
   .filter(({ path }) => !path.includes('/404'))
   .filter(({ path }) => !path.endsWith('.html.html'))
   .filter(({ path }) => !path.startsWith('/pages/estados/') || path === '/pages/estados/sao-paulo')

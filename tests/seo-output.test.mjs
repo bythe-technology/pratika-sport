@@ -45,6 +45,24 @@ test('a página inicial destaca os números confirmados pela empresa', async () 
   assert.match(html, />10\+ anos<\/strong>\s*<p class="trust-label">de operação<\/p>/);
 });
 
+test('páginas legadas alinham a apresentação institucional aos dados confirmados', async () => {
+  const about = await readFile(new URL('../dist/client/pages/sobre.html', import.meta.url), 'utf8');
+
+  assert.match(about, /mais de 10 anos de operação/i);
+  assert.match(about, /mais de 850 projetos realizados/i);
+  assert.match(about, /<div class="stat-label">Projetos Realizados<\/div>/);
+  assert.match(about, /<div class="stat-number">Brasil<\/div>[\s\S]*?<div class="stat-label">Atendimento Nacional<\/div>/);
+  assert.match(about, /<div class="stat-number">São Paulo<\/div>[\s\S]*?<div class="stat-label">Prioridade Operacional<\/div>/);
+  assert.doesNotMatch(about, /20\+ anos|mais de 20 anos|Fundada em 2004|26 estados|98%|garantia estendida/i);
+
+  const outputDirectory = new URL('../dist/client/', import.meta.url);
+  const htmlFiles = (await readdir(outputDirectory, { recursive: true })).filter((path) => path.endsWith('.html'));
+  for (const file of htmlFiles) {
+    const html = await readFile(new URL(file.replaceAll('\\', '/'), outputDirectory), 'utf8');
+    assert.doesNotMatch(html, /mais de 20 anos|20\+ anos (?:de experiência|no mercado|construindo)|26 estados|98% de satisfação|<strong>Durabilidade:<\/strong>\s*20\+ anos/i, file);
+  }
+});
+
 test('páginas públicas não exibem depoimentos, nomes ou métricas sem comprovação', async () => {
   for (const path of [
     'index.html',
