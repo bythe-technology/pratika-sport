@@ -51,7 +51,7 @@ test('acceptance loads correct ID only once and strips referrer queries', () => 
   page.choose('granted');
   page.choose('granted');
   assert.equal(page.scripts().length, 1);
-  assert.match(page.scripts()[0].src, /G-J5RD6CP1YY$/);
+  assert.match(page.scripts()[0].src, /G-FFZKDZTE9M$/);
   const config = page.events().find(([command]) => command === 'config');
   assert.equal(config[2].page_referrer, 'https://www.google.com');
   assert.equal(config[2].allow_google_signals, false);
@@ -73,7 +73,7 @@ test('contact click is not a sale and does not include WhatsApp message', () => 
   page.document.listeners.click({ target });
   assert.equal(page.events().filter(([command]) => command === 'event').length, 1);
   page.choose('granted');
-  assert.equal(page.window['ga-disable-G-J5RD6CP1YY'], false);
+  assert.equal(page.window['ga-disable-G-FFZKDZTE9M'], false);
   assert.equal(page.scripts().length, 1);
 });
 

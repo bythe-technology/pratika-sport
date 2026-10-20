@@ -1,7 +1,7 @@
 /* Basic consent mode: no Google request before explicit acceptance. */
 (() => {
   'use strict';
-  const measurementId = 'G-J5RD6CP1YY';
+  const measurementId = 'G-FFZKDZTE9M';
   const preferenceKey = 'pratika-analytics-consent-v1';
   let enabled = false;
   let loaded = false;
