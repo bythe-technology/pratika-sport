@@ -25,6 +25,7 @@ export default function QuoteForm() {
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    document.dispatchEvent(new Event('pratika-contact-intent'));
 
     const message = `*Solicitação de Orçamento - Pratika Sport*\n\n` +
       `👤 *Nome:* ${name || 'Não informado'}\n` +

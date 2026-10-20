@@ -76,3 +76,20 @@ test('contact click is not a sale and does not include WhatsApp message', () => 
   assert.equal(page.window['ga-disable-G-J5RD6CP1YY'], false);
   assert.equal(page.scripts().length, 1);
 });
+
+test('quote form contact intent is tracked only after consent and excludes form data', () => {
+  const page = browser('granted');
+  page.document.listeners['pratika-contact-intent']();
+  const event = page.events().find(([command, name]) => command === 'event' && name === 'contact_click');
+  assert.equal(event[2].contact_channel, 'whatsapp');
+  assert.equal(event[2].contact_origin, 'quote_form');
+  assert.doesNotMatch(JSON.stringify(event), /name|phone|city|message|private|purchase|generate_lead/i);
+
+  page.choose('denied');
+  page.document.listeners['pratika-contact-intent']();
+  assert.equal(page.events().filter(([command, name]) => command === 'event' && name === 'contact_click').length, 1);
+
+  const undecidedPage = browser();
+  undecidedPage.document.listeners['pratika-contact-intent']();
+  assert.equal(undecidedPage.events().filter(([command]) => command === 'event').length, 0);
+});

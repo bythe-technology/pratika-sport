@@ -11,7 +11,7 @@
   const savePreference = (value) => {
     try { localStorage.setItem(preferenceKey, value); } catch { /* Session-only choice. */ }
   };
-  const gtag = function () { window.dataLayer.push(arguments); };
+  const gtag = (...args) => { window.dataLayer.push(args); };
   const start = () => {
     if (loaded) return;
     loaded = true;
@@ -79,5 +79,14 @@
     try { url = new URL(anchor.href, location.origin); } catch { return; }
     const channel = ['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(url.hostname) ? 'whatsapp' : url.protocol === 'tel:' ? 'phone' : url.protocol === 'mailto:' ? 'email' : null;
     if (channel) gtag('event', 'contact_click', { contact_channel: channel, page_path: location.pathname, transport_type: 'beacon' });
+  });
+  document.addEventListener('pratika-contact-intent', () => {
+    if (!enabled) return;
+    gtag('event', 'contact_click', {
+      contact_channel: 'whatsapp',
+      contact_origin: 'quote_form',
+      page_path: location.pathname,
+      transport_type: 'beacon',
+    });
   });
 })();
