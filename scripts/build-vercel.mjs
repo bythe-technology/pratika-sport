@@ -2,11 +2,13 @@ import { cp, mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getServiceSlug, serviceIntent, serviceMetadata } from './service-intent.mjs';
+import { enhanceIllustratedPage } from './illustrated-pages.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = resolve(root, 'dist', 'client');
 const canonicalBase = 'https://www.pratikasport.com.br';
 await mkdir(output, { recursive: true });
+await cp(resolve(root, 'public', 'illustrated-pages.css'), resolve(output, 'illustrated-pages.css'));
 const saoPauloOutput = resolve(output, 'pages', 'estados', 'sao-paulo.html');
 const saoPauloModernPage = await readFile(saoPauloOutput, 'utf8');
 await cp(resolve(root, 'legacy-site', 'snapshot', 'pages'), resolve(output, 'pages'), { recursive: true });
@@ -229,7 +231,7 @@ await Promise.all(legacyPages.map(async (file) => {
   if (intent && !enhancedHtml.includes('id="avaliacao-do-espaco"')) {
     enhancedHtml = enhancedHtml.replace('</main>', `<section class="section" id="avaliacao-do-espaco"><div class="container"><h2>${intent[0]}</h2><p>${intent[1]}</p><p><a href="#planejar-orcamento">Veja quais informações enviar para solicitar seu orçamento</a>.</p></div></section></main>`);
   }
-  await writeFile(file, enhancedHtml, 'utf8');
+  await writeFile(file, enhanceIllustratedPage(enhancedHtml, path), 'utf8');
 }));
 
 // Shared static integration covers both modern exports and legacy entry pages.
@@ -239,6 +241,7 @@ await Promise.all(htmlFiles.map(async (file) => {
   if (file.endsWith('politica-privacidade.html') && !html.includes('id="analytics"')) {
     html = html.replace('</body>', '<section id="analytics" style="max-width:900px;margin:32px auto;padding:20px"><h2>Medição opcional com Google Analytics</h2><p>Somente após aceitar a medição, carregamos o Google Analytics 4 (G-FFZKDZTE9M) para analisar visitas e cliques nos canais de contato. Um clique não significa orçamento recebido ou venda. Não enviamos textos dos formulários, telefones, e-mails ou parâmetros da URL como parte desta integração. O Google pode processar informações técnicas da conexão, como endereço IP e dispositivo, para fornecer o serviço. A medição não é necessária para usar o site. Cookies analíticos podem ser armazenados quando você aceita. Preferências ficam salvas neste navegador e podem ser alteradas no botão Cookies; ao recusar, novos eventos desta integração são bloqueados e tentamos remover os cookies analíticos acessíveis ao site.</p><p><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Política de privacidade do Google</a>.</p></section></body>');
   }
+  if (/politica-privacidade|termos-servico/.test(file)) html = enhanceIllustratedPage(html, file);
   await writeFile(file, html, 'utf8');
 }));
 

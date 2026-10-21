@@ -14,6 +14,8 @@ import {
 import SiteHeader from '@/components/SiteHeader';
 import QuoteForm from '@/components/QuoteForm';
 import StructuredData from '@/components/StructuredData';
+import Illustration from '@/components/Illustration';
+import ConstructionStory from '@/components/ConstructionStory';
 import {
   contact,
   organizationSchema,
@@ -211,24 +213,17 @@ export const metadata: Metadata = {
 
 export default function SaoPauloPage() {
   return (
-    <div className="site-wrapper">
+    <div className="site-wrapper illustrated-sp">
       <StructuredData data={[organizationSchema, websiteSchema, serviceSchema, pageSchema, localFaqSchema]} />
       <a className="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
       <SiteHeader />
 
       <main id="conteudo-principal">
         <section className="hero" id="inicio">
-          <Image
-            className="hero-image"
-            src="/images/construcao-de-quadras-1.jpg"
-            alt="Quadra esportiva profissional em São Paulo"
-            fill
-            priority
-            sizes="100vw"
-          />
           <div className="hero-overlay" />
 
-          <div className="hero-container">
+          <div className="hero-container illustrated-hero-grid">
+            <div className="hero-copy">
             <div className="hero-badge">
               <Sparkles size={15} />
               <span>São Paulo • Atendimento prioritário</span>
@@ -273,6 +268,8 @@ export default function SaoPauloPage() {
                 <span>Escopo técnico e atendimento consultivo</span>
               </div>
             </div>
+            </div>
+            <ConstructionStory />
           </div>
         </section>
 
@@ -289,10 +286,11 @@ export default function SaoPauloPage() {
             </div>
 
             <div className="services-grid">
-              {serviceCards.map((card) => {
+              {serviceCards.map((card, index) => {
                 const Icon = card.icon;
                 return (
                   <article key={card.title} className="service-card">
+                    <Illustration id={(['servico-poliesportiva', 'servico-tenis', 'servico-beach', 'servico-society', 'servico-reforma', 'material-modular'] as const)[index]} sizes="(max-width: 640px) 100vw, 33vw" />
                     <div className="service-card-icon">
                       <Icon size={22} />
                     </div>
@@ -367,8 +365,9 @@ export default function SaoPauloPage() {
             </div>
 
             <div className="surface-grid">
-              {surfaceCards.map((surface) => (
+              {surfaceCards.map((surface, index) => (
                 <div key={surface.name} className="surface-card">
+                  <Illustration id={(['material-modular', 'material-acrilico', 'material-saibro', 'material-grama', 'material-areia', 'material-base'] as const)[index]} sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="surface-icon">
                     <CheckCircle2 size={22} />
                   </div>

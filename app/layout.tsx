@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import './illustrations.css';
 import StructuredData from '@/components/StructuredData';
 import { organizationSchema, siteUrl, websiteSchema } from '@/lib/seo';
 

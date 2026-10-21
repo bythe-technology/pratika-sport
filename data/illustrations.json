@@ -1,0 +1,146 @@
+{
+  "servico-poliesportiva": {
+    "title": "Quadras poliesportivas",
+    "alt": "Maquete ilustrada de quadra poliesportiva azul e verde, com traves, tabelas e alambrado.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/servico-poliesportiva-1080.webp",
+    "base": "/images/illustrations/servico-poliesportiva"
+  },
+  "etapa-terreno": {
+    "title": "Preparação do terreno",
+    "alt": "Ilustração da preparação e conferência de um terreno para receber uma quadra.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/etapa-terreno-1080.webp",
+    "base": "/images/illustrations/etapa-terreno"
+  },
+  "etapa-base": {
+    "title": "Base e drenagem",
+    "alt": "Corte ilustrativo da base e da drenagem de uma quadra em construção.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/etapa-base-1080.webp",
+    "base": "/images/illustrations/etapa-base"
+  },
+  "etapa-revestimento": {
+    "title": "Aplicação do revestimento",
+    "alt": "Ilustração da aplicação do revestimento azul de uma quadra esportiva.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/etapa-revestimento-1080.webp",
+    "base": "/images/illustrations/etapa-revestimento"
+  },
+  "etapa-pronta": {
+    "title": "Quadra finalizada",
+    "alt": "Maquete ilustrada de quadra finalizada, com demarcação e equipamentos.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/etapa-pronta-1080.webp",
+    "base": "/images/illustrations/etapa-pronta"
+  },
+  "servico-tenis": {
+    "title": "Quadras de tênis",
+    "alt": "Maquete ilustrada de quadra de tênis em saibro, com rede central e alambrado.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/servico-tenis-1080.webp",
+    "base": "/images/illustrations/servico-tenis"
+  },
+  "servico-beach": {
+    "title": "Beach tennis",
+    "alt": "Maquete ilustrada de quadra de beach tennis com areia e rede.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/servico-beach-1080.webp",
+    "base": "/images/illustrations/servico-beach"
+  },
+  "servico-society": {
+    "title": "Campos society",
+    "alt": "Maquete ilustrada de campo society com gramado sintético, traves e cercamento.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/servico-society-1080.webp",
+    "base": "/images/illustrations/servico-society"
+  },
+  "servico-reforma": {
+    "title": "Reforma de quadras",
+    "alt": "Ilustração conceitual da recuperação do revestimento de uma quadra.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/servico-reforma-1080.webp",
+    "base": "/images/illustrations/servico-reforma"
+  },
+  "servico-manutencao": {
+    "title": "Manutenção de quadras",
+    "alt": "Ilustração de profissionais verificando o piso e o cercamento de uma quadra.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/servico-manutencao-1080.webp",
+    "base": "/images/illustrations/servico-manutencao"
+  },
+  "material-modular": {
+    "title": "Piso modular",
+    "alt": "Detalhe ilustrativo do encaixe entre placas de piso modular esportivo.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/material-modular-1080.webp",
+    "base": "/images/illustrations/material-modular"
+  },
+  "material-acrilico": {
+    "title": "Revestimento acrílico",
+    "alt": "Amostra ilustrada de revestimento acrílico azul sobre uma base.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/material-acrilico-1080.webp",
+    "base": "/images/illustrations/material-acrilico"
+  },
+  "material-saibro": {
+    "title": "Saibro",
+    "alt": "Amostra ilustrada da textura e das camadas de uma superfície de saibro.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/material-saibro-1080.webp",
+    "base": "/images/illustrations/material-saibro"
+  },
+  "material-grama": {
+    "title": "Grama sintética",
+    "alt": "Amostra ilustrada de grama sintética com detalhe do suporte.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/material-grama-1080.webp",
+    "base": "/images/illustrations/material-grama"
+  },
+  "material-areia": {
+    "title": "Areia e drenagem",
+    "alt": "Corte esquemático ilustrado de areia, agregado e drenagem.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/material-areia-1080.webp",
+    "base": "/images/illustrations/material-areia"
+  },
+  "material-base": {
+    "title": "Base estrutural",
+    "alt": "Corte esquemático ilustrado das camadas de uma base de quadra.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/material-base-1080.webp",
+    "base": "/images/illustrations/material-base"
+  },
+  "institucional-planejamento": {
+    "title": "Planejamento do espaço",
+    "alt": "Ilustração de profissionais planejando um espaço esportivo com planta e maquete.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/institucional-planejamento-1080.webp",
+    "base": "/images/illustrations/institucional-planejamento"
+  },
+  "institucional-complexo": {
+    "title": "Espaços para diferentes modalidades",
+    "alt": "Maquete conceitual de um conjunto de quadras e campo society.",
+    "width": 1080,
+    "height": 720,
+    "src": "/images/illustrations/institucional-complexo-1080.webp",
+    "base": "/images/illustrations/institucional-complexo"
+  }
+}

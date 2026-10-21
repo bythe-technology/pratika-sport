@@ -1,0 +1,45 @@
+/* Shared visual shell for the preserved public routes. */
+.concept-figure { margin: 0; position: relative; min-width: 0; background: #eef7fc; border-radius: 20px; overflow: hidden; }
+.concept-figure picture, .concept-figure img { display: block; }
+.concept-figure img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
+.concept-figure figcaption { position: absolute; bottom: 9px; right: 10px; border-radius: 20px; padding: 3px 9px; background: #ffffffed; color: #38546a; font-size: 10px; line-height: 1.5; }
+body[data-illustrated-page] { color: #163950; background: #fcfdff; padding-top: 110px; font-family: Inter, system-ui, sans-serif; }
+body[data-illustrated-page] h1, body[data-illustrated-page] h2, body[data-illustrated-page] h3 { color: #07345a; letter-spacing: -.035em; }
+.illustrated-header { box-sizing: border-box; z-index: 1000; position: fixed; top: 14px; left: 50%; transform: translateX(-50%); width: calc(100% - 48px); max-width: 1232px; min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 8px 22px; background: #ffffffed; border: 1px solid #d3e7f2; border-radius: 40px; box-shadow: 0 8px 35px #07345a12; backdrop-filter: blur(12px); }
+.illustrated-header img { width: 155px; height: auto; display: block; }
+.illustrated-nav { display: flex; align-items: center; gap: 24px; }
+.illustrated-header a { color: #20435e; text-decoration: none; font-size: 13px; font-weight: 650; }
+.illustrated-quote, .illustrated-header .illustrated-quote { display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(110deg,#0085db,#0cacc5 60%,#70c500); color: #fff; border-radius: 24px; padding: 12px 19px; font-size: 13px; font-weight: 750; text-decoration: none; }
+.illustrated-mobile-nav { display: none; }
+body[data-illustrated-page] .page-header { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 40px; padding: 46px max(24px,calc((100vw - 1180px) / 2)); background: #f0f7fc; color: #163950; min-height: 300px; margin: 0; }
+body[data-illustrated-page] .page-header > .container { width: 100%; padding: 0; min-width: 0; }
+body[data-illustrated-page] .page-header::before, body[data-illustrated-page] .page-header::after { content: none; display: none; }
+body[data-illustrated-page] .page-header-title { color: #07345a; font-size: clamp(28px,3.1vw,48px); line-height: 1.14; }
+body[data-illustrated-page] .page-header-description { color: #4b6478; font-size: 17px; line-height: 1.75; }
+body[data-illustrated-page] .breadcrumb, body[data-illustrated-page] .breadcrumb a { color: #49728c; }
+.illustrated-heading-art { min-width: 0; }
+.illustrated-table-scroll { width: 100%; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; margin-block: 20px; }
+.illustrated-table-scroll table { margin: 0 !important; }
+body[data-illustrated-page] .service-content-grid > * { min-width: 0; }
+body[data-illustrated-page] a[href^="mailto:"] { overflow-wrap: anywhere; min-width: 0; }
+body[data-illustrated-page] .footer-contact li > svg { flex-shrink: 0; }
+body[data-illustrated-page] main .section { padding-block: 56px; }
+body[data-illustrated-page] .blog-card { border: 1px solid #dce8f0; border-radius: 22px; overflow: hidden; background: white; box-shadow: 0 10px 30px #07345a07; }
+body[data-illustrated-page] .blog-card .concept-figure { border-radius: 0; }
+.illustrated-materials { max-width: 1180px; box-sizing: border-box; margin: 35px auto 65px; padding: 32px; background: #f0f7fc; border: 1px solid #dfebf3; border-radius: 24px; }
+.illustrated-materials > div > span { color: #337a20; font-weight: 750; font-size: 11px; letter-spacing: .12em; }
+.illustrated-materials h2 { margin-top: 10px; }
+.illustrated-materials p { max-width: 700px; }
+.illustrated-material-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
+.illustrated-material-grid h3 { font-size: 18px; margin: 12px 0; }
+.illustrated-footer { padding: 55px max(24px,calc((100vw - 1180px) / 2)); display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 36px; background: #eaf3f8; color: #34566f; border-top: 1px solid #d9e7f0; font: 14px/1.8 Inter,system-ui,sans-serif; }
+.illustrated-footer img { width: 186px; height: auto; }
+.illustrated-footer nav { display: flex; flex-direction: column; gap: 10px; }
+.illustrated-footer a { color: #204f70; text-decoration: none; }
+.illustrated-footer small { grid-column: 1 / -1; border-top: 1px solid #cfdee8; padding-top: 20px; font-size: 11px; }
+body[data-legal-page] > .container { max-width: 900px; padding: 30px 24px 70px; }
+body[data-legal-page] > section { box-sizing: border-box; }
+body[data-illustrated-page] a:focus-visible, body[data-illustrated-page] summary:focus-visible { outline: 3px solid #0078d4; outline-offset: 4px; }
+@media(max-width:1000px) { .illustrated-nav { gap: 14px; } .illustrated-header { gap: 12px; } .illustrated-header img { width: 135px; } .illustrated-header a { font-size: 11px; } }
+@media(max-width:767px) { body[data-illustrated-page] { padding-top: 90px; } .illustrated-header { top: 10px; width: calc(100% - 24px); min-height: 62px; padding: 8px 14px; gap: 9px; border-radius: 30px; } .illustrated-header img { width: 126px; } .illustrated-nav { display: none; } .illustrated-header .illustrated-quote { font-size: 10px; padding: 10px; white-space: nowrap; } .illustrated-mobile-nav { display: block; } .illustrated-mobile-nav summary { cursor: pointer; color: #20435e; font-size: 11px; font-weight: 750; list-style: none; } .illustrated-mobile-nav nav { position: absolute; top: calc(100% + 10px); right: 0; width: min(300px,85vw); display: grid; gap: 0; padding: 14px; border: 1px solid #d9e8f1; background: white; box-shadow: 0 15px 40px #07345a20; border-radius: 20px; } .illustrated-mobile-nav nav a { font-size: 14px; padding: 12px; } body[data-illustrated-page] .page-header { grid-template-columns: 1fr; padding: 30px 20px; gap: 22px; } body[data-illustrated-page] .page-header-title { font-size: 32px; } body[data-illustrated-page] .page-header-description { font-size: 15px; } .illustrated-materials { margin: 25px 16px 40px; padding: 20px; } .illustrated-material-grid { grid-template-columns: 1fr; } .illustrated-footer { grid-template-columns: 1fr; gap: 25px; padding: 36px 22px; } }
+@media(prefers-reduced-motion:reduce) { body[data-illustrated-page] { scroll-behavior: auto; } }

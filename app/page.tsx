@@ -22,6 +22,8 @@ import QuoteForm from '@/components/QuoteForm';
 import FaqSection from '@/components/FaqSection';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import StructuredData from '@/components/StructuredData';
+import Illustration from '@/components/Illustration';
+import ConstructionStory from '@/components/ConstructionStory';
 import { faqSchema, serviceSchema } from '@/lib/seo';
 
 const services = [
@@ -30,7 +32,7 @@ const services = [
     category: 'Multiuso & Condomínios',
     description:
       'Projetadas para futsal, basquete, vôlei e handebol com piso de alta absorção de impacto, iluminação LED e alambrados reforçados.',
-    image: '/images/hero-quadra.jpg',
+    illustration: 'servico-poliesportiva' as const,
     href: '/pages/servicos/quadras-poliesportivas.html',
     waText:
       'Olá! Gostaria de um orçamento para construção ou reforma de Quadra Poliesportiva.',
@@ -40,7 +42,7 @@ const services = [
     category: 'Oficial & Recreativo',
     description:
       'Superfícies em saibro tradicional, piso rápido acrílico ou grama sintética, respeitando normas técnicas da CBT e ITF.',
-    image: '/images/quadra-tenis.jpg',
+    illustration: 'servico-tenis' as const,
     href: '/pages/servicos/quadra-de-tenis.html',
     waText: 'Olá! Gostaria de um orçamento para Quadra de Tênis.',
   },
@@ -49,7 +51,7 @@ const services = [
     category: 'Modalidades de Areia',
     description:
       'Sistema completo com drenagem profunda, areia tratada de granulometria ideal, cercamentos e postes oficiais.',
-    image: '/images/beach-tennis.jpeg',
+    illustration: 'servico-beach' as const,
     href: '/pages/servicos/quadra-de-beach-tennis.html',
     waText: 'Olá! Gostaria de um orçamento para Quadra de Beach Tennis.',
   },
@@ -58,7 +60,7 @@ const services = [
     category: 'Grama Sintética',
     description:
       'Grama sintética monofilamento de alta densidade com base amortecedora, drenagem ágil e fechamento perimetral com redes.',
-    image: '/images/campo-futebol.jpg',
+    illustration: 'servico-society' as const,
     href: '/pages/servicos/campo-de-futebol.html',
     waText: 'Olá! Gostaria de um orçamento para Campo de Futebol Society.',
   },
@@ -67,7 +69,7 @@ const services = [
     category: 'Interno e Externo',
     description:
       'Placas modulares em polipropileno de alta resistência, antiderrapantes, com drenagem instantânea e proteção UV.',
-    image: '/images/piso-modular-esportivo-area-externa-2.jpg',
+    illustration: 'material-modular' as const,
     href: '/pages/blog/melhor-piso-para-quadra-esportiva.html',
     waText: 'Olá! Gostaria de informações sobre Piso Modular Esportivo.',
   },
@@ -76,7 +78,7 @@ const services = [
     category: 'Manutenção & Pintura',
     description:
       'Correção de fissuras, regularização de base, pintura epóxi/acrílica, demarcação técnica e troca de acessórios esportivos.',
-    image: '/images/construcao-de-quadras-4.jpg',
+    illustration: 'servico-reforma' as const,
     href: '/pages/servicos/reforma-de-quadras.html',
     waText:
       'Olá! Gostaria de um diagnóstico e orçamento para Reforma de Quadra.',
@@ -86,36 +88,42 @@ const services = [
 const surfaces = [
   {
     name: 'Piso Modular Esportivo',
+    illustration: 'material-modular' as const,
     type: 'Polipropileno Alto Impacto',
     desc: 'Excelente amortecimento para articulações, drenagem automática contra chuva e custo de manutenção mínimo. Ideal para áreas externas e internas.',
     tag: 'Alta Durabilidade',
   },
   {
     name: 'Piso Acrílico / Asfáltico',
+    illustration: 'material-acrilico' as const,
     type: 'Piso Rápido / Emborrachado',
     desc: 'Camadas de resina acrílica sobre asfalto ou concreto nivelado. Velocidade de jogo uniforme, estética vibrante e alta resistência climática.',
     tag: 'Padrão Oficial',
   },
   {
     name: 'Saibro Clássico',
+    illustration: 'material-saibro' as const,
     type: 'Composto Cerâmico & Pó de Telha',
     desc: 'Piso tradicional para tênis com deslizamento controlado, conforto muscular e sistema de irrigação/drenagem especializada.',
     tag: 'Máximo Conforto',
   },
   {
     name: 'Grama Sintética Esportiva',
+    illustration: 'material-grama' as const,
     type: 'Fibras Fibriladas / Monofilamento',
     desc: 'Uso contínuo para campos society e minicampos, dispensando corte e irrigação constante com excelente tração e segurança.',
     tag: 'Society & Futebol',
   },
   {
     name: 'Areia Tratada e Selecionada',
+    illustration: 'material-areia' as const,
     type: 'Granulometria Especial',
     desc: 'Areia lavada e selecionada para Beach Tennis, Futevôlei e Vôlei de Praia, sem aquecimento excessivo nem acúmulo de poeira.',
     tag: 'Beach Sports',
   },
   {
     name: 'Bases Estruturais em Concreto / Asfalto',
+    illustration: 'material-base' as const,
     type: 'Fundação e Regularização',
     desc: 'Engenharia de base com caimento perfeito para escoamento de água, juntas de dilatação e armaduras de reforço estrutural.',
     tag: 'Base Construtiva',
@@ -158,24 +166,17 @@ export default function Home() {
       <main id="conteudo-principal">
         {/* HERO SECTION */}
         <section className="hero" id="inicio">
-          <Image
-            className="hero-image"
-            src="/images/hero-quadra.jpg"
-            alt="Quadra poliesportiva profissional construída pela Pratika Sport"
-            fill
-            priority
-            sizes="100vw"
-          />
           <div className="hero-overlay" />
 
-          <div className="hero-container">
+          <div className="hero-container illustrated-hero-grid">
+            <div className="hero-copy">
             <div className="hero-badge">
               <Sparkles size={15} />
               <span>Construção • Reforma • Manutenção</span>
             </div>
 
             <h1 className="hero-title">
-              Espaços esportivos de alta performance, do projeto à entrega.
+              Sua quadra, do projeto ao primeiro jogo.
             </h1>
 
             <p className="hero-description">
@@ -244,6 +245,8 @@ export default function Home() {
                 </span>
               </div>
             </div>
+            </div>
+            <ConstructionStory />
           </div>
         </section>
 
@@ -317,13 +320,7 @@ export default function Home() {
               {services.map((service, index) => (
                 <article className="service-card" key={index}>
                   <div className="service-image-wrapper">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="service-img"
-                    />
+                    <Illustration id={service.illustration} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                     <div className="service-badge-pill">{service.category}</div>
                     <div className="service-overlay-gradient" />
                   </div>
@@ -373,6 +370,7 @@ export default function Home() {
             <div className="surfaces-grid">
               {surfaces.map((surf, idx) => (
                 <div className="surface-card" key={idx}>
+                  <Illustration id={surf.illustration} sizes="(max-width: 640px) 100vw, 33vw" />
                   <div className="surface-top">
                     <span className="surface-tag">{surf.tag}</span>
                     <Layers size={20} className="surface-icon" />
@@ -406,6 +404,7 @@ export default function Home() {
             <div className="steps-grid">
               {steps.map((item, idx) => (
                 <div className="step-card" key={idx}>
+                  <Illustration id={(['institucional-planejamento', 'etapa-terreno', 'etapa-base', 'etapa-pronta'] as const)[idx]} sizes="(max-width: 640px) 100vw, 25vw" />
                   <div className="step-badge">{item.step}</div>
                   <h3 className="step-title">{item.title}</h3>
                   <p className="step-desc">{item.desc}</p>
@@ -418,6 +417,7 @@ export default function Home() {
         {/* AUDIENCE / PARA QUEM FAZEMOS */}
         <section className="audience-section">
           <div className="section-container">
+            <Illustration id="institucional-complexo" className="audience-illustration" />
             <div className="audience-card-wrapper">
               <div className="audience-header">
                 <span className="section-eyebrow">Segmentos Atendidos</span>
@@ -466,7 +466,7 @@ export default function Home() {
         <div className="footer-top">
           <div className="footer-brand-col">
             <Image
-              src="/images/logo-footer-colored-globe.png"
+              src="/images/logo-header.png"
               alt="Pratika Sport"
               width={204}
               height={68}
@@ -531,6 +531,10 @@ export default function Home() {
               <li>
                 <a href="#orcamento">Solicitar Orçamento</a>
               </li>
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Legal pages are static HTML, outside the React router. */}
+              <li><a href="/politica-privacidade.html">Privacidade</a></li>
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Legal pages are static HTML, outside the React router. */}
+              <li><a href="/termos-servico.html">Termos de uso</a></li>
             </ul>
           </div>
 

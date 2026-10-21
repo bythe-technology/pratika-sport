@@ -1,0 +1,101 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-21",
+  "reference": "servico-poliesportiva",
+  "style": "Professional cartoon architectural education; isometric camera; navy, cyan, lime; pale blue background; no embedded text.",
+  "sourceDirectory": "artwork/source (local archive)",
+  "referencePrompt": "Create a professional editorial cartoon illustration for Brazilian sports court construction company Pratika Sport website. A single isometric miniature multi-sport court on an isolated off-white pale blue background, landscape 3:2. Consistent polished hand-crafted 3D cartoon style, rounded clean forms but believable materials, blue playing surface, lime green surrounding area, white clear simplified basketball and futsal markings, two correctly placed goals at opposite short ends and two basketball hoops, perimeter mesh fence and four light posts. Three-quarter elevated camera, soft daylight from upper left, subtle contact shadows, crisp details, sophisticated friendly architectural educational illustration. Entire court fits with breathing room. Palette navy blue #07345a, cyan blue, lime green, off-white. No words, no letters, no logos, no watermark, no people. This is a conceptual educational illustration, not a photograph. Keep court geometry coherent, no random equipment or illegible text.",
+  "promptTemplate": "Use attached image ONLY as style, palette and camera reference. Generate a NEW distinct website illustration: {subject} Style: professional CARTOON architectural educational illustration, slightly rounded forms, subtly textured materials, soft daylight and contact shadows, crisp edges, warm friendly non-childish look. Match reference palette navy #07345a, cyan blue, lime green, pale off-white blue background. Entire subject centered with breathing room, landscape 3:2. No words, letters, captions, numbers, logos or watermarks. Schematic conceptual illustration, never a project photograph. Keep geometry believable.",
+  "assets": [
+    {
+      "id": "servico-poliesportiva",
+      "subject": "Reference image; see referencePrompt.",
+      "source": "artwork/source/servico-poliesportiva.png"
+    },
+    {
+      "id": "etapa-terreno",
+      "subject": "The same rectangular court site BEFORE construction: a flat neatly prepared brown soil platform with simple stakes and string at corners, tiny cartoon surveyor with helmet and a small level instrument beside it. No finished court, no fence, no lights. Keep the same elevated isometric view and rectangular footprint as reference.",
+      "source": "artwork/source/etapa-terreno.png"
+    },
+    {
+      "id": "etapa-base",
+      "subject": "The same rectangular court site during base and drainage construction. Show a clean educational cutaway at the near edge revealing gravel aggregate and earth, drainage pipe along the side, compacted pale gray base over it. Two friendly miniature cartoon construction workers with helmets. No blue floor yet, no markings, no hoops. Same isometric rectangular footprint as reference.",
+      "source": "artwork/source/etapa-base.png"
+    },
+    {
+      "id": "etapa-revestimento",
+      "subject": "The same rectangular court during coating installation. Show mostly blue court surface and lime green perimeter with one small unpainted corner, a cartoon worker applying blue paint with a long roller, another placing tools outside court. No sports markings or hoops yet. Same rectangular footprint and isometric camera as reference.",
+      "source": "artwork/source/etapa-revestimento.png"
+    },
+    {
+      "id": "etapa-pronta",
+      "subject": "The same rectangular completed blue and lime green multi-sport court as reference, coherent white sports lines, two goals at opposite short ends, basketball hoops, perimeter fence and light posts. Two friendly miniature cartoon engineers with helmets inspect it standing OUTSIDE the playing area. Entire court fits, same elevated camera.",
+      "source": "artwork/source/etapa-pronta.png"
+    },
+    {
+      "id": "servico-tenis",
+      "subject": "A single elegant miniature tennis court with terracotta clay playing surface, green perimeter, accurate simple white TENNIS lines only, central taut tennis net across width with two end posts, mesh fence, four lights. No football goals, no basketball hoops. Friendly sophisticated cartoon isometric architectural model.",
+      "source": "artwork/source/servico-tenis.png"
+    },
+    {
+      "id": "servico-beach",
+      "subject": "A single miniature beach tennis court with clean pale sand, narrow rectangular court boundary tapes, a single elevated central net across width with two poles, wooden perimeter containment, drainage hinted at side. No grass, no hard court, no football goals. Cartoon isometric architectural model.",
+      "source": "artwork/source/servico-beach.png"
+    },
+    {
+      "id": "servico-society",
+      "subject": "A single miniature football society field with alternating green synthetic turf stripes, simple coherent white football lines, ONE goal at each opposite short end, high perimeter safety mesh, light poles. No tennis nets, no basketball hoops. Cartoon isometric architectural model.",
+      "source": "artwork/source/servico-society.png"
+    },
+    {
+      "id": "servico-reforma",
+      "subject": "A conceptual sports court renovation scene: one rectangular miniature court, left portion worn faded paint and a few cracks, right portion freshly renovated blue and lime green floor. A friendly cartoon worker kneeling beside a small repaired crack and another rolling paint, both wearing protective gear. Illustrative comparison within same scene, no written labels, no destructive gigantic cracks.",
+      "source": "artwork/source/servico-reforma.png"
+    },
+    {
+      "id": "servico-manutencao",
+      "subject": "Preventive sports court maintenance scene: a small clean blue/green sports court, two friendly helmeted cartoon technicians, one checks perimeter fence fastenings from outside, one brushes the floor, a small neat toolkit. No dangerous ladders or electrical work. Educational professional cartoon model.",
+      "source": "artwork/source/servico-manutencao.png"
+    },
+    {
+      "id": "material-modular",
+      "subject": "Close-up educational isometric sample of interlocking polypropylene modular sports flooring, four blue and lime green square tiles, one raised above the others to show clip connections and open drainage lattice. Plausible neat texture, friendly polished cartoon material illustration. Not an entire court.",
+      "source": "artwork/source/material-modular.png"
+    },
+    {
+      "id": "material-acrilico",
+      "subject": "Close-up educational isometric square material sample showing a blue acrylic sports coating over gray mineral base, clean cutaway edge, one small white painted stripe, a miniature paint roller beside it. Realistic material grain with simplified professional cartoon shapes. No labels.",
+      "source": "artwork/source/material-acrilico.png"
+    },
+    {
+      "id": "material-saibro",
+      "subject": "Close-up educational isometric square sample of terracotta clay tennis surface with granular orange-red texture, white line strip, subtle layered cutaway edge over gravel, small green tennis ball outside the sample as context. Professional cartoon materials illustration.",
+      "source": "artwork/source/material-saibro.png"
+    },
+    {
+      "id": "material-grama",
+      "subject": "Close-up educational isometric square sample of green synthetic sports turf, one corner slightly rolled up to reveal backing and gray base, upright fine green grass blades, small football outside sample as context. Clear professional cartoon texture illustration, not natural soil lawn.",
+      "source": "artwork/source/material-grama.png"
+    },
+    {
+      "id": "material-areia",
+      "subject": "Close-up educational isometric square sample showing selected pale sports sand over gravel and a drainage pipe in a schematic cutaway block, soft grain texture and simple crisp layer edges. A small rake outside the sample. No numerical thicknesses or labels. Cartoon educational rendering.",
+      "source": "artwork/source/material-areia.png"
+    },
+    {
+      "id": "material-base",
+      "subject": "Close-up educational isometric cutaway block of a sports court structural base: compacted brown soil lower layer, coarse gravel middle, flat gray concrete top with one clean joint line. Schematic only, no engineering dimensions, no text. Professional cartoon textured architectural sample.",
+      "source": "artwork/source/material-base.png"
+    },
+    {
+      "id": "institucional-planejamento",
+      "subject": "Friendly professional cartoon illustration of planning a sports area: two miniature helmeted professionals beside a large table with a simple blue-green court plan, measuring tape, rolled drawings and a tiny court model. Diverse adults, natural hands, modest detail. No readable text, no company insignias, no promises. Isometric pale blue background.",
+      "source": "artwork/source/institucional-planejamento.png"
+    },
+    {
+      "id": "institucional-complexo",
+      "subject": "Friendly professional cartoon isometric miniature sports complex: blue/green multisport court, terracotta tennis court with center net, pale sand beach tennis court, green small society field. Courts distinctly separated by landscaped paths and a few stylized trees. Coherent sport equipment, no people, no logos, wide landscape composition.",
+      "source": "artwork/source/institucional-complexo.png"
+    }
+  ]
+}

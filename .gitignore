@@ -38,3 +38,6 @@ next-env.d.ts
 /outputs/
 /output/
 /work/
+# Original generated artwork is archived locally; optimized web variants are tracked.
+artwork/source/
+*.tsbuildinfo

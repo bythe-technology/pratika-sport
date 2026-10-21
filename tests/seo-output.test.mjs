@@ -187,7 +187,7 @@ test('a identificação de páginas de serviço funciona em caminhos Windows e L
 
 test('remoção de preços preserva navegação, modalidades e conteúdo técnico do campo', async () => {
   const html = await readFile(new URL('../dist/client/pages/servicos/campo-de-futebol.html', import.meta.url), 'utf8');
-  assert.match(html, /nav-desktop/);
+  assert.match(html, /aria-label="Navegação principal"/);
   assert.match(html, /Society 20x40m/);
   assert.match(html, /Campo oficial \(grama natural\)/);
   assert.match(html, /id="planejar-orcamento"/);
