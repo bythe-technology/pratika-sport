@@ -73,7 +73,7 @@ try {
   await animated.getByRole('button',{name:'Recusar medição',exact:true}).click();
   await animated.waitForFunction(() => document.querySelector('.story-controls [aria-selected="true"]')?.id === 'stage-1');
   await animated.getByRole('button',{name:'Pausar',exact:true}).click();
-  await animated.getByRole('button',{name:'↻ Repetir etapas',exact:true}).click();
+  await animated.getByRole('button',{name:'Repetir etapas',exact:true}).click();
   await animated.waitForFunction(() => document.querySelector('.story-controls [aria-selected="true"]')?.id === 'stage-3' && [...document.querySelectorAll('button')].some(button=>button.textContent==='Continuar'));
   await animated.getByLabel('Nome / Empresa / Condomínio *',{exact:true}).fill('Teste local');
   await animated.getByLabel('WhatsApp ou Telefone *',{exact:true}).fill('11900000000');

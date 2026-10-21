@@ -2,13 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight,
-  CheckCircle2,
   MapPin,
   Phone,
   ShieldCheck,
   Award,
   Layers,
-  Sparkles,
   Users,
   Building2,
   HardHat,
@@ -170,20 +168,15 @@ export default function Home() {
 
           <div className="hero-container illustrated-hero-grid">
             <div className="hero-copy">
-            <div className="hero-badge">
-              <Sparkles size={15} />
-              <span>Construção • Reforma • Manutenção</span>
-            </div>
+            <div className="hero-badge"><span>Construção · Reforma · Manutenção</span></div>
 
             <h1 className="hero-title">
-              Sua quadra, do projeto ao primeiro jogo.
+              <span>Sua quadra.</span> Do projeto ao <em>primeiro jogo.</em>
             </h1>
 
             <p className="hero-description">
-              Construção, reforma e manutenção de quadras esportivas em todo o
-              Brasil para condomínios, clubes, escolas, centros de treinamento,
-              empresas e residências, com prioridade operacional no estado de
-              São Paulo.
+              Transformamos espaços em quadras para condomínios, clubes e escolas.
+              Construção, reforma e manutenção em todo o Brasil, com prioridade em <strong>São Paulo.</strong>
             </p>
 
             <div className="hero-actions">
@@ -193,57 +186,18 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>Solicitar Orçamento Grátis</span>
+                <span>Solicitar orçamento</span>
                 <ArrowRight aria-hidden="true" size={18} />
               </a>
 
               <a className="btn btn-glass" href="#servicos">
-                <span>Conhecer Soluções</span>
-              </a>
-            </div>
-
-            <div
-              className="hero-socials"
-              aria-label="Redes sociais da Pratika Sport"
-            >
-              <a
-                href="https://www.instagram.com/pratikasport.com.br/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-social-link"
-                aria-label="Instagram da Pratika Sport"
-              >
-                <Camera size={18} />
-                <span>Instagram</span>
-              </a>
-
-              <a
-                href="https://wa.me/5515997157642?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20da%20Pratika%20Sport."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-social-link"
-                aria-label="WhatsApp da Pratika Sport"
-              >
-                <MessageCircle size={18} />
-                <span>WhatsApp</span>
+                <span>Ver soluções</span><ArrowRight size={16} aria-hidden="true" />
               </a>
             </div>
 
             <div className="hero-highlights">
-              <div className="hero-highlight-item">
-                <ShieldCheck size={18} className="text-accent" />
-                <span>Garantia de Obra Estrutural</span>
-              </div>
-              <div className="hero-highlight-item">
-                <CheckCircle2 size={18} className="text-accent" />
-                <span>Medidas & Normas Oficiais</span>
-              </div>
-              <div className="hero-highlight-item">
-                <MapPin size={18} className="text-accent" />
-                <span>
-                  Atendimento Nacional · Prioridade no Estado de São Paulo
-                </span>
-              </div>
+              <div className="hero-proof"><strong>+850</strong><span>projetos realizados</span></div>
+              <div className="hero-proof"><strong>10+ anos</strong><span>de operação</span></div>
             </div>
             </div>
             <ConstructionStory />
@@ -262,8 +216,8 @@ export default function Home() {
                 <Award size={24} />
               </div>
               <div>
-                <strong className="trust-number trust-metric">+850</strong>
-                <p className="trust-label">projetos realizados</p>
+                <strong className="trust-number">Construção</strong>
+                <p className="trust-label">Do terreno à demarcação</p>
               </div>
             </div>
 
@@ -272,8 +226,8 @@ export default function Home() {
                 <FileCheck2 size={24} />
               </div>
               <div>
-                <strong className="trust-number trust-metric">10+ anos</strong>
-                <p className="trust-label">de operação</p>
+                <strong className="trust-number">Reforma</strong>
+                <p className="trust-label">Recuperação do seu espaço</p>
               </div>
             </div>
 
@@ -282,8 +236,8 @@ export default function Home() {
                 <MapPin size={24} />
               </div>
               <div>
-                <strong className="trust-number">Atendimento nacional</strong>
-                <p className="trust-label">Com prioridade em São Paulo</p>
+                <strong className="trust-number">Manutenção</strong>
+                <p className="trust-label">Cuidado em cada detalhe</p>
               </div>
             </div>
 
@@ -292,8 +246,8 @@ export default function Home() {
                 <ShieldCheck size={24} />
               </div>
               <div>
-                <strong className="trust-number">Soluções completas</strong>
-                <p className="trust-label">Construção, reforma e manutenção</p>
+                <strong className="trust-number">Atendimento nacional</strong>
+                <p className="trust-label">Prioridade em São Paulo</p>
               </div>
             </div>
           </div>

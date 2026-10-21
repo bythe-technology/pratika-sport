@@ -41,8 +41,8 @@ test('a página inicial comunica atendimento nacional sem limitar a empresa a SP
 test('a página inicial destaca os números confirmados pela empresa', async () => {
   const html = await readFile(homePath, 'utf8');
 
-  assert.match(html, />\+850<\/strong>\s*<p class="trust-label">projetos realizados<\/p>/);
-  assert.match(html, />10\+ anos<\/strong>\s*<p class="trust-label">de operação<\/p>/);
+  assert.match(html, />\+850<\/strong>\s*<(?:p|span)\b[^>]*>projetos realizados<\//);
+  assert.match(html, />10\+ anos<\/strong>\s*<(?:p|span)\b[^>]*>de operação<\//);
 });
 
 test('páginas legadas alinham a apresentação institucional aos dados confirmados', async () => {

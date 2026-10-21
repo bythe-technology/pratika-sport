@@ -13,7 +13,11 @@
     "width": 1080,
     "height": 720,
     "src": "/images/illustrations/etapa-terreno-1080.webp",
-    "base": "/images/illustrations/etapa-terreno"
+    "base": "/images/illustrations/etapa-terreno",
+    "hero": {
+      "src": "/images/illustrations/hero-v2/etapa-terreno-1080.webp",
+      "base": "/images/illustrations/hero-v2/etapa-terreno"
+    }
   },
   "etapa-base": {
     "title": "Base e drenagem",
@@ -21,7 +25,11 @@
     "width": 1080,
     "height": 720,
     "src": "/images/illustrations/etapa-base-1080.webp",
-    "base": "/images/illustrations/etapa-base"
+    "base": "/images/illustrations/etapa-base",
+    "hero": {
+      "src": "/images/illustrations/hero-v2/etapa-base-1080.webp",
+      "base": "/images/illustrations/hero-v2/etapa-base"
+    }
   },
   "etapa-revestimento": {
     "title": "Aplicação do revestimento",
@@ -29,7 +37,11 @@
     "width": 1080,
     "height": 720,
     "src": "/images/illustrations/etapa-revestimento-1080.webp",
-    "base": "/images/illustrations/etapa-revestimento"
+    "base": "/images/illustrations/etapa-revestimento",
+    "hero": {
+      "src": "/images/illustrations/hero-v2/etapa-revestimento-1080.webp",
+      "base": "/images/illustrations/hero-v2/etapa-revestimento"
+    }
   },
   "etapa-pronta": {
     "title": "Quadra finalizada",
@@ -37,7 +49,11 @@
     "width": 1080,
     "height": 720,
     "src": "/images/illustrations/etapa-pronta-1080.webp",
-    "base": "/images/illustrations/etapa-pronta"
+    "base": "/images/illustrations/etapa-pronta",
+    "hero": {
+      "src": "/images/illustrations/hero-v2/etapa-pronta-1080.webp",
+      "base": "/images/illustrations/hero-v2/etapa-pronta"
+    }
   },
   "servico-tenis": {
     "title": "Quadras de tênis",

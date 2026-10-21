@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-21",
+  "tool": "built-in image_gen",
+  "mode": "edit",
+  "transparent_background": true,
+  "prompt": "Edit target image: extract the ENTIRE standalone isometric sports court illustration onto a genuinely transparent background. Remove only the pale blue/white studio background outside the court and people. Preserve the exact court geometry, colors, proportions, equipment, construction stage, workers, perspective and details. Preserve fine fence mesh and light posts. Keep all subjects fully inside the landscape 3:2 canvas with the same framing. No new objects, no restyling, no text. No white/blue rectangular backdrop, no gradient panel, no frame. Keep a very subtle natural contact shadow only immediately below the model; all remaining background must have alpha transparency. This is a transparent cutout for a professional architectural website hero.",
+  "assets": [
+    {
+      "id": "etapa-terreno",
+      "input": "artwork/source/etapa-terreno.png",
+      "output": "artwork/source/hero-v2-etapa-terreno.png",
+      "publishedBase": "public/images/illustrations/hero-v2/etapa-terreno"
+    },
+    {
+      "id": "etapa-base",
+      "input": "artwork/source/etapa-base.png",
+      "output": "artwork/source/hero-v2-etapa-base.png",
+      "publishedBase": "public/images/illustrations/hero-v2/etapa-base"
+    },
+    {
+      "id": "etapa-revestimento",
+      "input": "artwork/source/etapa-revestimento.png",
+      "output": "artwork/source/hero-v2-etapa-revestimento.png",
+      "publishedBase": "public/images/illustrations/hero-v2/etapa-revestimento"
+    },
+    {
+      "id": "etapa-pronta",
+      "input": "artwork/source/etapa-pronta.png",
+      "output": "artwork/source/hero-v2-etapa-pronta.png",
+      "publishedBase": "public/images/illustrations/hero-v2/etapa-pronta"
+    }
+  ]
+}
