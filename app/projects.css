@@ -1,0 +1,49 @@
+/* Real photographs have their own visual language, separate from illustrations. */
+.project-photo { display: block; overflow: hidden; background: #d1e8eb; }
+.project-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.hero-visual-column { min-width: 0; }
+.project-preview { display: flex; gap: 16px; align-items: center; margin: 20px 5px 0; padding: 12px; border: 1px solid #b4d9c3; border-left: 4px solid #77bb2a; border-radius: 12px; background: #ffffffbd; color: #174c62; text-decoration: none; transition: background-color 180ms,border-color 180ms; }
+.project-preview:hover { background: #fff; border-color: #34813b; }
+.project-preview > .project-photo { width: 112px; flex-shrink: 0; border-radius: 7px; }
+.project-preview > span { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.project-preview small { text-transform: uppercase; font-size: 10px; font-weight: 750; letter-spacing: .08em; color: #327138; }
+.project-preview strong { display: flex; align-items: center; gap: 8px; font-size: 14px; line-height: 1.4; }
+.project-preview > span > span { font-size: 11px; color: #4c6470; line-height: 1.4; }
+.project-gallery-section { padding: 70px 24px; background: #eaf4df; border-block: 1px solid #d2e6bd; scroll-margin-top: 110px; }
+.project-gallery-heading { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: end; margin-bottom: 30px; }
+.project-gallery-heading .section-eyebrow { display: inline-flex; gap: 8px; align-items: center; color: #30652b; }
+.project-gallery-heading h2 { max-width: 640px; font-size: clamp(28px,3vw,40px); line-height: 1.15; letter-spacing: -.04em; color: #103d4e; text-wrap: balance; }
+.project-gallery-heading > p { max-width: 440px; color: #405f56; font-size: 15px; line-height: 1.75; }
+.project-gallery-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.project-gallery-item { margin: 0; min-width: 0; border-radius: 15px; overflow: hidden; background: #fff; border: 1px solid #d0dfc8; }
+.project-gallery-item a { display: block; text-decoration: none; }
+.project-gallery-item figcaption { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 17px 15px; color: #184d65; font-size: 14px; font-weight: 700; }
+.project-gallery-item a:hover figcaption { color: #23632b; background: #f6faef; }
+.project-instagram-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 22px; color: #215c36; font-size: 14px; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
+.project-preview:focus-visible, .project-gallery-section a:focus-visible { outline: 3px solid #006cae; outline-offset: 4px; }
+.service-card-action { min-height: 44px; border-top: 1px solid #d9e8e5; padding-top: 14px; color: #17673c; }
+.service-card-action:hover { color: #005486; }
+.service-card { transition: border-color 180ms,box-shadow 180ms; }
+.service-card:hover { transform: none; border-color: #79b4ac; }
+.service-image-wrapper .project-photo { width: 100%; }
+.process-section { background: #eff7fb; }
+.process-section .step-card { border-top: 3px solid #0078ba; }
+.process-section .step-card:nth-child(even) { border-top-color: #55971f; background: #f7fbf0; }
+.process-section .step-badge { background: #006cae; color: #fff; }
+.process-section .step-card:nth-child(even) .step-badge { background: #32712c; color: #fff; }
+.quote-section-wrapper { background: linear-gradient(135deg,#e6f4fb,#f0f7e8); }
+.submit-quote-btn { background: linear-gradient(110deg,#006cae,#08794f); transition: background-color 180ms,box-shadow 180ms; }
+.submit-quote-btn:hover { background: #005486; transform: none; }
+@media(max-width:1024px) {
+  .project-gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .project-gallery-heading { grid-template-columns: 1fr; gap: 18px; }
+  .project-gallery-heading > p { max-width: 670px; }
+}
+@media(max-width:520px) {
+  .project-preview { gap: 12px; margin-inline: 0; }
+  .project-preview > .project-photo { width: 88px; }
+  .project-preview strong { font-size: 12px; }
+  .project-preview small { font-size: 9px; }
+  .project-gallery-section { padding: 48px 22px; }
+  .project-gallery-grid { grid-template-columns: 1fr; gap: 18px; }
+}

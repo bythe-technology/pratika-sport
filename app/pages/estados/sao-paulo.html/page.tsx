@@ -16,6 +16,8 @@ import QuoteForm from '@/components/QuoteForm';
 import StructuredData from '@/components/StructuredData';
 import Illustration from '@/components/Illustration';
 import ConstructionStory from '@/components/ConstructionStory';
+import ProjectPhoto from '@/components/ProjectPhoto';
+import ProjectGallery, { ProjectPhotoPreview } from '@/components/ProjectGallery';
 import {
   contact,
   organizationSchema,
@@ -269,7 +271,7 @@ export default function SaoPauloPage() {
               </div>
             </div>
             </div>
-            <ConstructionStory />
+            <div className="hero-visual-column"><ConstructionStory /><ProjectPhotoPreview /></div>
           </div>
         </section>
 
@@ -290,7 +292,7 @@ export default function SaoPauloPage() {
                 const Icon = card.icon;
                 return (
                   <article key={card.title} className="service-card">
-                    <Illustration id={(['servico-poliesportiva', 'servico-tenis', 'servico-beach', 'servico-society', 'servico-reforma', 'material-modular'] as const)[index]} sizes="(max-width: 640px) 100vw, 33vw" />
+                    <ProjectPhoto id={(['poliesportiva', 'tenis', 'beach', 'society', 'reforma', 'modular'] as const)[index]} sizes="(max-width: 640px) 100vw, 33vw" />
                     <div className="service-card-icon">
                       <Icon size={22} />
                     </div>
@@ -306,6 +308,8 @@ export default function SaoPauloPage() {
             </div>
           </div>
         </section>
+
+        <ProjectGallery />
 
         <section className="section" id="diferenciais">
           <div className="container">

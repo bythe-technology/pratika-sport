@@ -1,0 +1,8 @@
+{
+  "poliesportiva": { "source": "/images/construcao-de-quadras-1.jpg", "alt": "Foto do acervo da Pratika Sport: quadra poliesportiva azul com demarcações e alambrado", "label": "Quadras poliesportivas", "href": "/pages/servicos/quadras-poliesportivas.html" },
+  "tenis": { "source": "/images/construcao-de-quadra-de-tennis-5.jpeg", "alt": "Foto do acervo da Pratika Sport: quadra de tênis azul em espaço arborizado", "label": "Quadras de tênis", "href": "/pages/servicos/quadra-de-tenis.html" },
+  "beach": { "source": "/images/quadra-beach-tennis-4.jpeg", "alt": "Foto do acervo da Pratika Sport: quadra de areia com rede e cercamento", "label": "Beach tennis e areia", "href": "/pages/servicos/quadra-de-beach-tennis.html" },
+  "society": { "source": "/images/construcao-manutecao-de-campo-de-futebol-society-4.jpg", "alt": "Foto do acervo da Pratika Sport: campo de futebol com gramado, traves e cercamento", "label": "Campos de futebol", "href": "/pages/servicos/campo-de-futebol.html" },
+  "modular": { "source": "/images/piso-modular-esportivo-area-externa-6.jpg", "alt": "Foto do acervo da Pratika Sport: piso modular esportivo azul em quadra externa", "label": "Pisos modulares", "href": "/pages/blog/melhor-piso-para-quadra-esportiva.html" },
+  "reforma": { "source": "/images/construcao-manutecao-de-quadras-poli-esportivas-34.jpg", "alt": "Foto do acervo da Pratika Sport: quadra multiuso azul com traves, cestas e alambrado", "label": "Reforma e revitalização", "href": "/pages/servicos/reforma-de-quadras.html" }
+}

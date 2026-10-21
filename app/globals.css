@@ -847,17 +847,6 @@ img {
   color: var(--ink-600);
 }
 
-.surfaces-section .section-header-block,
-.surfaces-section .section-header-block .section-title,
-.surfaces-section .section-header-block .section-subtitle,
-.surfaces-section .section-header-block .section-eyebrow {
-  color: #f8fafc;
-}
-
-.surfaces-section .section-header-block .section-eyebrow {
-  color: #7dd3fc;
-}
-
 /* ==========================================================================
    SERVICE / ESPECIALIDADES CARDS
    ========================================================================== */

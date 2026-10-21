@@ -10,10 +10,12 @@
 .service-badge-pill { top: 14px; bottom: auto; background: #fff; color: #30586e; box-shadow: 0 2px 12px #07345a0d; }
 .service-card { border: 1px solid #dce8f0; box-shadow: 0 10px 30px #07345a07; }
 .surface-card > .concept-figure { margin: -8px -8px 22px; border-radius: 14px; }
-.surfaces-section { background: #eff6fa; }
-.surfaces-section .section-title, .surfaces-section .surface-title { color: #07345a; }
-.surfaces-section .section-subtitle, .surfaces-section .surface-desc { color: #4b6478; }
-.surfaces-section .section-eyebrow { color: #237719; }
+.surfaces-section { background: radial-gradient(ellipse at top right,#08617d 0%,transparent 62%),#07345a; }
+.surfaces-section .section-header-block .section-title { color: #fff; }
+.surfaces-section .section-header-block .section-subtitle { color: #d3e6ef; }
+.surfaces-section .section-header-block .section-eyebrow { color: #c7ed83; }
+.surfaces-section .surface-title { color: #07345a; }
+.surfaces-section .surface-desc { color: #4b6478; }
 .surfaces-section .surface-card { background: #fff; border-color: #dbe7f0; }
 .surfaces-section .surface-type { color: #49728c; }
 .surfaces-section .surface-tag { background: #eaf5de; color: #37651c; }
@@ -25,6 +27,7 @@
 .direct-icon { flex-shrink: 0; }
 .main-footer { background: #eaf3f8; border-top: 1px solid #d9e7f0; }
 .main-footer .footer-col-title, .main-footer .footer-contact-link, .main-footer .footer-links-list a { color: #204f70; }
+.main-footer .footer-contact-link:hover, .main-footer .footer-links-list a:hover { color: #075d91; }
 .main-footer .footer-brand-desc, .main-footer .footer-copyright, .main-footer .footer-bythe-label { color: #527085; }
 .main-footer .footer-divider { background: #cfdee8; }
 .main-footer .footer-social-link { background: #ffffffb3; color: #28618b; border-color: #d0e0eb; }
@@ -35,6 +38,7 @@
 .illustrated-sp .services-grid, .illustrated-sp .surface-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
 .illustrated-sp .service-card { padding: 20px; }
 .illustrated-sp .service-card > .concept-figure { margin: -20px -20px 20px; border-radius: 20px 20px 0 0; }
+.illustrated-sp .service-card > .project-photo { margin: -20px -20px 20px; width: calc(100% + 40px); }
 .illustrated-sp .service-card-description, .illustrated-sp .surface-card > p { color: #527085; font-size: 14px; line-height: 1.75; }
 .illustrated-sp .service-card-icon { display: none; }
 .illustrated-sp .service-card-category { font-size: 11px; color: #467d23; text-transform: uppercase; font-weight: 750; margin-bottom: 10px; }
@@ -45,7 +49,8 @@
 .illustrated-sp .dark-section h2, .illustrated-sp .dark-section h3 { color: white; }
 .illustrated-sp .dark-section p { color: #c3d9e8; }
 .illustrated-sp .steps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
-.illustrated-sp .steps .step-card { padding: 24px; border: 1px solid #ffffff30; border-radius: 20px; }
+.illustrated-sp .steps .step-card { padding: 24px; background: #104866; border: 1px solid #49839a; border-top: 3px solid #addd62; border-radius: 20px; }
+.illustrated-sp .dark-section .section-eyebrow { color: #c7ed83; }
 .illustrated-sp .steps b { color: #b3e378; }
 .illustrated-sp .steps h3 { font-size: 18px; margin: 12px 0; }
 .illustrated-sp .steps p { font-size: 14px; line-height: 1.7; }

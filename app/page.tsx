@@ -22,6 +22,8 @@ import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import StructuredData from '@/components/StructuredData';
 import Illustration from '@/components/Illustration';
 import ConstructionStory from '@/components/ConstructionStory';
+import ProjectPhoto from '@/components/ProjectPhoto';
+import ProjectGallery, { ProjectPhotoPreview } from '@/components/ProjectGallery';
 import { faqSchema, serviceSchema } from '@/lib/seo';
 
 const services = [
@@ -30,7 +32,7 @@ const services = [
     category: 'Multiuso & Condomínios',
     description:
       'Projetadas para futsal, basquete, vôlei e handebol com piso de alta absorção de impacto, iluminação LED e alambrados reforçados.',
-    illustration: 'servico-poliesportiva' as const,
+    photo: 'poliesportiva' as const,
     href: '/pages/servicos/quadras-poliesportivas.html',
     waText:
       'Olá! Gostaria de um orçamento para construção ou reforma de Quadra Poliesportiva.',
@@ -40,7 +42,7 @@ const services = [
     category: 'Oficial & Recreativo',
     description:
       'Superfícies em saibro tradicional, piso rápido acrílico ou grama sintética, respeitando normas técnicas da CBT e ITF.',
-    illustration: 'servico-tenis' as const,
+    photo: 'tenis' as const,
     href: '/pages/servicos/quadra-de-tenis.html',
     waText: 'Olá! Gostaria de um orçamento para Quadra de Tênis.',
   },
@@ -49,7 +51,7 @@ const services = [
     category: 'Modalidades de Areia',
     description:
       'Sistema completo com drenagem profunda, areia tratada de granulometria ideal, cercamentos e postes oficiais.',
-    illustration: 'servico-beach' as const,
+    photo: 'beach' as const,
     href: '/pages/servicos/quadra-de-beach-tennis.html',
     waText: 'Olá! Gostaria de um orçamento para Quadra de Beach Tennis.',
   },
@@ -58,7 +60,7 @@ const services = [
     category: 'Grama Sintética',
     description:
       'Grama sintética monofilamento de alta densidade com base amortecedora, drenagem ágil e fechamento perimetral com redes.',
-    illustration: 'servico-society' as const,
+    photo: 'society' as const,
     href: '/pages/servicos/campo-de-futebol.html',
     waText: 'Olá! Gostaria de um orçamento para Campo de Futebol Society.',
   },
@@ -67,7 +69,7 @@ const services = [
     category: 'Interno e Externo',
     description:
       'Placas modulares em polipropileno de alta resistência, antiderrapantes, com drenagem instantânea e proteção UV.',
-    illustration: 'material-modular' as const,
+    photo: 'modular' as const,
     href: '/pages/blog/melhor-piso-para-quadra-esportiva.html',
     waText: 'Olá! Gostaria de informações sobre Piso Modular Esportivo.',
   },
@@ -76,7 +78,7 @@ const services = [
     category: 'Manutenção & Pintura',
     description:
       'Correção de fissuras, regularização de base, pintura epóxi/acrílica, demarcação técnica e troca de acessórios esportivos.',
-    illustration: 'servico-reforma' as const,
+    photo: 'reforma' as const,
     href: '/pages/servicos/reforma-de-quadras.html',
     waText:
       'Olá! Gostaria de um diagnóstico e orçamento para Reforma de Quadra.',
@@ -200,7 +202,7 @@ export default function Home() {
               <div className="hero-proof"><strong>10+ anos</strong><span>de operação</span></div>
             </div>
             </div>
-            <ConstructionStory />
+            <div className="hero-visual-column"><ConstructionStory /><ProjectPhotoPreview /></div>
           </div>
         </section>
 
@@ -274,7 +276,7 @@ export default function Home() {
               {services.map((service, index) => (
                 <article className="service-card" key={index}>
                   <div className="service-image-wrapper">
-                    <Illustration id={service.illustration} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                    <ProjectPhoto id={service.photo} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                     <div className="service-badge-pill">{service.category}</div>
                     <div className="service-overlay-gradient" />
                   </div>
@@ -303,19 +305,21 @@ export default function Home() {
           </div>
         </section>
 
+        <ProjectGallery />
+
         {/* SURFACES & PISOS GUIDE */}
         <section className="surfaces-section" id="superficies">
           <div className="section-container">
-            <div className="section-header-block text-light">
+            <div className="section-header-block">
               <div>
-                <span className="section-eyebrow text-accent">
+                <span className="section-eyebrow">
                   Pisos & Revestimentos
                 </span>
-                <h2 className="section-title text-white">
+                <h2 className="section-title">
                   A superfície certa para cada intensidade de jogo.
                 </h2>
               </div>
-              <p className="section-subtitle text-slate-300">
+              <p className="section-subtitle">
                 A escolha do piso define a drenagem, amortecimento, manutenção e
                 a velocidade da partida. Conheça as opções que instalamos:
               </p>

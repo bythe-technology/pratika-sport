@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import './illustrations.css';
 import './hero.css';
+import './projects.css';
 import StructuredData from '@/components/StructuredData';
 import { organizationSchema, siteUrl, websiteSchema } from '@/lib/seo';
 
