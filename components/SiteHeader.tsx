@@ -51,8 +51,8 @@ export default function SiteHeader() {
           <a href="#servicos" className="floating-nav-link">
             <span>Serviços</span>
           </a>
-          <a href="#diferenciais" className="floating-nav-link">
-            <span>Diferenciais</span>
+          <a href="#quadras-reais" className="floating-nav-link">
+            <span>Quadras reais</span>
           </a>
           <a href="#superficies" className="floating-nav-link">
             <span>Superfícies</span>
@@ -108,8 +108,8 @@ export default function SiteHeader() {
               <span>Especialidades & Quadras</span>
               <ArrowUpRight size={17} className="mobile-link-arrow" />
             </a>
-            <a href="#diferenciais" onClick={closeMenu} className="floating-mobile-link">
-              <span>Por que a Pratika</span>
+            <a href="#quadras-reais" onClick={closeMenu} className="floating-mobile-link">
+              <span>Fotos das quadras reais</span>
               <ArrowUpRight size={17} className="mobile-link-arrow" />
             </a>
             <a href="#superficies" onClick={closeMenu} className="floating-mobile-link">

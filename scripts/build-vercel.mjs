@@ -3,6 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getServiceSlug, serviceIntent, serviceMetadata } from './service-intent.mjs';
 import { enhanceIllustratedPage } from './illustrated-pages.mjs';
+import { getSitemapImages } from './sitemap-images.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = resolve(root, 'dist', 'client');
@@ -266,13 +267,9 @@ const urlEntries = (await Promise.all(htmlFiles.map(async (file) => {
   const path = normalizeRoute(originalPath);
   const html = await readFile(file, 'utf8');
   const isIndexable = !/<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
-  const imageSource = html.match(/<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i)?.[1]
-    ?? html.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
-  const imageUrl = imageSource && !imageSource.startsWith('data:')
-    ? new URL(imageSource, `${canonicalBase}${originalPath}`).href
-    : null;
+  const imageUrls = getSitemapImages(html, `${canonicalBase}${originalPath}`);
 
-  return { path, isIndexable, imageUrl };
+  return { path, isIndexable, imageUrls };
 })))
   .filter(({ isIndexable }) => isIndexable)
   .filter(({ path }) => !path.includes('/404'))
@@ -283,12 +280,12 @@ const urlEntries = (await Promise.all(htmlFiles.map(async (file) => {
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${urlEntries.map(({ path, imageUrl }) => `  <url>
+${urlEntries.map(({ path, imageUrls }) => `  <url>
     <loc>${xmlEscape(`${canonicalBase}${path}`)}</loc>
-    ${imageUrl ? `
+    ${imageUrls.map(imageUrl => `
     <image:image>
       <image:loc>${xmlEscape(imageUrl)}</image:loc>
-    </image:image>` : ''}
+    </image:image>`).join('')}
   </url>`).join('\n')}
 </urlset>
 `;
