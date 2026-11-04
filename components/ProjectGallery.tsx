@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { ArrowRight, Camera } from 'lucide-react';
+import { ArrowRight, Camera, MapPin } from 'lucide-react';
 import photos from '@/data/project-photos.json';
 import ProjectPhoto, { type ProjectPhotoId } from './ProjectPhoto';
+import completedProjects from '@/data/completed-projects.json';
 
 const gallery: ProjectPhotoId[] = ['poliesportiva', 'tenis', 'beach', 'society'];
 
@@ -15,6 +16,8 @@ export function ProjectPhotoPreview() {
 }
 
 export default function ProjectGallery() {
+  const projects = Object.entries(completedProjects);
+
   return (
     <section className="project-gallery-section" id="quadras-reais" aria-labelledby="project-gallery-title">
       <div className="section-container">
@@ -30,6 +33,47 @@ export default function ProjectGallery() {
                 <figcaption><span>{photos[id].label}</span><ArrowRight size={18} aria-hidden="true" /></figcaption>
               </Link>
             </figure>
+          ))}
+        </div>
+        <div className="project-case-list">
+          {projects.map(([id, project]) => (
+            <article className="project-case-card" id={`quadras-reais-${id}`} key={id}>
+              <div className="project-case-photo-grid">
+                {project.photos.map((photo, index) => {
+                  const base = `/images/project-cases/${id}/${photo.id}`;
+                  const srcSet = (format: string) => [360, 720, 1080]
+                    .map(width => `${base}-${width}.${format} ${width}w`)
+                    .join(', ');
+
+                  return (
+                    <figure className="project-case-photo" key={photo.id}>
+                      <picture>
+                        <source type="image/avif" srcSet={srcSet('avif')} sizes="(max-width: 700px) 50vw, 32vw" />
+                        {/* oxlint-disable-next-line next/no-img-element -- Responsive pre-encoded WebP and AVIF assets. */}
+                        <img
+                          src={`${base}-1080.webp`}
+                          srcSet={srcSet('webp')}
+                          sizes="(max-width: 700px) 50vw, 32vw"
+                          width={1080}
+                          height={810}
+                          alt={photo.alt}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </picture>
+                      <figcaption>Vista {index + 1}</figcaption>
+                    </figure>
+                  );
+                })}
+              </div>
+              <div className="project-case-copy">
+                <span className="project-case-status">{project.status}</span>
+                <p className="project-case-location"><MapPin size={16} aria-hidden="true" />{project.location}</p>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <small className="project-case-note">Fotos reais com tratamento visual digital; arquivos originais preservados.</small>
+              </div>
+            </article>
           ))}
         </div>
         <a className="project-instagram-link" href="https://www.instagram.com/pratikasport.com.br/" target="_blank" rel="noopener noreferrer">Mais registros no Instagram <ArrowRight size={16} aria-hidden="true" /></a>

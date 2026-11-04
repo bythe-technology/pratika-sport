@@ -2,7 +2,7 @@
 export function getSitemapImages(html, pageUrl) {
   const primary = html.match(/<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i)?.[1]
     ?? html.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
-  const photographs = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']*\/images\/projects\/[^"']+)["']/gi)].map(match => match[1]);
+  const photographs = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']*\/images\/(?:projects|project-cases)\/[^"']+)["']/gi)].map(match => match[1]);
   const origin = new URL(pageUrl).origin;
   const images = new Set();
   for (const source of [primary, ...photographs]) {

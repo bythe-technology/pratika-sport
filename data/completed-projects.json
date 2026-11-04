@@ -1,0 +1,22 @@
+{
+  "monte-siao-mg": {
+    "title": "Quadra concluída em Monte Sião",
+    "location": "Monte Sião, Minas Gerais",
+    "status": "Projeto concluído",
+    "description": "Registro de uma quadra com superfície de areia, cercamento e refletores, fotografada de dois ângulos.",
+    "photos": [
+      {
+        "id": "vista-01",
+        "original": "assets/project-cases/monte-siao-mg/original-01.png",
+        "enhanced": "assets/project-cases/monte-siao-mg/enhanced-01.webp",
+        "alt": "Quadra de areia concluída em Monte Sião, MG, vista pela lateral do alambrado."
+      },
+      {
+        "id": "vista-02",
+        "original": "assets/project-cases/monte-siao-mg/original-02.png",
+        "enhanced": "assets/project-cases/monte-siao-mg/enhanced-02.webp",
+        "alt": "Outra vista da quadra de areia concluída em Monte Sião, MG, com cercamento e refletores."
+      }
+    ]
+  }
+}

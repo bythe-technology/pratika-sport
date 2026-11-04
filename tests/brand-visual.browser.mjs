@@ -30,6 +30,8 @@ try {
       assert.deepEqual(await page.locator('img').evaluateAll(images=>images.filter(img=>!img.complete||!img.naturalWidth).map(img=>img.src)),[]);
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${width} ${path}`);
       assert.equal(await page.locator('.project-gallery-item').count(),4);
+      assert.equal(await page.locator('.project-case-card').count(),1);
+      assert.ok(await page.getByText('Monte Sião, Minas Gerais',{exact:true}).isVisible());
       assert.equal(await page.locator('.service-card .project-photo').count(),6);
       const common='.story-controls button,.project-gallery-item figcaption,.project-gallery-heading h2,.project-gallery-heading > p,.service-card-title,.project-preview strong,.hero-title,.hero-title em,.hero-description';
       const selectors=common+','+(path==='/'?'.surfaces-section .section-title,.surfaces-section .section-subtitle,.surfaces-section .surface-title,.surfaces-section .surface-desc,.trust-number,.trust-label':'.dark-section h2,.dark-section h3,.dark-section .step-card p,.dark-section .section-eyebrow');
