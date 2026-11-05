@@ -22,12 +22,22 @@
     gtag('js', new Date());
     let referrer = '';
     try { referrer = new URL(document.referrer).origin; } catch { /* No referrer. */ }
+    // Fixed campaign vocabulary only; never forward arbitrary URL values or click IDs.
+    const campaign = new URL(location.href || location.origin + location.pathname).searchParams;
+    const paidCampaign = campaign.get('utm_source') === 'google'
+      && campaign.get('utm_medium') === 'cpc'
+      && campaign.get('utm_campaign') === 'sp_quadras_teste_300';
     gtag('config', measurementId, {
       page_location: location.origin + location.pathname,
       page_referrer: referrer,
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       send_page_view: true,
+      ...(paidCampaign ? {
+        campaign_source: 'google',
+        campaign_medium: 'cpc',
+        campaign_name: 'sp_quadras_teste_300',
+      } : {}),
     });
     const script = document.createElement('script');
     script.async = true;

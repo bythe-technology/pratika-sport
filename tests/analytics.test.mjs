@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import { runInNewContext } from 'node:vm';
 
 const source = await readFile(new URL('../public/analytics.js', import.meta.url), 'utf8');
-function browser(preference) {
+function browser(preference, href = 'https://www.pratikasport.com.br/') {
   class Element {
     listeners = {};
     children = [];
@@ -28,10 +28,22 @@ function browser(preference) {
   });
   const storage = new Map(preference ? [['pratika-analytics-consent-v1', preference]] : []);
   const window = {};
-  runInNewContext(source, { document, window, Element, URL, Date, location: { origin: 'https://www.pratikasport.com.br', pathname: '/', hostname: 'www.pratikasport.com.br' }, localStorage: { getItem: (key) => storage.get(key), setItem: (key, value) => storage.set(key, value) } });
+  runInNewContext(source, { document, window, Element, URL, Date, location: { href, origin: 'https://www.pratikasport.com.br', pathname: '/', hostname: 'www.pratikasport.com.br' }, localStorage: { getItem: (key) => storage.get(key), setItem: (key, value) => storage.set(key, value) } });
   const banner = document.body.children[1];
   return { document, window, Element, banner, choose: (choice) => banner.querySelectorAll().find((button) => button.dataset.choice === choice).listeners.click(), scripts: () => document.head.children.filter((element) => element.tag === 'script'), events: () => (window.dataLayer ?? []).map((args) => Array.from(args)) };
 }
+
+test('paid attribution accepts only the configured campaign and never forwards arbitrary URL data', () => {
+  const href = 'https://www.pratikasport.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=sp_quadras_teste_300&email=private@example.com&gclid=private-click';
+  assert.equal(browser(undefined, href).events().length, 0);
+  const config = browser('granted', href).events().find(([command]) => command === 'config')[2];
+  assert.equal(config.campaign_source, 'google');
+  assert.equal(config.campaign_medium, 'cpc');
+  assert.equal(config.campaign_name, 'sp_quadras_teste_300');
+  assert.doesNotMatch(JSON.stringify(config), /private|gclid|example\.com/);
+  const unknown = browser('granted', href.replace('sp_quadras_teste_300', 'private-name')).events().find(([command]) => command === 'config')[2];
+  assert.equal(unknown.campaign_name, undefined);
+});
 
 test('no Google requests or tracking before consent, including refusal', () => {
   const page = browser();
