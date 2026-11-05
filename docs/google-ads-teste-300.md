@@ -64,3 +64,14 @@ Negativas iniciais: emprego, vaga, salário, curso, apostila, pdf, desenho, jogo
 
 Fontes: https://support.google.com/google-ads/answer/6385083 ; https://support.google.com/google-ads/answer/9376662
 
+
+## Resultado da tentativa no Google Ads
+
+- Assistente de campanha inteligente no usuário Google `bythe.technology@gmail.com`, conta exibida `869-831-0599`; a identidade de faturamento e país ainda não foram confirmadas.
+- Meta escolhida: ligações, com botão de chamada para o telefone público confirmado da empresa `(15) 99715-7642`. Não contar chamada/clique como venda.
+- Anúncio: títulos “Reforma de Quadra Esportiva”, “Construção de Quadras em SP” e “Orçamento para sua Quadra”. Descrições com atendimento em SP/Brasil e orçamento personalizado, sem preços nem garantias.
+- Temas em Português: construção de quadra esportiva; reforma de quadra esportiva; manutenção de quadra esportiva; construção de quadra poliesportiva; quadras esportivas em São Paulo. Temas sugeridos genéricos foram removidos.
+- Página vinculada: URL pública de São Paulo. Fotos reais sugeridas pelo site foram preparadas em formatos paisagem e quadrado, e o símbolo de marca foi escolhido das sugestões do site.
+- A interface avança para alcance mas mantém “Avançar” desativado com uma região selecionada. Selecionar o estado de São Paulo desenha o mapa corretamente, mas ao recarregar o assistente restaura a cidade default. Console do Ads registra TypeError “Cannot read properties of null (reading 'split')”.
+- O fluxo Smart também pode veicular em outros serviços do Google e sites de terceiros, não somente Pesquisa; nenhuma opção de rede foi exposta nesta etapa.
+- Verba de R$ 300 total confirmada; ainda sem orçamento definido na conta, sem ativação, sem forma de pagamento inserida e sem cobrança. Necessário corrigir o assistente/usar modo especialista, confirmar conta anunciante, região persistida, R$ 300 como limite de teste e configurações de gasto antes de concluir. Não ativar campanha antes da validação.
