@@ -39,6 +39,14 @@ test('legal pages use shared navigation without decorative generated imagery', a
   }
 });
 
+test('privacy page documents separately consented Google Ads measurement', async () => {
+  const html = await readFile(resolve('dist/client', 'politica-privacidade.html'), 'utf8');
+  assert.match(html, /Google Ads \(AW-18558191618\)/);
+  assert.match(html, /consentimento separado/);
+  assert.match(html, /personalização de anúncios.*desativad[oa]s/i);
+  assert.match(html, /gclid|gbraid|wbraid/i);
+});
+
 test('every generated legacy route gets a consistent visual shell', async () => {
   const files = await readdir(resolve('dist/client/pages'), { recursive: true });
   for (const file of files.filter(file => file.endsWith('.html') && !file.includes('sao-paulo'))) {
