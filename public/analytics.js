@@ -11,7 +11,8 @@
   const savePreference = (value) => {
     try { localStorage.setItem(preferenceKey, value); } catch { /* Session-only choice. */ }
   };
-  const gtag = (...args) => { window.dataLayer.push(args); };
+  // Use the vendor's documented command envelope (Arguments, not an Array).
+  function gtag() { window.dataLayer.push(arguments); }
   const start = () => {
     if (loaded) return;
     loaded = true;

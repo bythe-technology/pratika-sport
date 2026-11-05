@@ -63,6 +63,7 @@ test('acceptance loads correct ID only once and strips referrer queries', () => 
   page.choose('granted');
   page.choose('granted');
   assert.equal(page.scripts().length, 1);
+  assert.equal(Object.prototype.toString.call(page.window.dataLayer[0]), '[object Arguments]');
   assert.match(page.scripts()[0].src, /G-FFZKDZTE9M$/);
   const config = page.events().find(([command]) => command === 'config');
   assert.equal(config[2].page_referrer, 'https://www.google.com');
