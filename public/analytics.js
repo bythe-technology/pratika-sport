@@ -54,6 +54,24 @@
     return currentUrl.origin + currentUrl.pathname + (query ? '?' + query : '');
   };
 
+  const trackWhatsAppClick = (origin) => {
+    if (analyticsEnabled) {
+      gtag('event', 'whatsapp_click', {
+        contact_origin: origin,
+        page_path: location.pathname,
+        transport_type: 'beacon',
+      });
+    }
+    if (adsEnabled) {
+      gtag('event', 'conversion', {
+        send_to: 'AW-18558191618/WD6bCKjB67IdEIKQnpFF',
+        value: 0,
+        currency: 'BRL',
+        transport_type: 'beacon',
+      });
+    }
+  };
+
   const configureDestinations = () => {
     if (!loaded) return;
     if (analyticsEnabled && !analyticsConfigured) {
@@ -161,21 +179,27 @@
   if (analyticsEnabled || adsEnabled) start();
 
   document.addEventListener('click', (event) => {
-    if (!analyticsEnabled || !(event.target instanceof Element)) return;
+    if (!(event.target instanceof Element)) return;
     const anchor = event.target.closest('a[href]');
     if (!anchor) return;
     let url;
     try { url = new URL(anchor.href, location.origin); } catch { return; }
     const channel = ['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(url.hostname) ? 'whatsapp' : url.protocol === 'tel:' ? 'phone' : url.protocol === 'mailto:' ? 'email' : null;
-    if (channel) gtag('event', 'contact_click', { contact_channel: channel, page_path: location.pathname, transport_type: 'beacon' });
+    if (!channel) return;
+    if (channel === 'whatsapp') trackWhatsAppClick('site_link');
+    if (analyticsEnabled) {
+      gtag('event', 'contact_click', { contact_channel: channel, page_path: location.pathname, transport_type: 'beacon' });
+    }
   });
   document.addEventListener('pratika-contact-intent', () => {
-    if (!analyticsEnabled) return;
-    gtag('event', 'contact_click', {
-      contact_channel: 'whatsapp',
-      contact_origin: 'quote_form',
-      page_path: location.pathname,
-      transport_type: 'beacon',
-    });
+    trackWhatsAppClick('quote_form');
+    if (analyticsEnabled) {
+      gtag('event', 'contact_click', {
+        contact_channel: 'whatsapp',
+        contact_origin: 'quote_form',
+        page_path: location.pathname,
+        transport_type: 'beacon',
+      });
+    }
   });
 })();

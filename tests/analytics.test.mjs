@@ -102,7 +102,13 @@ test('Ads-only consent configures Ads without activating GA4 or contact events',
   assert.equal(consent.ad_user_data, 'denied');
   assert.equal(consent.ad_personalization, 'denied');
   page.document.listeners.click({ target: Object.assign(new page.Element(), { closest: () => ({ href: 'https://wa.me/5515997157642' }) }) });
-  assert.equal(page.events().filter(([command]) => command === 'event').length, 0);
+  const events = page.events().filter(([command]) => command === 'event');
+  assert.equal(events.length, 1);
+  assert.equal(events[0][1], 'conversion');
+  assert.equal(events[0][2].send_to, 'AW-18558191618/WD6bCKjB67IdEIKQnpFF');
+  assert.equal(events[0][2].value, 0);
+  assert.equal(events[0][2].currency, 'BRL');
+  assert.equal(events[0][2].transport_type, 'beacon');
 });
 
 test('both destinations share one loader and configure each destination once', () => {
@@ -152,31 +158,65 @@ test('paid attribution accepts only the configured campaign and no arbitrary URL
   assert.equal(unknown.campaign_name, undefined);
 });
 
-test('contact click is not a sale and does not include WhatsApp message', () => {
+test('WhatsApp link records separate Analytics intent without personal data', () => {
   const page = browser({ analytics: 'granted' });
   const target = new page.Element();
   target.closest = () => ({ href: 'https://wa.me/5515997157642?text=private-message' });
   page.document.listeners.click({ target });
-  const event = page.events().find(([command]) => command === 'event');
-  assert.equal(event[1], 'contact_click');
-  assert.equal(event[2].contact_channel, 'whatsapp');
-  assert.doesNotMatch(JSON.stringify(event), /private-message|5515997157642|generate_lead|purchase/);
+  const events = page.events().filter(([command]) => command === 'event');
+  const contact = events.find(([, name]) => name === 'contact_click');
+  const whatsapp = events.find(([, name]) => name === 'whatsapp_click');
+  assert.equal(events.length, 2);
+  assert.equal(contact[2].contact_channel, 'whatsapp');
+  assert.equal(whatsapp[2].contact_origin, 'site_link');
+  assert.doesNotMatch(JSON.stringify(events), /private-message|5515997157642|generate_lead|purchase/);
   page.choose('none');
   page.document.listeners.click({ target });
-  assert.equal(page.events().filter(([command]) => command === 'event').length, 1);
+  assert.equal(page.events().filter(([command]) => command === 'event').length, 2);
+});
+
+test('both consent choices send one zero-value Ads conversion and distinct Analytics event', () => {
+  const page = browser();
+  page.choose('both');
+  const target = new page.Element();
+  target.closest = () => ({ href: 'https://api.whatsapp.com/send?phone=5515997157642&text=private-message' });
+  page.document.listeners.click({ target });
+  const events = page.events().filter(([command]) => command === 'event');
+  assert.deepEqual(events.map(([, name]) => name).sort((left, right) => left.localeCompare(right)), ['contact_click', 'conversion', 'whatsapp_click']);
+  const conversion = events.find(([, name]) => name === 'conversion');
+  assert.equal(conversion[2].send_to, 'AW-18558191618/WD6bCKjB67IdEIKQnpFF');
+  assert.equal(conversion[2].value, 0);
+  assert.equal(conversion[2].currency, 'BRL');
+  assert.doesNotMatch(JSON.stringify(events), /private-message|5515997157642|generate_lead|purchase/);
+});
+
+test('phone and email clicks are not counted as WhatsApp Ads conversions', () => {
+  const page = browser({ analytics: 'granted', ads: 'granted' });
+  for (const href of ['tel:+5515997157642', 'mailto:contato@pratikasport.com.br']) {
+    const target = new page.Element();
+    target.closest = () => ({ href });
+    page.document.listeners.click({ target });
+  }
+  const events = page.events().filter(([command]) => command === 'event');
+  assert.deepEqual(events.map(([, name]) => name), ['contact_click', 'contact_click']);
+  assert.ok(events.every(([, , params]) => ['phone', 'email'].includes(params.contact_channel)));
 });
 
 test('quote form contact intent is tracked only after Analytics consent and excludes form data', () => {
   const page = browser({ analytics: 'granted' });
   page.document.listeners['pratika-contact-intent']();
-  const event = page.events().find(([command, name]) => command === 'event' && name === 'contact_click');
-  assert.equal(event[2].contact_channel, 'whatsapp');
-  assert.equal(event[2].contact_origin, 'quote_form');
-  assert.doesNotMatch(JSON.stringify(event), /name|phone|city|message|private|purchase|generate_lead/i);
+  const events = page.events().filter(([command]) => command === 'event');
+  const contact = events.find(([, name]) => name === 'contact_click');
+  const whatsapp = events.find(([, name]) => name === 'whatsapp_click');
+  assert.equal(events.length, 2);
+  assert.equal(contact[2].contact_channel, 'whatsapp');
+  assert.equal(contact[2].contact_origin, 'quote_form');
+  assert.equal(whatsapp[2].contact_origin, 'quote_form');
+  assert.doesNotMatch(JSON.stringify(events), /name|phone|city|message|private|purchase|generate_lead/i);
 
   page.choose('none');
   page.document.listeners['pratika-contact-intent']();
-  assert.equal(page.events().filter(([command, name]) => command === 'event' && name === 'contact_click').length, 1);
+  assert.equal(page.events().filter(([command]) => command === 'event').length, 2);
 
   const undecidedPage = browser();
   undecidedPage.document.listeners['pratika-contact-intent']();
