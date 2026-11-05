@@ -69,5 +69,5 @@
 - Produces a production build with the Ads tag available only after Ads consent.
 
 - [x] Run the Analytics, SEO-output, illustration, hero, project-photo, and completed-project test files plus the production build.
-- [ ] Confirm production homepage and `/analytics.js` return HTTP 200 and the script exposes both expected IDs without duplicate loaders.
-- [ ] Merge/push through the existing GitHub/Vercel flow, confirm the deployment, and use Google Ads “Test installation” without publishing or changing budget settings.
+- [x] Confirm production homepage and `/analytics.js` return HTTP 200 and the script exposes both expected IDs without duplicate loaders.
+- [x] Merge/push through the existing GitHub/Vercel flow, confirm the deployment, and use Google Ads “Test installation” without publishing or changing budget settings.
