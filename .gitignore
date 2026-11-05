@@ -41,3 +41,4 @@ next-env.d.ts
 # Original generated artwork is archived locally; optimized web variants are tracked.
 artwork/source/
 *.tsbuildinfo
+/.worktrees/
