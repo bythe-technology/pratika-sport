@@ -1,5 +1,7 @@
 # Preparação do teste Google Ads — 05/11/2026
 
+> Registro inicial de planejamento. O estado operacional mais recente está no adendo de 06/11/2026, no fim deste documento.
+
 ## Estado e arquitetura
 
 Objetivo: pedidos de orçamento de construção e reforma de quadras em SP. O valor de R$ 300 é verba de mídia, sem publicação de preços no site. Confirmado pelo usuário: R$ 300 no total para o primeiro teste; não é verba mensal recorrente. Campanha deve permanecer rascunho/pausada até pagamento e revisão final.
@@ -63,6 +65,18 @@ Negativas iniciais: emprego, vaga, salário, curso, apostila, pdf, desenho, jogo
 7. Monitorar termos, gastos, cliques de contato e qualidade dos pedidos diariamente durante teste. Manter SEO nas páginas úteis existentes e atualizar casos reais sem criar páginas locais repetidas.
 
 Fontes: https://support.google.com/google-ads/answer/6385083 ; https://support.google.com/google-ads/answer/9376662
+
+## Estado operacional — 06/11/2026
+
+- Conta conferida na interface: MCC Pratika Sport Ads `886-848-4654`, subconta Pratika Sport `213-949-8356`.
+- A campanha `Pratika Sport | Pesquisa de Quadras | SP` está ativa e qualificada, em aprendizado. O orçamento é R$ 300 no total, para 06/11 a 05/12/2026. A recarga automática está desligada.
+- No painel de 06/11: 75 impressões, 4 cliques, CTR de 5,33%, CPC médio de R$ 2,88 e custo de R$ 11,53. O saldo exibido foi R$ 286,87. Cliques são visitas potenciais, não leads ou vendas.
+- O vínculo GA4 ↔ Google Ads está concluído para a propriedade Pratika (`559764094`) e apenas a conta `213-949-8356`; publicidade personalizada aparece desativada. A codificação automática do Google Ads está ativa.
+- Adicionado na campanha o sufixo `utm_source=google&utm_medium=cpc&utm_campaign=sp_quadras_teste_300`. O teste do Google encontrou a página de destino com esse sufixo. Modelo de rastreamento da conta permanece vazio.
+- O site não repassa mais `gclid`, `gbraid` ou `wbraid` por um `page_location` montado pelo código; após consentimento de medição de anúncios, o Google tag usa o URL padrão e a codificação automática. A personalização, o armazenamento de dados do usuário para anúncios e remarketing continuam desativados.
+- Testes locais: Analytics 11/11, SEO 12/12, lint sem apontamentos e build de produção concluído.
+- Analytics nos últimos 7 dias: 13 usuários ativos, 51 eventos, 17 visualizações e 0 eventos principais. Sessões por canal: Direct 13, Organic Search 2, Referral 1 e Unassigned 1. Não há atribuição paga ou lead confirmado nesses dados até este momento.
+- A ação de conversão de WhatsApp ainda precisa de validação por tráfego real permitido. Não gerar cliques artificiais, mensagens, leads ou vendas para alterar o status; não otimizar a campanha como se `contact_click` representasse venda.
 
 
 ## Resultado da tentativa no Google Ads

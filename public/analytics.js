@@ -35,25 +35,6 @@
     try { return new URL(document.referrer).origin; } catch { return ''; }
   };
 
-  const safeAdsPageLocation = () => {
-    const currentUrl = new URL(location.href || location.origin + location.pathname);
-    const allowed = new URLSearchParams();
-    for (const key of ['gclid', 'gbraid', 'wbraid']) {
-      const value = currentUrl.searchParams.get(key);
-      if (value && value.length <= 512) allowed.set(key, value);
-    }
-    const isPratikaCampaign = currentUrl.searchParams.get('utm_source') === 'google'
-      && currentUrl.searchParams.get('utm_medium') === 'cpc'
-      && currentUrl.searchParams.get('utm_campaign') === 'sp_quadras_teste_300';
-    if (isPratikaCampaign) {
-      allowed.set('utm_source', 'google');
-      allowed.set('utm_medium', 'cpc');
-      allowed.set('utm_campaign', 'sp_quadras_teste_300');
-    }
-    const query = allowed.toString();
-    return currentUrl.origin + currentUrl.pathname + (query ? '?' + query : '');
-  };
-
   const trackWhatsAppClick = (origin) => {
     if (analyticsEnabled) {
       gtag('event', 'whatsapp_click', {
@@ -95,7 +76,7 @@
     }
     if (adsEnabled && !adsConfigured) {
       gtag('config', adsMeasurementId, {
-        page_location: safeAdsPageLocation(),
+        // Let Google's auto-tagging read the landing URL; don't forward click IDs ourselves.
         page_referrer: safeReferrer(),
         allow_ad_personalization_signals: false,
       });

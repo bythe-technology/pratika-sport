@@ -122,14 +122,13 @@ test('both destinations share one loader and configure each destination once', (
   assert.equal(page.configs().filter((config) => config[1] === 'AW-18558191618').length, 1);
 });
 
-test('Ads page location keeps approved click attribution and strips arbitrary URL data', () => {
+test('Ads tag does not manually forward click identifiers or arbitrary URL data', () => {
   const href = 'https://www.pratikasport.com.br/?gclid=click-123&utm_source=google&utm_medium=cpc&utm_campaign=sp_quadras_teste_300&utm_term=private-keyword&email=private@example.com';
   const page = browser({}, href);
   page.choose('ads-only');
   const config = page.configs().find((entry) => entry[1] === 'AW-18558191618')[2];
-  assert.match(config.page_location, /gclid=click-123/);
-  assert.match(config.page_location, /utm_campaign=sp_quadras_teste_300/);
-  assert.doesNotMatch(config.page_location, /private-keyword|private%40example.com|email=/);
+  assert.equal(Object.hasOwn(config, 'page_location'), false);
+  assert.doesNotMatch(JSON.stringify(config), /gclid|gbraid|wbraid|private-keyword|private%40example.com|email=/);
 });
 
 test('revoking Ads consent denies ad storage and clears first-party Ads cookies', () => {
