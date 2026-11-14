@@ -18,6 +18,7 @@ import Illustration from '@/components/Illustration';
 import ConstructionStory from '@/components/ConstructionStory';
 import ProjectPhoto from '@/components/ProjectPhoto';
 import ProjectGallery, { ProjectPhotoPreview } from '@/components/ProjectGallery';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import {
   contact,
   organizationSchema,
@@ -168,6 +169,20 @@ const pageSchema = {
   about: { '@id': `${siteUrl}/#organization` },
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: siteUrl },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'São Paulo',
+      item: `${siteUrl}/pages/estados/sao-paulo`,
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
@@ -216,7 +231,7 @@ export const metadata: Metadata = {
 export default function SaoPauloPage() {
   return (
     <div className="site-wrapper illustrated-sp">
-      <StructuredData data={[organizationSchema, websiteSchema, serviceSchema, pageSchema, localFaqSchema]} />
+      <StructuredData data={[organizationSchema, websiteSchema, serviceSchema, pageSchema, breadcrumbSchema, localFaqSchema]} />
       <a className="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
       <SiteHeader />
 
@@ -488,6 +503,25 @@ export default function SaoPauloPage() {
 
         <div className="footer-credits">
           <div className="footer-divider" />
+          <div className="footer-bythe-promo">
+            <a
+              href="https://bythe.tech/?utm_source=pratikasport.com.br&utm_medium=credito-rodape&utm_campaign=assinatura"
+              target="_blank"
+              rel="noopener nofollow"
+              className="footer-bythe-link"
+              aria-label="Desenvolvido por BYTHE — visitar bythe.tech (abre em nova aba)"
+            >
+              <span className="footer-bythe-label">Desenvolvido por</span>
+              <Image
+                src="/images/bythe-logo.svg"
+                alt="BYTHE Tech"
+                width={74}
+                height={24}
+                className="footer-bythe-logo"
+              />
+            </a>
+          </div>
+
           <div className="footer-bottom container">
             <p className="footer-copyright">
               © {new Date().getFullYear()} Pratika Sport · Página dedicada a São Paulo.
@@ -495,6 +529,8 @@ export default function SaoPauloPage() {
           </div>
         </div>
       </footer>
+
+      <FloatingWhatsApp />
     </div>
   );
 }

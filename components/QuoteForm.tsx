@@ -66,9 +66,9 @@ export default function QuoteForm() {
 
           <a href="mailto:contatosuperquadras@gmail.com" className="direct-card">
             <div className="direct-icon"><Mail size={20} /></div>
-            <div>
+            <div className="direct-copy">
               <span className="direct-label">E-mail Comercial</span>
-              <strong className="direct-val">contatosuperquadras@gmail.com</strong>
+              <strong className="direct-val">contatosuperquadras@<wbr />gmail.com</strong>
             </div>
           </a>
 

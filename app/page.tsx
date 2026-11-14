@@ -542,11 +542,11 @@ export default function Home() {
           <div className="footer-divider" />
           <div className="footer-bythe-promo">
             <a
-              href="https://bythe.tech"
+              href="https://bythe.tech/?utm_source=pratikasport.com.br&utm_medium=credito-rodape&utm_campaign=assinatura"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener nofollow"
               className="footer-bythe-link"
-              aria-label="Visitar o site da BYTHE Tech"
+              aria-label="Desenvolvido por BYTHE — visitar bythe.tech (abre em nova aba)"
             >
               <span className="footer-bythe-label">Desenvolvido por</span>
               <Image

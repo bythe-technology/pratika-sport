@@ -56,6 +56,7 @@ export const organizationSchema = {
   areaServed: [
     { '@type': 'Country', name: 'Brasil' },
     { '@type': 'State', name: 'São Paulo' },
+    { '@type': 'City', name: 'São Paulo' },
   ],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -86,6 +87,7 @@ export const serviceSchema = {
   areaServed: [
     { '@type': 'Country', name: 'Brasil' },
     { '@type': 'State', name: 'São Paulo' },
+    { '@type': 'City', name: 'São Paulo' },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

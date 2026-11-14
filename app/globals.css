@@ -1316,6 +1316,10 @@ img {
   transition: all 0.2s;
 }
 
+.direct-copy {
+  min-width: 0;
+}
+
 .direct-card:hover {
   border-color: var(--logo-blue);
   background: #eff6ff;
