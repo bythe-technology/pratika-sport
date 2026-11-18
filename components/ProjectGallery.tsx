@@ -71,7 +71,7 @@ export default function ProjectGallery() {
                 <p className="project-case-location"><MapPin size={16} aria-hidden="true" />{project.location}</p>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <small className="project-case-note">Fotos reais com tratamento visual digital; arquivos originais preservados.</small>
+                <small className="project-case-note">{project.photoNote}</small>
               </div>
             </article>
           ))}

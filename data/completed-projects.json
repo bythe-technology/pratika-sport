@@ -1,9 +1,31 @@
 {
+  "sete-lagoas-mg": {
+    "title": "Quadra de tênis concluída em Sete Lagoas",
+    "location": "Sete Lagoas, Minas Gerais",
+    "status": "Projeto concluído",
+    "description": "Quadra de tênis com piso azul, área de escape verde e rede, registrada em duas vistas.",
+    "photoNote": "Versões exibidas receberam tratamento de imagem com IA; fotos originais preservadas.",
+    "photos": [
+      {
+        "id": "vista-01",
+        "original": "assets/project-cases/sete-lagoas-mg/original-01.png",
+        "enhanced": "assets/project-cases/sete-lagoas-mg/enhanced-01.webp",
+        "alt": "Quadra de tênis concluída em Sete Lagoas, MG, vista lateral com piso azul e rede."
+      },
+      {
+        "id": "vista-02",
+        "original": "assets/project-cases/sete-lagoas-mg/original-02.png",
+        "enhanced": "assets/project-cases/sete-lagoas-mg/enhanced-02.webp",
+        "alt": "Quadra de tênis concluída em Sete Lagoas, MG, vista frontal com marcações e área verde."
+      }
+    ]
+  },
   "monte-siao-mg": {
     "title": "Quadra concluída em Monte Sião",
     "location": "Monte Sião, Minas Gerais",
     "status": "Projeto concluído",
     "description": "Registro de uma quadra com superfície de areia, cercamento e refletores, fotografada de dois ângulos.",
+    "photoNote": "Fotos reais com tratamento visual digital; arquivos originais preservados.",
     "photos": [
       {
         "id": "vista-01",

@@ -6,8 +6,10 @@ import projects from '../data/completed-projects.json' with { type: 'json' };
 
 const origin='https://www.pratikasport.com.br';
 void test('sitemap preserves primary image and deduplicates modality and project-case photographs',()=>{
-  const html='<meta property="og:image" content="/images/original.jpg"><img src="/images/projects/tenis-1080.webp"><img src="/images/projects/tenis-1080.webp"><img src="/images/project-cases/monte-siao-mg/vista-01-1080.webp"><img src="/images/projects/beach-1080.webp">';
-  assert.deepEqual(getSitemapImages(html,origin+'/'),[origin+'/images/original.jpg',origin+'/images/projects/tenis-1080.webp',origin+'/images/project-cases/monte-siao-mg/vista-01-1080.webp',origin+'/images/projects/beach-1080.webp']);
+  const projectCaseImages=Object.entries(projects).flatMap(([projectId,project])=>project.photos.map(photo=>`${origin}/images/project-cases/${projectId}/${photo.id}-1080.webp`));
+  const projectCaseMarkup=projectCaseImages.map(image=>`<img src="${image}">`).join('');
+  const html=`<meta property="og:image" content="/images/original.jpg"><img src="/images/projects/tenis-1080.webp"><img src="/images/projects/tenis-1080.webp">${projectCaseMarkup}<img src="/images/projects/beach-1080.webp">`;
+  assert.deepEqual(getSitemapImages(html,origin+'/'),[origin+'/images/original.jpg',origin+'/images/projects/tenis-1080.webp',...projectCaseImages,origin+'/images/projects/beach-1080.webp']);
 });
 void test('sitemap rejects external/data/malformed images and handles empty pages',()=>{
   assert.deepEqual(getSitemapImages('',origin+'/'),[]);
@@ -23,7 +25,7 @@ void test('published home and São Paulo sitemaps expose all modality and comple
     const images=[...block.matchAll(/<image:loc>([^<]+)<\/image:loc>/g)].map(match=>match[1]);
     assert.equal(images.length,new Set(images).size);
     for(const id of ['poliesportiva','tenis','beach','society','modular','reforma'])assert.ok(images.includes(`${origin}/images/projects/${id}-1080.webp`),`${path}: ${id}`);
-    for(const photo of projects['monte-siao-mg'].photos)assert.ok(images.includes(`${origin}/images/project-cases/monte-siao-mg/${photo.id}-1080.webp`),`${path}: ${photo.id}`);
+    for(const [projectId,project] of Object.entries(projects))for(const photo of project.photos)assert.ok(images.includes(`${origin}/images/project-cases/${projectId}/${photo.id}-1080.webp`),`${path}: ${projectId}/${photo.id}`);
   }
 });
 
