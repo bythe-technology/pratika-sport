@@ -199,8 +199,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/construcao-de-quadras-1.jpg',
-        width: 1200,
-        height: 630,
+        width: 1080,
+        height: 607,
         alt: 'Quadra esportiva construída pela Pratika Sport em São Paulo',
       },
     ],
@@ -482,7 +482,7 @@ export default function SaoPauloPage() {
           </div>
 
           <div className="footer-links-col">
-            <h4 className="footer-col-title">Navegação</h4>
+            <h2 className="footer-col-title">Navegação</h2>
             <ul className="footer-links-list">
               <li><a href="#inicio">Início</a></li>
               <li><a href="#servicos">Serviços</a></li>
@@ -492,7 +492,27 @@ export default function SaoPauloPage() {
           </div>
 
           <div className="footer-links-col">
-            <h4 className="footer-col-title">Contato</h4>
+            <h2 className="footer-col-title">Serviços</h2>
+            <ul className="footer-links-list">
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Static HTML page outside the React router. */}
+              <li><a href="/pages/servicos/quadras-poliesportivas.html">Quadras poliesportivas</a></li>
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Static HTML page outside the React router. */}
+              <li><a href="/pages/servicos/quadra-de-tenis.html">Quadras de tênis</a></li>
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Static HTML page outside the React router. */}
+              <li><a href="/pages/servicos/quadra-de-beach-tennis.html">Quadras de beach tennis</a></li>
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Static HTML page outside the React router. */}
+              <li><a href="/pages/servicos/campo-de-futebol.html">Campos de futebol society</a></li>
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Static HTML page outside the React router. */}
+              <li><a href="/pages/servicos/reforma-de-quadras.html">Reforma de quadras</a></li>
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Static HTML page outside the React router. */}
+              <li><a href="/pages/servicos/manutencao-de-quadras.html">Manutenção de quadras</a></li>
+              {/* oxlint-disable-next-line next/no-html-link-for-pages -- Static HTML page outside the React router. */}
+              <li><a href="/pages/blog.html">Guias e blog</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-links-col">
+            <h2 className="footer-col-title">Contato</h2>
             <ul className="footer-links-list">
               <li><a href={`tel:${contact.phone}`}>{contact.displayPhone}</a></li>
               <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>

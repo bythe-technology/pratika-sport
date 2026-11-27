@@ -76,6 +76,7 @@ export default function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             className="floating-cta-btn"
+            aria-label="Solicitar orçamento pelo WhatsApp (abre em nova aba)"
           >
             <MessageCircle size={17} aria-hidden="true" className="shrink-0" />
             <span className="cta-text">Solicitar Orçamento</span>

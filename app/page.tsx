@@ -170,9 +170,8 @@ export default function Home() {
 
           <div className="hero-container illustrated-hero-grid">
             <div className="hero-copy">
-            <div className="hero-badge"><span>Construção · Reforma · Manutenção</span></div>
-
             <h1 className="hero-title">
+              <span className="hero-badge">Construção e reforma de quadras esportivas</span>{' '}
               <span>Sua quadra.</span> Do projeto ao <em>primeiro jogo.</em>
             </h1>
 
@@ -469,7 +468,7 @@ export default function Home() {
           </div>
 
           <div className="footer-links-col">
-            <h4 className="footer-col-title">Navegação</h4>
+            <h2 className="footer-col-title">Navegação</h2>
             <ul className="footer-links-list">
               <li>
                 <a href="#inicio">Início</a>
@@ -497,7 +496,7 @@ export default function Home() {
           </div>
 
           <div className="footer-links-col">
-            <h4 className="footer-col-title">Modalidades</h4>
+            <h2 className="footer-col-title">Modalidades</h2>
             <ul className="footer-links-list">
               <li>
                 <Link href="/pages/servicos/quadras-poliesportivas.html">
@@ -530,10 +529,30 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link href="/pages/estados/sao-paulo">
-                  Atendimento em São Paulo
+                <Link href="/pages/servicos/manutencao-de-quadras.html">
+                  Manutenção de Quadras
                 </Link>
               </li>
+              <li>
+                <Link href="/pages/estados/sao-paulo">
+                  Quadras em São Paulo
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-links-col">
+            <h2 className="footer-col-title">Guias e empresa</h2>
+            <ul className="footer-links-list">
+              <li><Link href="/pages/blog/quanto-custa-construir-quadra-poliesportiva.html">Como planejar uma quadra</Link></li>
+              <li><Link href="/pages/blog/medidas-oficiais-quadra-poliesportiva.html">Medidas da quadra poliesportiva</Link></li>
+              <li><Link href="/pages/blog/tipos-de-piso-quadra-de-tenis.html">Pisos para quadra de tênis</Link></li>
+              <li><Link href="/pages/blog/grama-sintetica-campo-futebol.html">Grama sintética para society</Link></li>
+              <li><Link href="/pages/blog/manutencao-quadra-beach-tennis.html">Manutenção de beach tennis</Link></li>
+              <li><Link href="/pages/blog.html">Blog</Link></li>
+              <li><Link href="/pages/projetos.html">Projetos realizados</Link></li>
+              <li><Link href="/pages/sobre.html">Sobre a Pratika Sport</Link></li>
+              <li><Link href="/pages/contato.html">Contato</Link></li>
             </ul>
           </div>
         </div>
