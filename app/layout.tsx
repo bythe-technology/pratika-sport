@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: 'Pratika Sport',
   title: {
-    default: 'Construção e Reforma de Quadras no Brasil | Pratika Sport',
+    default: 'Construção, Reforma e Manutenção de Quadras | Pratika Sport',
     template: '%s | Pratika Sport',
   },
   description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     languages: { 'pt-BR': '/' },
   },
   openGraph: {
-    title: 'Construção e Reforma de Quadras no Brasil | Pratika Sport',
+    title: 'Construção, Reforma e Manutenção de Quadras | Pratika Sport',
     description:
       'Projetos completos de construção, reforma e manutenção de quadras esportivas em todo o Brasil, com prioridade operacional no estado de São Paulo.',
     url: siteUrl,
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Construção e Reforma de Quadras no Brasil | Pratika Sport',
+    title: 'Construção, Reforma e Manutenção de Quadras | Pratika Sport',
     description:
       'Projetos completos de quadras esportivas em todo o Brasil, com prioridade operacional no estado de São Paulo.',
     images: ['/images/construcao-de-quadras-1.jpg'],

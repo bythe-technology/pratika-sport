@@ -29,7 +29,7 @@ test('a página inicial comunica atendimento nacional sem limitar a empresa a SP
 
   assert.match(
     html,
-    /<title>Construção e Reforma de Quadras no Brasil \| Pratika Sport<\/title>/,
+    /<title>Construção, Reforma e Manutenção de Quadras \| Pratika Sport<\/title>/,
   );
   assert.match(
     html,
